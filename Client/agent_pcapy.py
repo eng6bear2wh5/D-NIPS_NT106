@@ -1,12 +1,43 @@
-import pcap
-import struct
 import socket
-import json
+import pcap
+import platform
+import psutil
+import datetime
+import psycopg2
+import uuid
 import asyncio
 import websockets
+import json
+import signal
+import datetime
 
-INTERFACE = "eth0"  # Đổi thành interface mạng của bạn nếu cần
-agent_id = "d86a6d80-c0c2-4c65-a836-61a3bf86bfb3"
+
+INTERFACE = "eth0"  
+agent_id = str(uuid.uuid4())
+
+def update_agent_last_seen(agent_id):
+    try:
+        hostname = socket.gethostname()
+        ip_address = socket.gethostbyname(hostname)
+        os = platform.system()  
+        status = "active" if psutil.boot_time() else "inactive"
+        current_time = datetime.datetime.now(datetime.timezone.utc).isoformat()
+        # agent_name = get_latest_agent_name() + 1
+        conn = psycopg2.connect("postgres://avnadmin:AVNS_-KEo1AvB98NH557DB5v@pg-18c83e66-d-nips.d.aivencloud.com:20242/mydb?sslmode=require")
+        cursor = conn.cursor()
+
+        cursor.execute("""
+            INSERT INTO public."AGENTS" ("ID", "LAST_SEEN", "HOSTNAME", "IP_ADDRESS", "OS", "STATUS")
+            VALUES (%s, %s, %s, %s, %s, %s)
+        """, (agent_id, current_time, hostname, ip_address, os, status))
+    
+        conn.commit()
+        cursor.close()
+        conn.close()
+    except Exception as e:
+        print(f"❌ Lỗi cập nhật AGENT: {e}")
+
+
 def parse_packet(ts, pkt):
     eth_length = 14
 
@@ -56,12 +87,36 @@ async def send_one_packet(uri):
 
     for ts, pkt in cap:
         packet_data = parse_packet(ts, pkt)
-        if packet_data:
-            async with websockets.connect(uri) as ws:
-                await ws.send(json.dumps(packet_data))
-                print(f"📤 Gửi gói tin: {packet_data}")
-            break  # Gửi 1 gói xong thì thoát vòng lặp
+        if not packet_data:
+            continue
 
-# Chạy chương trình chính
+        while True:
+            try:
+                async with websockets.connect(uri) as ws:
+                    await ws.send(json.dumps(packet_data))
+                    print(f"📤 Gửi gói tin: {packet_data}")
+                    break  # Gửi thành công thì thoát vòng lặp reconnect
+            except Exception as e:
+                print(f"⚠️ Lỗi kết nối WebSocket: {e}")
+                print("🔄 Thử reconnect sau 5 giây...")
+                await asyncio.sleep(5)
+        break  
+
+async def main():
+    loop = asyncio.get_event_loop()
+    loop.add_signal_handler(signal.SIGINT, lambda: asyncio.create_task(shutdown(loop)))
+    # await send_one_packet("ws://localhost:8765")
+
+async def shutdown(loop):
+    print("Đang dừng chương trình...")
+    loop.stop()  # Dừng vòng lặp asyncio
+
+
+
 if __name__ == "__main__":
-    asyncio.run(send_one_packet("ws://localhost:8765"))
+    update_agent_last_seen(agent_id)
+    try:
+        asyncio.run(main())
+    except KeyboardInterrupt:
+        # print("Đã nhận tín hiệu Ctrl+C. Kết thúc chương trình.")
+        exit(0)

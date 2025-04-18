@@ -59,12 +59,9 @@ def load_rules_from_file(filename):
 
 # Load all .rules files
 def load_all_rules():
-    rule_dir = "./rules"
-    for filename in os.listdir(rule_dir):
-        if filename.endswith(".rules"):
-            load_rules_from_file(os.path.join(rule_dir, filename))
-
-load_all_rules()
+    rule_file = "./rules/myrules.rules"  # Đặt tên file rule của bạn ở đây
+    load_rules_from_file(rule_file)
+# load_all_rules()
 
 def check_rules(packet):
     alerts = []

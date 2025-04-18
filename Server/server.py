@@ -2,7 +2,6 @@ import asyncio
 import websockets
 import json
 import psycopg2
-import uuid
 import time
 from collections import defaultdict
 import re
@@ -31,19 +30,34 @@ def insert_packet(data):
     ))
     conn.commit()
 
+
+def update_agent_last_seen(agent_id):
+    cursor.execute("""
+        UPDATE public."AGENTS"
+        SET "LAST_SEEN" = now()
+        WHERE "ID" = %s
+    """, (agent_id,))
+    conn.commit()
+
 async def handle_client(websocket):
     try:
-        data = await websocket.recv()
-        print("\U0001F4E9 Nhận packet:")
-        packet = json.loads(data)
-        print(json.dumps(packet, indent=2))
+        async for data in websocket: 
+            print("\U0001F4E9 Nhận packet:")
+            packet = json.loads(data)
+            print(json.dumps(packet, indent=2))
 
-        # Check rules
-        alerts = check_rules(packet)
-        for alert in alerts:
-            print(f"⚠️ Alert (SID {alert['sid']}): {alert['msg']} from {alert['src_ip']}")
-            # insert_alert(alert)  # bạn đã có hàm này để ghi vào DB
-        insert_packet(packet)
+            # Cập nhật LAST_SEEN
+            agent_id = packet.get("agent_id")
+            if agent_id:
+                update_agent_last_seen(agent_id)
+                print(f"🕒 Cập nhật LAST_SEEN cho agent {agent_id}")
+
+            alerts = check_rules(packet)
+            for alert in alerts:
+                print(f"⚠️ Alert (SID {alert['sid']}): {alert['msg']} from {alert['src_ip']}")
+                # insert_alert(alert) 
+
+            insert_packet(packet)
 
     except Exception as e:
         print(f"\u274C Lỗi: {e}")
