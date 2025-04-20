@@ -1,0 +1,32 @@
+{
+  "ShowLogs": true,
+  "QMainWindow": [
+    {
+      "tittle": "Dashboard"
+    }
+  ],
+  "QSettings": [
+    {
+      "ThemeSettings": [
+        {
+          "CustomTheme": [
+            {
+              "Background-color": "#000000",
+              "Text-color": "#FFFFFF",
+              "Accent-color": "#0000FF",
+              "Icons-color": "#FFFFFF",
+              "Theme-name": "Default-theme",
+              "Default-Theme": true
+            }
+          ]
+        }
+      ],
+      "AppSettings": {
+        "OrginizationName": "Dashboard",
+        "ApplicationName": "Dashboard Company",
+        "OrginizationDormain": "Dashboard.org"
+      }
+    }
+  ],
+  "QtBinding": "PySide6"
+}

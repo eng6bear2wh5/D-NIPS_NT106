@@ -1,0 +1,84 @@
+{
+  "QPushButton": [
+    {
+      "name": "pushButton",
+      "icon": "Qss/icons/icons/feather/menu.png"
+    },
+    {
+      "name": "pushButton_2",
+      "icon": "Qss/icons/icons/material_design/space_dashboard.png"
+    },
+    {
+      "name": "pushButton_3",
+      "icon": "Qss/icons/icons/material_design/manage_search.png"
+    },
+    {
+      "name": "pushButton_6",
+      "icon": "Qss/icons/icons/font_awesome/solid/ban.png"
+    },
+    {
+      "name": "pushButton_5",
+      "icon": "Qss/icons/icons/material_design/work_history.png"
+    },
+    {
+      "name": "pushButton_4",
+      "icon": "Qss/icons/icons/material_design/circle_notifications.png"
+    },
+    {
+      "name": "pushButton_7",
+      "icon": "Qss/icons/icons/feather/tool.png"
+    },
+    {
+      "name": "pushButton_8",
+      "icon": "Qss/icons/icons/material_design/admin_panel_settings.png"
+    },
+    {
+      "name": "pushButton_9",
+      "icon": "Qss/icons/icons/material_design/support_agent.png"
+    },
+    {
+      "name": "pushButton_10",
+      "icon": "Qss/icons/icons/material_design/perm_contact_calendar.png"
+    },
+    {
+      "name": "pushButton_11",
+      "icon": "Qss/icons/icons/feather/settings.png"
+    },
+    {
+      "name": "pushButton_12",
+      "icon": "Qss/icons/icons/material_design/logout.png"
+    },
+    {
+      "name": "pushButton_35",
+      "icon": "Qss/icons/icons/feather/users.png"
+    },
+    {
+      "name": "pushButton_36",
+      "icon": "Qss/icons/icons/material_design/arrow_circle_up.png"
+    },
+    {
+      "name": "pushButton_37",
+      "icon": "Qss/icons/icons/font_awesome/regular/file.png"
+    },
+    {
+      "name": "pushButton_38",
+      "icon": "Qss/icons/icons/material_design/arrow_circle_up.png"
+    },
+    {
+      "name": "pushButton_39",
+      "icon": "Qss/icons/icons/material_design/warning_amber.png"
+    },
+    {
+      "name": "pushButton_40",
+      "icon": "Qss/icons/icons/material_design/arrow_circle_up.png"
+    },
+    {
+      "name": "pushButton_42",
+      "icon": "Qss/icons/icons/material_design/arrow_circle_up.png"
+    },
+    {
+      "name": "pushButton_41",
+      "icon": "Qss/icons/icons/feather/users.png"
+    }
+  ]
+}
