@@ -79,6 +79,42 @@
     {
       "name": "pushButton_41",
       "icon": "Qss/icons/icons/feather/users.png"
+    },
+    {
+      "name": "pushButton_22",
+      "icon": "Qss/icons/icons/feather/save.png"
+    },
+    {
+      "name": "pushButton_21",
+      "icon": "Qss/icons/icons/feather/play.png"
+    },
+    {
+      "name": "pushButton_23",
+      "icon": "Qss/icons/icons/feather/pause.png"
+    },
+    {
+      "name": "pushButton_24",
+      "icon": "Qss/icons/icons/material_design/replay.png"
+    },
+    {
+      "name": "pushButton_19",
+      "icon": "Qss/icons/icons/feather/search.png"
+    },
+    {
+      "name": "pushButton_20",
+      "icon": "Qss/icons/icons/feather/arrow-left.png"
+    },
+    {
+      "name": "pushButton_25",
+      "icon": "Qss/icons/icons/feather/arrow-right.png"
+    },
+    {
+      "name": "pushButton_26",
+      "icon": "Qss/icons/icons/feather/arrow-up.png"
+    },
+    {
+      "name": "pushButton_27",
+      "icon": "Qss/icons/icons/feather/arrow-down.png"
     }
   ]
 }

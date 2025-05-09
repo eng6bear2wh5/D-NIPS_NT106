@@ -38,7 +38,7 @@ class InitializeChart:
 
         # Đặt chiều cao cố định cho widget graph
         self.ui.graph.setMinimumHeight(300)
-        self.ui.graph.setMaximumHeight(300)  # Giới hạn chiều cao
+        self.ui.graph.setMaximumHeight(300)
 
         # Tạo trục X tùy chỉnh
         self.time_axis = self.TimeAxisItem(orientation='bottom')
@@ -73,7 +73,7 @@ class InitializeChart:
         """Khởi tạo dữ liệu và cập nhật biểu đồ thời gian thực."""
         self.x_data = []  # Dữ liệu trục X (thời gian)
         self.y_data = []  # Dữ liệu trục Y (số gói tin bất thường)
-        self.max_points = 50  # Số điểm tối đa hiển thị trên biểu đồ
+        self.max_points = 100  # Số điểm tối đa hiển thị trên biểu đồ
 
         # Tạo đường biểu đồ
         self.curve = self.chart.plot(
@@ -100,9 +100,9 @@ class InitializeChart:
         self.y_data.append(new_packet_count)
 
         # Giới hạn số điểm hiển thị
-        if len(self.x_data) > self.max_points:
-            self.x_data.pop(0)
-            self.y_data.pop(0)
+        #if len(self.x_data) > self.max_points:
+        #    self.x_data.pop(0)
+        #    self.y_data.pop(0)
 
         # Cập nhật nhãn trục X
         self.time_axis.update_labels(self.x_data)

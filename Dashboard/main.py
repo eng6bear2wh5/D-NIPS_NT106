@@ -18,6 +18,8 @@ from Custom_Widgets.QAppSettings import QAppSettings
 from src.functions import *
 from src.showPage import ShowPageMixin
 from src.chart import InitializeChart
+from src.table import AddTableInfo
+from src.packetSniffer import AddPacketsToTable
 
 ########################################################################
 ## MAIN WINDOW CLASS
@@ -54,6 +56,12 @@ class MainWindow(QMainWindow):
 
         # Thêm biểu đồ vào dashboardPage
         self.chart = InitializeChart(self)
+
+        # Add table info to dashboardPage
+        self.table = AddTableInfo(self)
+
+        # Add packets to table
+        self.packets = AddPacketsToTable(self)
 
 ########################################################################
 ## EXECUTE APP
