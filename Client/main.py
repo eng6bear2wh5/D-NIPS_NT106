@@ -94,12 +94,13 @@ def main():
             print(Fore.RED + "[!] Đã hủy bắt gói tin.")
             sys.exit(0)
         
-        # Khởi tạo PacketSniffer và bắt đầu bắt gói tin
+        # Khởi tạo PacketSniffer và bắt đầu bắt gói tin (với analyze_only=False vì đang bắt gói tin)
         sniffer = PacketSniffer(
             interface=interface,
             output_dir=output_dir,
             model_path=model_path,
-            filter_exp=filter_exp
+            filter_exp=filter_exp,
+            analyze_only=False
         )
         
         print(Fore.GREEN + "\n[+] Bắt đầu bắt gói tin... Nhấn Ctrl+C để dừng")

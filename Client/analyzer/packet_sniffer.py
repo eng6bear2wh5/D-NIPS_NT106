@@ -6,14 +6,16 @@ from utils.packet_parser import PacketParser
 from utils.pcap_handler import PCAPHandler
 from models.anomaly_detector import EnhancedAnomalyDetection
 from analyzer.visualizer import PacketVisualizer
+from utils.anomaly_reporter import AnomalyReporter
 from config import *
 
 class PacketSniffer:
-    def __init__(self, interface=DEFAULT_INTERFACE, output_dir=DEFAULT_OUTPUT_DIR, model_path=DEFAULT_MODEL_PATH, filter_exp=None):
+    def __init__(self, interface=DEFAULT_INTERFACE, output_dir=DEFAULT_OUTPUT_DIR, model_path=DEFAULT_MODEL_PATH, filter_exp=None, analyze_only=False):
         # Khởi tạo các thành phần
         self.interface = interface
         self.packet_id = 0
         self.filter_exp = filter_exp  # Thêm thuộc tính lưu filter
+        self.analyze_only = analyze_only  # Thêm flag để xác định chế độ chỉ phân tích
 
         # Khởi tạo đối tượng xử lý file pcap
         self.pcap_handler = PCAPHandler(output_dir=output_dir)
@@ -21,24 +23,27 @@ class PacketSniffer:
         # Khởi tạo đối tượng parser
         self.packet_parser = PacketParser()
         
-        # Khởi tạo đối tượng pcap để bắt gói tin
-        try:
-            self.pcap_object = pcap.pcap(name=interface, promisc=True, immediate=True)
-            
-            # Thiết lập filter nếu có
-            if self.filter_exp:
-                try:
-                    self.pcap_object.setfilter(self.filter_exp)
-                    print(f"[+] Đã áp dụng filter: {self.filter_exp}")
-                except Exception as e:
-                    print(f"[!] Lỗi khi áp dụng filter: {e}")
-            
-            print(f"[+] Đã khởi tạo pcap trên interface: {interface}")
-        except Exception as e:
-            print(f"[!] Lỗi khi khởi tạo pcap: {e}")
-            sys.exit(1)
+        # Chỉ khởi tạo đối tượng pcap nếu không phải chế độ chỉ phân tích
+        if not analyze_only:
+            try:
+                self.pcap_object = pcap.pcap(name=interface, promisc=True, immediate=True)
+                
+                # Thiết lập filter nếu có
+                if self.filter_exp:
+                    try:
+                        self.pcap_object.setfilter(self.filter_exp)
+                        print(f"[+] Đã áp dụng filter: {self.filter_exp}")
+                    except Exception as e:
+                        print(f"[!] Lỗi khi áp dụng filter: {e}")
+                
+                print(f"[+] Đã khởi tạo pcap trên interface: {interface}")
+            except Exception as e:
+                print(f"[!] Lỗi khi khởi tạo pcap: {e}")
+                sys.exit(1)
+        else:
+            self.pcap_object = None
+            print(f"[+] Đã khởi tạo trong chế độ chỉ phân tích file")
 
-        # Phần còn lại của hàm khởi tạo giữ nguyên
         # Khởi tạo visualizer
         self.visualizer = PacketVisualizer()
 
@@ -48,6 +53,19 @@ class PacketSniffer:
         # Lưu trữ dữ liệu gói tin để huấn luyện
         self.feature_vectors = []
         self.flow_anomalies = defaultdict(int)
+        
+        # Khởi tạo reporter để gửi thông tin bất thường tới server
+        if ANOMALY_REPORT_ENABLED:
+            self.anomaly_reporter = AnomalyReporter(
+                server_host=ANOMALY_REPORT_SERVER,
+                server_port=ANOMALY_REPORT_PORT,
+                reconnect_interval=ANOMALY_REPORT_RETRY,
+                queue_size=ANOMALY_REPORT_QUEUE_SIZE
+            )
+            print(f"[+] Đã khởi tạo reporter kết nối tới {ANOMALY_REPORT_SERVER}:{ANOMALY_REPORT_PORT}")
+        else:
+            self.anomaly_reporter = None
+            print("[!] Báo cáo bất thường qua socket đã bị tắt trong cấu hình")
             
     def detect_anomaly(self, packet_info, timestamp):
         """Phát hiện bất thường trong gói tin"""
@@ -69,7 +87,31 @@ class PacketSniffer:
         
         return is_anomaly, score, flow_score
 
+    def parse_packet(self, packet):
+        """Phân tích gói tin và trả về thông tin"""
+        return self.packet_parser.parse_packet(packet)
+    
+    def report_anomaly(self, packet_info, anomaly_info, raw_packet=None):
+        """Báo cáo gói tin bất thường tới server nếu đã bật tính năng"""
+        if not self.anomaly_reporter or not ANOMALY_REPORT_ENABLED:
+            return
+            
+        is_anomaly, score, flow_score = anomaly_info
+        
+        # Kiểm tra ngưỡng báo cáo
+        if (is_anomaly == -1 and score < ANOMALY_THRESHOLD) or flow_score >= FLOW_SCORE_THRESHOLD:
+            self.anomaly_reporter.report_anomaly(packet_info, anomaly_info, raw_packet)
+
     def start_sniffing(self, max_packets=None):
+        # Kiểm tra xem có đang ở chế độ chỉ phân tích không
+        if self.analyze_only or self.pcap_object is None:
+            print("[!] Không thể bắt gói tin trong chế độ chỉ phân tích")
+            return
+
+        # Khởi động reporter nếu có
+        if self.anomaly_reporter and ANOMALY_REPORT_ENABLED:
+            self.anomaly_reporter.start()
+            
         # Bắt đầu bắt và phân tích gói tin
         self.visualizer.update_display()
         print(f"[+] Bắt đầu bắt gói tin... Nhấn Ctrl+C để dừng")
@@ -89,6 +131,9 @@ class PacketSniffer:
                 
                 # Thêm gói tin vào visualizer
                 self.visualizer.add_packet(packet_info, (is_anomaly, anomaly_score, flow_score))
+                
+                # Báo cáo bất thường nếu cần
+                self.report_anomaly(packet_info, (is_anomaly, anomaly_score, flow_score), packet)
                 
                 # Hiển thị bảng
                 if self.packet_id % 5 == 0:  # Cập nhật bảng sau mỗi 5 gói tin để giảm nhấp nháy
@@ -121,7 +166,13 @@ class PacketSniffer:
             print("\n[!] Đã dừng bắt gói tin do người dùng ngắt")
         except Exception as e:
             print(f"\n[!] Lỗi: {e}")
+            import traceback
+            traceback.print_exc()
         finally:
+            # Dừng reporter
+            if self.anomaly_reporter and ANOMALY_REPORT_ENABLED:
+                self.anomaly_reporter.stop()
+                
             # Lưu mô hình trước khi thoát
             if self.feature_vectors and len(self.feature_vectors) > 100:
                 self.anomaly_detector.save_model()

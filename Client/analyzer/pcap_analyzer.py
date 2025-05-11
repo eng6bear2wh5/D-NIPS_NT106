@@ -3,11 +3,14 @@ from rich.table import Table
 from rich.text import Text
 import dpkt
 import os
+import time
 from datetime import datetime
 from collections import defaultdict
 from analyzer.packet_sniffer import PacketSniffer
 from utils.packet_parser import PacketParser
 from models.anomaly_detector import EnhancedAnomalyDetection
+from utils.anomaly_reporter import AnomalyReporter
+from config import *
 
 def analyze_pcap_file(pcap_file, model_path="./model/anomaly_model.pkl"):
     """Phân tích file PCAP đã lưu"""
@@ -15,6 +18,19 @@ def analyze_pcap_file(pcap_file, model_path="./model/anomaly_model.pkl"):
     
     # Khởi tạo detector
     detector = EnhancedAnomalyDetection(model_path=model_path)
+    
+    # Khởi tạo reporter nếu cần
+    if ANOMALY_REPORT_ENABLED:
+        anomaly_reporter = AnomalyReporter(
+            server_host=ANOMALY_REPORT_SERVER,
+            server_port=ANOMALY_REPORT_PORT,
+            reconnect_interval=ANOMALY_REPORT_RETRY,
+            queue_size=ANOMALY_REPORT_QUEUE_SIZE
+        )
+        anomaly_reporter.start()
+        print(f"[+] Đã kết nối tới server báo cáo {ANOMALY_REPORT_SERVER}:{ANOMALY_REPORT_PORT}")
+    else:
+        anomaly_reporter = None
     
     # Khởi tạo bảng hiển thị
     console = Console()
@@ -39,15 +55,21 @@ def analyze_pcap_file(pcap_file, model_path="./model/anomaly_model.pkl"):
             feature_vectors = []
             flow_anomalies = defaultdict(int)
             
-            # Tạo đối tượng PacketSniffer tạm thời để sử dụng phương thức parse_packet
-            temp_sniffer = PacketSniffer(interface="none")
+            # Tạo đối tượng parser
+            packet_parser = PacketParser()
+            
+            # Thời gian bắt đầu
+            start_time = time.time()
+            
+            # Tạo đối tượng PacketSniffer tạm thời để sử dụng phương thức parse_packet - với analyze_only=True
+            temp_sniffer = PacketSniffer(interface="none", analyze_only=True)
             
             # Đọc từng gói tin
             for timestamp, packet in pcap_reader:
                 packet_id += 1
                 
                 # Phân tích gói tin
-                packet_info = temp_sniffer.parse_packet(packet)
+                packet_info = packet_parser.parse_packet(packet)
                 
                 # Trích xuất đặc trưng
                 features, flow_key = detector.extract_features(packet_info, timestamp)
@@ -61,11 +83,18 @@ def analyze_pcap_file(pcap_file, model_path="./model/anomaly_model.pkl"):
                     anomaly_count += 1
                     flow_anomalies[flow_key] += 1
                 
+                # Tính flow score
+                flow_score = flow_anomalies[flow_key]
+                
+                # Báo cáo bất thường nếu cần
+                if anomaly_reporter and ((is_anomaly == -1 and score < ANOMALY_THRESHOLD) or flow_score >= FLOW_SCORE_THRESHOLD):
+                    anomaly_reporter.report_anomaly(packet_info, (is_anomaly, score, flow_score), packet)
+                
                 # Chuẩn bị dữ liệu hiển thị
                 anomaly_text = "Bình thường"
                 anomaly_style = "green"
                 if is_anomaly == -1:
-                    anomaly_text = f"Bất thường ({score:.2f})"
+                    anomaly_text = f"{score:.2f}"
                     anomaly_style = "red"
                 
                 # Định dạng timestamp
@@ -89,6 +118,10 @@ def analyze_pcap_file(pcap_file, model_path="./model/anomaly_model.pkl"):
                     console.clear()
                     console.print(table)
                     console.print(f"Đã phân tích: {packet_id} gói tin, phát hiện: {anomaly_count} bất thường")
+                    
+                    # Hiển thị thời gian phân tích
+                    elapsed = time.time() - start_time
+                    console.print(f"Thời gian phân tích: {int(elapsed//60):02d}:{int(elapsed%60):02d}")
                 
                 # Huấn luyện lại mô hình sau mỗi 1000 gói tin
                 if packet_id % 1000 == 0 and len(feature_vectors) > 100:
@@ -104,6 +137,10 @@ def analyze_pcap_file(pcap_file, model_path="./model/anomaly_model.pkl"):
             # Hiển thị thống kê
             print(f"\n[+] Hoàn tất phân tích: {packet_id} gói tin, phát hiện: {anomaly_count} bất thường")
             
+            # Hiển thị thời gian phân tích
+            elapsed = time.time() - start_time
+            print(f"\n[+] Tổng thời gian phân tích: {int(elapsed//60):02d} phút {int(elapsed%60):02d} giây")
+            
             if top_flows:
                 print("\n[~] Top 5 luồng có nhiều bất thường nhất:")
                 for flow, count in top_flows:
@@ -112,5 +149,25 @@ def analyze_pcap_file(pcap_file, model_path="./model/anomaly_model.pkl"):
                     else:  # Các giao thức khác
                         print(f"  - {flow[0]} → {flow[1]} [{flow[2]}]: {count} bất thường")
             
+            # Lưu mô hình nếu có nhiều gói tin
+            if len(feature_vectors) > 100:
+                detector.save_model()
+                print(f"[+] Đã lưu mô hình được cập nhật tại: {model_path}")
+            
+            # Dừng reporter
+            if anomaly_reporter:
+                # Đợi một chút để đảm bảo các báo cáo đã được xử lý
+                print("[+] Đang hoàn tất gửi báo cáo bất thường...")
+                time.sleep(3)
+                anomaly_reporter.stop()
+                
+            print(f"[+] Đã hoàn tất phân tích file: {pcap_file}")
+            
     except Exception as e:
         print(f"[!] Lỗi khi phân tích file PCAP: {e}")
+        import traceback
+        traceback.print_exc()
+        
+        # Đảm bảo dừng reporter nếu xảy ra lỗi
+        if 'anomaly_reporter' in locals() and anomaly_reporter:
+            anomaly_reporter.stop()
