@@ -1,0 +1,51 @@
+{
+  "packet": {
+    "ip": {
+      "src": "10.45.85.160",
+      "dst": "35.174.127.31",
+      "proto": 6,
+      "ttl": 64,
+      "id": 0,
+      "flags": {
+        "df": 0,
+        "mf": 0
+      },
+      "frag_offset": 0,
+      "tos": 0,
+      "options": []
+    },
+    "tcp": {
+      "sport": 34672,
+      "dport": 443,
+      "seq": 0,
+      "ack": 0,
+      "flags": {
+        "syn": 0,
+        "ack": 1,
+        "fin": 0,
+        "rst": 0,
+        "psh": 1,
+        "urg": 0
+      },
+      "window": 0,
+      "header_len": 20,
+      "options": []
+    }
+  },
+  "flow": {
+    "id": "10.45.85.160:34672-35.174.127.31:443-TCP",
+    "packet_count": 1,
+    "byte_count": 205,
+    "start_time": "2025-05-13T04:17:58.174110",
+    "last_time": "2025-05-13T04:17:58.174110",
+    "inter_packet_time": 0
+  },
+  "proto_layer": {
+    "type": "https"
+  },
+  "anomaly": {
+    "score": -0.05350391202090998,
+    "flow_score": 3,
+    "detection_method": "isolation_forest"
+  }
+}
