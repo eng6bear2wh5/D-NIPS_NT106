@@ -1,0 +1,1 @@
+sudo env "PATH=$PATH" "PYTHONPATH=$PYTHONPATH" python3 main.py
