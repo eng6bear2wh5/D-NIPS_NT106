@@ -26,7 +26,6 @@ wheels/
 venv/
 env/
 ENV/
-Dashboard/.venv/
 
 # IDE files
 .idea/
