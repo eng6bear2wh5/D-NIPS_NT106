@@ -1,2 +1,3 @@
 PySide6
 QT-PyQt-PySide-Custom-Widgets
+pyqtgraph

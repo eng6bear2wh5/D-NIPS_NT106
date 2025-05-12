@@ -26,3 +26,39 @@
 This structure allows for automatic conversion of UI files to Python code and placement within the src folder, simplifying the development process for users.
 
 For more, visit https://github.com/KhamisiKibet/QT-PyQt-PySide-Custom-Widgets
+
+## Setup and Run Instructions
+
+To set up and run this project on a new machine, follow these steps:
+
+1.  **Install system packages (run once with sudo):**
+    ```bash
+    sudo apt-get update
+    sudo apt-get install -y python3 python3-venv python3-pip libxcb-cursor0
+    ```
+
+2.  **Navigate to the project's root directory:**
+    ```bash
+    cd /path/to/PacketSniffer/D-NIPS_NT106
+    ```
+    *(Replace `/path/to/` with the actual path to the `PacketSniffer` directory)*
+
+3.  **Create a virtual environment (run once):**
+    ```bash
+    python3 -m venv Dashboard/.venv
+    ```
+
+4.  **Activate the virtual environment (run every time you open a new terminal for this project):**
+    ```bash
+    source Dashboard/.venv/bin/activate
+    ```
+
+5.  **Install Python dependencies (run once after creating/activating the venv, or when `requirements.txt` changes):**
+    ```bash
+    pip install -r Dashboard/requirements.txt
+    ```
+
+6.  **Run the application:**
+    ```bash
+    Dashboard/.venv/bin/python /home/rigil/PacketSniffer/D-NIPS_NT106/Dashboard/main.py
+    ```
