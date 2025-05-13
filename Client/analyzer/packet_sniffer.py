@@ -1,12 +1,14 @@
 import time
 import pcap
 import sys
+import threading
 from collections import defaultdict
 from utils.packet_parser import PacketParser
 from utils.pcap_handler import PCAPHandler
 from models.anomaly_detector import EnhancedAnomalyDetection
 from analyzer.visualizer import PacketVisualizer
 from utils.anomaly_reporter import AnomalyReporter
+from analyzer.data_sender import DataSender
 from config import *
 
 class PacketSniffer:
@@ -22,6 +24,9 @@ class PacketSniffer:
         
         # Khởi tạo đối tượng parser
         self.packet_parser = PacketParser()
+
+        # Khởi tạo DataSender
+        self.data_sender = DataSender()
         
         # Chỉ khởi tạo đối tượng pcap nếu không phải chế độ chỉ phân tích
         if not analyze_only:
@@ -111,6 +116,15 @@ class PacketSniffer:
         # Khởi động reporter nếu có
         if self.anomaly_reporter and ANOMALY_REPORT_ENABLED:
             self.anomaly_reporter.start()
+
+        # Tạo luồng gửi dữ liệu định kỳ
+        def periodic_send():
+            while True:
+                time.sleep(1)  # Gửi dữ liệu mỗi giây
+                self.data_sender.send_data()
+
+        sender_thread = threading.Thread(target=periodic_send, daemon=True)
+        sender_thread.start()
             
         # Bắt đầu bắt và phân tích gói tin
         self.visualizer.update_display()
@@ -128,7 +142,10 @@ class PacketSniffer:
                 
                 # Phát hiện bất thường
                 is_anomaly, anomaly_score, flow_score = self.detect_anomaly(packet_info, timestamp)
-                
+
+                # Thêm dữ liệu vào hàng đợi gửi
+                self.data_sender.add_data(packet_info, is_anomaly, anomaly_score, flow_score)
+
                 # Thêm gói tin vào visualizer
                 self.visualizer.add_packet(packet_info, (is_anomaly, anomaly_score, flow_score))
                 
