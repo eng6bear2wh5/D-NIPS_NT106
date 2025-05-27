@@ -11,6 +11,8 @@ import argparse
 import time
 import os
 from datetime import datetime
+import psycopg2
+import psycopg2.extras
 
 # Thiết lập logging
 logging.basicConfig(
@@ -40,7 +42,26 @@ class AnomalyServer:
             "total_clients": 0,
             "start_time": time.time()
         }
-    
+
+        # Database
+        # self.db_name = os.getenv("DATABASE_NAME")
+        # self.db_host = os.getenv("HOST")
+        # self.db_port = os.getenv("PORT")
+        # self.db_user = os.getenv("USER")
+        # self.db_password = os.getenv("PASSWORD")
+
+        # self.db_conn = psycopg2.connect(
+        #     dbname=self.db_name,
+        #     user=self.db_user,
+        #     password=self.db_password,
+        #     host=self.db_host,
+        #     port=self.db_port,
+        #     sslmode='require'
+        # )
+        # self.db_cursor = self.db_conn.cursor()
+        # # self._setup_db()
+
+
     def start(self):
         """Khởi động server"""
         try:
@@ -128,7 +149,7 @@ class AnomalyServer:
                     report_json, buffer = buffer.split('\n', 1)
                     
                     # Xử lý báo cáo
-                    self._process_report(report_json, address)
+                    self._process_report(report_json, address, client_socket)
         
         except Exception as e:
             logger.error(f"Lỗi khi xử lý client {address[0]}:{address[1]}: {e}")
@@ -144,17 +165,18 @@ class AnomalyServer:
                 if client_socket in self.clients:
                     self.clients.remove(client_socket)
     
-    def _process_report(self, report_json, address):
+    def _process_report(self, report_json, address, client_socket):
         """Xử lý báo cáo bất thường từ client"""
         try:
             # Parse JSON
             report = json.loads(report_json)
-            
+            print(report)
             # In thông tin báo cáo
             flow_id = report["flow"]["id"]
             anomaly_score = report["anomaly"]["score"]
             flow_score = report["anomaly"]["flow_score"]
-            
+            src_ip = report["flow"]["src_ip"]
+
             logger.info(f"Báo cáo từ {address[0]}: {flow_id} - Score: {anomaly_score:.2f}, Flow Score: {flow_score}")
             
             # Lưu báo cáo vào file
@@ -162,7 +184,14 @@ class AnomalyServer:
             
             # Cập nhật thống kê
             self.stats["total_reports"] += 1
-            
+
+            # Soft-block
+            if anomaly_score > 0.8:
+                block_cmd = f"iptables -A INPUT -s {src_ip} -j DROP"
+                response = json.dumps({"action": "block", "target_ip": src_ip, "command": block_cmd}) + "\n"
+                client_socket.sendall(response.encode('utf-8'))
+                logger.info(f"Gửi lệnh block tới client: {response}")
+        
         except Exception as e:
             logger.error(f"Lỗi khi xử lý báo cáo từ {address[0]}: {e}")
     
