@@ -10,10 +10,14 @@ from analyzer.visualizer import PacketVisualizer
 from utils.anomaly_reporter import AnomalyReporter
 from analyzer.data_sender import DataSender
 from config import *
+import platform
 
 class PacketSniffer:
-    def __init__(self, interface=DEFAULT_INTERFACE, output_dir=DEFAULT_OUTPUT_DIR, model_path=DEFAULT_MODEL_PATH, filter_exp=None, analyze_only=False):
+    def __init__(self, interface=DEFAULT_INTERFACE, output_dir=DEFAULT_OUTPUT_DIR, model_path=DEFAULT_MODEL_PATH, filter_exp=None, analyze_only=False, agent_id=None, agent_hostname=None, agent_os=None):
         # Khởi tạo các thành phần
+        self.agent_id = agent_id
+        self.agent_hostname = agent_hostname
+        self.agent_os = agent_os
         self.interface = interface
         self.packet_id = 0
         self.filter_exp = filter_exp  # Thêm thuộc tính lưu filter
@@ -96,7 +100,7 @@ class PacketSniffer:
         """Phân tích gói tin và trả về thông tin"""
         return self.packet_parser.parse_packet(packet)
     
-    def report_anomaly(self, packet_info, anomaly_info, raw_packet=None):
+    def report_anomaly(self, packet_info, anomaly_info, raw_packet=None, agent_id=None, agent_hostname=None, agent_os=None):
         """Báo cáo gói tin bất thường tới server nếu đã bật tính năng"""
         if not self.anomaly_reporter or not ANOMALY_REPORT_ENABLED:
             return
@@ -105,7 +109,7 @@ class PacketSniffer:
         
         # Kiểm tra ngưỡng báo cáo
         if (is_anomaly == -1 and score < ANOMALY_THRESHOLD) or flow_score >= FLOW_SCORE_THRESHOLD:
-            self.anomaly_reporter.report_anomaly(packet_info, anomaly_info, raw_packet)
+            self.anomaly_reporter.report_anomaly(packet_info, anomaly_info, raw_packet, agent_id, agent_hostname, agent_os)
 
     def start_sniffing(self, max_packets=None):
         # Kiểm tra xem có đang ở chế độ chỉ phân tích không
@@ -123,8 +127,8 @@ class PacketSniffer:
                 time.sleep(1)  # Gửi dữ liệu mỗi giây
                 self.data_sender.send_data()
 
-        sender_thread = threading.Thread(target=periodic_send, daemon=True)
-        sender_thread.start()
+        # sender_thread = threading.Thread(target=periodic_send, daemon=True)
+        # sender_thread.start()
             
         # Bắt đầu bắt và phân tích gói tin
         self.visualizer.update_display()
@@ -144,13 +148,13 @@ class PacketSniffer:
                 is_anomaly, anomaly_score, flow_score = self.detect_anomaly(packet_info, timestamp)
 
                 # Thêm dữ liệu vào hàng đợi gửi
-                self.data_sender.add_data(packet_info, is_anomaly, anomaly_score, flow_score)
+                # self.data_sender.add_data(packet_info, is_anomaly, anomaly_score, flow_score)
 
                 # Thêm gói tin vào visualizer
                 self.visualizer.add_packet(packet_info, (is_anomaly, anomaly_score, flow_score))
                 
                 # Báo cáo bất thường nếu cần
-                self.report_anomaly(packet_info, (is_anomaly, anomaly_score, flow_score), packet)
+                self.report_anomaly(packet_info, (is_anomaly, anomaly_score, flow_score), packet, self.agent_id, self.agent_hostname, self.agent_os)
                 
                 # Hiển thị bảng
                 if self.packet_id % 5 == 0:  # Cập nhật bảng sau mỗi 5 gói tin để giảm nhấp nháy

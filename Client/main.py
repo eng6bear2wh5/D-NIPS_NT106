@@ -5,8 +5,10 @@ from colorama import init, Fore
 from analyzer.packet_sniffer import PacketSniffer
 from analyzer.pcap_analyzer import analyze_pcap_file
 from config import DEFAULT_INTERFACE, DEFAULT_OUTPUT_DIR, DEFAULT_MODEL_PATH
-
+import socket
+import uuid
 init(autoreset=True)
+import platform
 
 def main():
     print(Fore.CYAN + "=" * 60)
@@ -17,7 +19,13 @@ def main():
     if os.geteuid() != 0:
         print(Fore.RED + "[!] Script này phải được chạy với quyền sudo để bắt gói tin.")
         sys.exit(1)
+
+    # Lấy thông tin agent  
+    agent_id = uuid.uuid4()  
+    agent_hostname = socket.gethostname()
+    agent_os = platform.platform()
     
+
     # Hỏi người dùng có muốn phân tích file PCAP sẵn có không
     analyze_choice = input(Fore.YELLOW + "Bạn muốn phân tích file PCAP có sẵn? (y/n): ").lower()
     
@@ -33,7 +41,7 @@ def main():
             model_path = DEFAULT_MODEL_PATH
             
         print(Fore.CYAN + f"[+] Bắt đầu phân tích file: {pcap_file}")
-        analyze_pcap_file(pcap_file, model_path=model_path)
+        analyze_pcap_file(pcap_file, model_path=model_path, agent_id=agent_id, agent_hostname=agent_hostname, agent_os=agent_os)
         sys.exit(0)
     
     # Bắt gói tin mới
@@ -93,14 +101,19 @@ def main():
         if confirm != 'y':
             print(Fore.RED + "[!] Đã hủy bắt gói tin.")
             sys.exit(0)
-        
+
+
+
         # Khởi tạo PacketSniffer và bắt đầu bắt gói tin (với analyze_only=False vì đang bắt gói tin)
         sniffer = PacketSniffer(
             interface=interface,
             output_dir=output_dir,
             model_path=model_path,
             filter_exp=filter_exp,
-            analyze_only=False
+            analyze_only=False,
+            agent_id= agent_id,
+            agent_hostname=agent_hostname,
+            agent_os = agent_os
         )
         
         print(Fore.GREEN + "\n[+] Bắt đầu bắt gói tin... Nhấn Ctrl+C để dừng")
