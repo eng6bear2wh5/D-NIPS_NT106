@@ -1,8 +1,9 @@
 {
   "agent": {
     "id": "3f5027a0-1d5d-49d5-b023-7cebb8e27abd",
-    "hostname": "DESTOP",
-    "os": "Linux" 
+    "hostname": "DESKTOP",
+    "os": "Linux",
+    "ip_addr": "127.0.1.1"
   },
   "packet": {
     "ip": {
