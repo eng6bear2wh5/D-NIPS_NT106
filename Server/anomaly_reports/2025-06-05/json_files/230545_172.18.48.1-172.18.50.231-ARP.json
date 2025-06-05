@@ -1,0 +1,39 @@
+{
+  "agent": {
+    "id": "c992dd35-bd3c-4b99-99ff-f7cad21bc699",
+    "hostname": "DESKTOP-PLLUPI4",
+    "os": "Linux-6.6.87.1-microsoft-standard-WSL2-x86_64-with-glibc2.39"
+  },
+  "packet": {
+    "ip": {
+      "src": "172.18.48.1",
+      "dst": "172.18.50.231",
+      "proto": 0,
+      "ttl": 64,
+      "id": 0,
+      "flags": {
+        "df": 0,
+        "mf": 0
+      },
+      "frag_offset": 0,
+      "tos": 0,
+      "options": []
+    }
+  },
+  "flow": {
+    "id": "172.18.48.1-172.18.50.231-ARP",
+    "packet_count": 1,
+    "byte_count": 42,
+    "start_time": "2025-06-05T23:05:40.524496",
+    "last_time": "2025-06-05T23:05:40.524496",
+    "inter_packet_time": 0
+  },
+  "proto_layer": {
+    "type": "unknown"
+  },
+  "anomaly": {
+    "score": 0.16696881933169605,
+    "flow_score": 0,
+    "detection_method": "isolation_forest"
+  }
+}

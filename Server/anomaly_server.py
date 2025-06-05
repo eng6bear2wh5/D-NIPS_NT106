@@ -17,6 +17,19 @@ from dotenv import load_dotenv
 from psycopg2.extras import Json
 from json2pcap import JSONtoPCAP
 from suricata_analyzer import SuricataAnalyzer, parse_eve_json
+from cryptography.hazmat.primitives.asymmetric import dh
+from crypto_util import CryptoUtil
+from dh_utils import (
+    serialize_dh_parameters,
+    generate_dh_private_key,
+    serialize_dh_public_key,
+    deserialize_dh_public_key,
+    derive_aes_key_from_shared,
+    generate_dh_parameters,
+    send_message_dh,
+    recv_message_dh
+)
+
 
 # Thiết lập logging
 logging.basicConfig(
@@ -28,14 +41,22 @@ suricata_integration_logger = logging.getLogger("SuricataIntegration")
 SURICATA_ALERT_BLOCK_SEVERITY_THRESHOLD=2
 
 
+
+
 class AnomalyServer:
     def __init__(self, host="0.0.0.0", port=9999, save_dir=None, suricata_bin="suricata", suricata_config=None, suricata_rules_dir=None):
         load_dotenv()
         self.host = host
         self.port = port
         if save_dir is None:
-            base_dir = os.path.dirname(os.path.abspath(__file__)) 
+            base_dir = os.path.dirname(os.path.realpath(__file__))
             save_dir = os.path.join(base_dir, "anomaly_reports")
+
+
+        # Tham số DH toàn cục của Server 
+        self.SERVER_DH_PARAMETERS: dh.DHParameters = None
+        self.SERVER_DH_PARAMETERS_PEM: bytes = None
+
 
         self.save_dir = save_dir
         self.json_subdir_name = "json_files"
@@ -68,18 +89,29 @@ class AnomalyServer:
         
         self._connect_db()
 
-        try:
+        try:    
             if self.suricata_bin: # Chỉ khởi tạo nếu suricata_bin được cung cấp
                 self.suricata_analyzer_instance = SuricataAnalyzer(
                     suricata_bin=self.suricata_bin,
                     config_file=self.suricata_config,
                     rules_dir=self.suricata_rules_dir
                 )
-                suricata_integration_logger.info("SuricataAnalyzer đã được khởi tạo thành công.")
+
         except Exception as e:
             suricata_integration_logger.error(f"Không thể khởi tạo SuricataAnalyzer: {e}. Phân tích Suricata sẽ bị bỏ qua.")
             self.suricata_analyzer_instance = None
+
+        self._initialize_global_dh_parameters_server()
         
+
+    def _initialize_global_dh_parameters_server(self): 
+        # global self.SERVER_DH_PARAMETERS, self.SERVER_DH_PARAMETERS_PEM
+        if self.SERVER_DH_PARAMETERS is None:
+            logger.info("Đang tạo tham số DH toàn cục cho server... (có thể mất vài giây)")
+            self.SERVER_DH_PARAMETERS = generate_dh_parameters() # Sử dụng hàm từ dh_utils
+            self.SERVER_DH_PARAMETERS_PEM = serialize_dh_parameters(self.SERVER_DH_PARAMETERS)
+            logger.info("Đã tạo và serialize tham số DH toàn cục.")
+
 
     def _connect_db(self):
         
@@ -93,6 +125,7 @@ class AnomalyServer:
                 password=os.environ.get('DB_PASSWORD')
             )
             self.db_conn.autocommit = True
+            logger.info("Đã kết nối tới database")
         except Exception as e:
             logger.error(f"Lỗi khi kết nối database: {e}")
 
@@ -161,10 +194,70 @@ class AnomalyServer:
                 pass
         
         logger.info("Server đã dừng")
+
+    def _perform_dh_key_exchange_for_client(self, client_socket, client_address_str) -> CryptoUtil:
+            """Thực hiện trao đổi khóa DH với client và trả về CryptoUtil nếu thành công."""
+
+            logger.info(f"[{client_address_str}] Bắt đầu trao đổi khóa Diffie-Hellman.")
+            
+            try:
+                # 1. Server tạo cặp khóa DH (private/public) cho phiên này
+                server_session_private_key = generate_dh_private_key(self.SERVER_DH_PARAMETERS)
+                server_session_public_key = server_session_private_key.public_key()
+                server_session_public_key_pem = serialize_dh_public_key(server_session_public_key)
+
+                # 2. Server gửi tham số DH (PEM) và khóa công khai của mình (PEM) cho client
+                # logger.debug(f"[{client_address_str}] Gửi tham số DH...")
+                send_message_dh(client_socket, self.SERVER_DH_PARAMETERS_PEM)
+                
+                # logger.debug(f"[{client_address_str}] Gửi khóa công khai server...")
+                send_message_dh(client_socket, server_session_public_key_pem)
+                
+                # 3. Server nhận khóa công khai của client
+                # logger.debug(f"[{client_address_str}] Chờ khóa công khai của client...")
+                client_public_key_pem = recv_message_dh(client_socket)
+                client_dh_public_key = deserialize_dh_public_key(client_public_key_pem) # Server deserializes client's public key
+                # logger.debug(f"[{client_address_str}] Đã nhận khóa công khai của client.")
+
+                # 4. Server tính toán shared secret
+                shared_secret_bytes = server_session_private_key.exchange(client_dh_public_key)
+                
+                # 5. Dẫn xuất khóa AES và khởi tạo CryptoUtil cho phiên này
+                aes_key_session = derive_aes_key_from_shared(shared_secret_bytes, key_length_bytes=32)
+                crypto_for_session = CryptoUtil(aes_key_session)
+                
+                logger.info(f"[{client_address_str}] Trao đổi khóa DH thành công. Khóa AES đã được dẫn xuất.")
+                return crypto_for_session
+            
+            except (socket.timeout, ConnectionAbortedError, ValueError) as e_dh_exchange:
+                logger.error(f"[{client_address_str}] Lỗi trong quá trình trao đổi DH: {e_dh_exchange}")
+                return None
+            except Exception as e_crypto: # Lỗi từ thư viện cryptography
+                logger.error(f"[{client_address_str}] Lỗi crypto trong quá trình DH: {e_crypto}", exc_info=True)
+                return None
+    
+
     
     def _handle_client(self, client_socket, address):
         """Xử lý kết nối từ client"""
-        buffer = ""
+
+        client_address_str = f"{address[0]}:{address[1]}"
+        logger.info(f"Đã chấp nhận kết nối từ {client_address_str}")
+        
+        crypto_for_session: CryptoUtil = None
+        
+        client_socket.settimeout(30) # Đặt timeout cho các bước trao đổi khóa DH
+        crypto_for_session = self._perform_dh_key_exchange_for_client(client_socket, client_address_str)
+        
+        if not crypto_for_session:
+            logger.error(f"[{client_address_str}] Trao đổi khóa DH thất bại. Đóng kết nối.")
+            return # Thoát thread, finally sẽ đóng socket
+
+        client_socket.settimeout(None) # Reset timeout cho hoạt động nhận dữ liệu bình thường
+        logger.info(f"[{client_address_str}] Sẵn sàng nhận dữ liệu báo cáo mã hóa.")
+
+
+        buffer = b""
         
         try:
             while self.running:
@@ -175,13 +268,16 @@ class AnomalyServer:
                     break
                 
                 # Thêm dữ liệu vào buffer
-                buffer += data.decode('utf-8')
+                buffer += data
                 
                 # Xử lý từng báo cáo (phân tách bằng ký tự xuống dòng)
-                while '\n' in buffer:
+                while b'\n' in buffer:
                     # Lấy báo cáo đầu tiên
-                    report_json, buffer = buffer.split('\n', 1)
-                    
+                    encrypted_report_part, buffer = buffer.split(b'\n', 1)
+                    encrypted_report_str = encrypted_report_part.decode('utf-8').strip()
+
+                    report_json = crypto_for_session.decrypt(encrypted_report_str)
+
                     # Xử lý báo cáo
                     self._process_report(report_json, client_socket, address)
 
@@ -284,7 +380,8 @@ class AnomalyServer:
                                         suricata_integration_logger.warning(f"Client socket cho FlowID {associated_flow_id} dường như đã đóng. Không thể gửi lệnh block cho IP {src_ip_to_block}.")
                             
                     else:
-                        suricata_integration_logger.info(f"Không tìm thấy cảnh báo Suricata nào cho PCAP: {pcap_file_path} (Flow: {associated_flow_id})")
+                        None
+                        # suricata_integration_logger.info(f"Không tìm thấy cảnh báo Suricata nào cho PCAP: {pcap_file_path} (Flow: {associated_flow_id})")
                     return eve_json_path
                 else:
                     suricata_integration_logger.error(f"Phân tích Suricata cho {pcap_file_path} không tạo ra file eve.json hoặc file không tồn tại.")
@@ -371,7 +468,7 @@ class AnomalyServer:
             with open(file_path, 'w') as f:
                 json.dump(report, f, indent=2)
             abs_path = os.path.abspath(file_path)
-            logger.info(f"Đã lưu báo cáo vào file: {abs_path}")
+            logger.info(f"Đã lưu báo cáo vào file: {file_path}")
             return abs_path
             
         except Exception as e:
