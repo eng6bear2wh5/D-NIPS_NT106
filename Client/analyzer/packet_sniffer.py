@@ -106,7 +106,6 @@ class PacketSniffer:
             return
             
         is_anomaly, score, flow_score = anomaly_info
-        
         # Kiểm tra ngưỡng báo cáo
         if (is_anomaly == -1 and score < ANOMALY_THRESHOLD) or flow_score >= FLOW_SCORE_THRESHOLD:
             self.anomaly_reporter.report_anomaly(packet_info, anomaly_info, raw_packet, agent_id, agent_hostname, agent_os)
