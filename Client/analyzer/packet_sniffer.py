@@ -18,6 +18,7 @@ class PacketSniffer:
         self.agent_id = agent_id
         self.agent_hostname = agent_hostname
         self.agent_os = agent_os
+        self.agent_ip_addr = agent_ip_addr
         self.interface = interface
         self.packet_id = 0
         self.filter_exp = filter_exp  # Thêm thuộc tính lưu filter
@@ -153,7 +154,7 @@ class PacketSniffer:
                 self.visualizer.add_packet(packet_info, (is_anomaly, anomaly_score, flow_score))
                 
                 # Báo cáo bất thường nếu cần
-                self.report_anomaly(packet_info, (is_anomaly, anomaly_score, flow_score), packet, self.agent_id, self.agent_hostname, self.agent_os)
+                self.report_anomaly(packet_info, (is_anomaly, anomaly_score, flow_score), packet, self.agent_id, self.agent_hostname, self.agent_os, self.agent_ip_addr)
                 
                 # Hiển thị bảng
                 if self.packet_id % 5 == 0:  # Cập nhật bảng sau mỗi 5 gói tin để giảm nhấp nháy

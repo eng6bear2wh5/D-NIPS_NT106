@@ -583,7 +583,7 @@ class AnomalyServer:
             # ====== 4. Commit and optionally block source IP ======
             
             update_query = """
-                UPDATE "AGENTS"
+                UPDATE "CLIENTS"
                 SET "STATUS" = 'inactive'
                 WHERE "LAST_SEEN" < NOW() - INTERVAL '5 minutes'
                 AND "STATUS" != 'inactive'
@@ -606,19 +606,19 @@ class AnomalyServer:
                 )
                 VALUES (%(current_date)s, 1, %(anomaly_inc)s, %(high_sev_inc)s, %(init_proto_json)s::jsonb, %(init_flow_json)s::jsonb)
                 ON CONFLICT ("DATE") DO UPDATE SET
-                    TOTAL_REPORTS = DAILY_STATISTICS.TOTAL_REPORTS + 1,
-                    ANOMALY_COUNT = DAILY_STATISTICS.ANOMALY_COUNT + EXCLUDED.ANOMALY_COUNT,
-                    HIGH_SEVERITY_COUNT = DAILY_STATISTICS.HIGH_SEVERITY_COUNT + EXCLUDED.HIGH_SEVERITY_COUNT,
-                    TOP_PROTOCOLS = jsonb_set(
-                        COALESCE(DAILY_STATISTICS.TOP_PROTOCOLS, '{}'::jsonb),
+                    "TOTAL_REPORTS" = "DAILY_STATISTICS"."TOTAL_REPORTS" + 1,
+                    "ANOMALY_COUNT" = "DAILY_STATISTICS"."ANOMALY_COUNT" + EXCLUDED."ANOMALY_COUNT",
+                    "HIGH_SEVERITY_COUNT" = "DAILY_STATISTICS"."HIGH_SEVERITY_COUNT" + EXCLUDED."HIGH_SEVERITY_COUNT",
+                    "TOP_PROTOCOLS" = jsonb_set(
+                        COALESCE("DAILY_STATISTICS"."TOP_PROTOCOLS", '{}'::jsonb),
                         ARRAY[%(proto_key)s],
-                        to_jsonb(COALESCE((DAILY_STATISTICS.TOP_PROTOCOLS->>%(proto_key)s)::int, 0) + 1),
+                        to_jsonb((COALESCE(("DAILY_STATISTICS"."TOP_PROTOCOLS"->>%(proto_key)s)::int, 0) + 1)),
                         true 
                     ),
-                    top_flow_ids = jsonb_set(
-                        COALESCE(DAILY_STATISTICS.top_flow_ids, '{}'::jsonb),
+                    "TOP_FLOW_IDS" = jsonb_set(
+                        COALESCE("DAILY_STATISTICS"."TOP_FLOW_IDS", '{}'::jsonb),
                         ARRAY[%(flow_key)s],
-                        to_jsonb(COALESCE((DAILY_STATISTICS.top_flow_ids->>%(flow_key)s)::int, 0) + 1),
+                        to_jsonb((COALESCE(("DAILY_STATISTICS"."TOP_FLOW_IDS"->>%(flow_key)s)::int, 0) + 1)),
                         true 
                     );
             """

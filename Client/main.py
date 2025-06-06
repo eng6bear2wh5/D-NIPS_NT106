@@ -25,7 +25,6 @@ def main():
     agent_hostname = socket.gethostname()
     agent_os = platform.platform()
     agent_ip_addr = socket.gethostbyname(agent_hostname)
-
     # Hỏi người dùng có muốn phân tích file PCAP sẵn có không
     analyze_choice = input(Fore.YELLOW + "Bạn muốn phân tích file PCAP có sẵn? (y/n): ").lower()
     
@@ -43,7 +42,8 @@ def main():
         print(Fore.CYAN + f"[+] Bắt đầu phân tích file: {pcap_file}")
         analyze_pcap_file(pcap_file, model_path=model_path, agent_id=agent_id, agent_hostname=agent_hostname, agent_os=agent_os)
         sys.exit(0)
-    if analyze_choice != 'y':
+        
+    if analyze_choice != 'n':
         print(Fore.RED + "[!] Đã hủy bắt gói tin.")
         sys.exit(0)
 
