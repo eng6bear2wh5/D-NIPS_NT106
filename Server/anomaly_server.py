@@ -10,7 +10,7 @@ import logging
 import argparse
 import time
 import os
-from datetime import datetime, timezone
+from datetime import datetime, timezone, date
 import psycopg2 
 import uuid
 from dotenv import load_dotenv
@@ -39,7 +39,7 @@ logging.basicConfig(
 logger = logging.getLogger("AnomalyServer")
 suricata_integration_logger = logging.getLogger("SuricataIntegration")
 SURICATA_ALERT_BLOCK_SEVERITY_THRESHOLD=2
-
+HIGH_SEVERITY_ANOMALY_SCORE_THRESHOLD = 0.8
 
 
 
@@ -80,7 +80,7 @@ class AnomalyServer:
         
         # Thống kê
         self.stats = {
-            "total_reports": 0,
+            "TOTAL_REPORTS": 0,
             "total_clients": 0,
             "start_time": time.time(),
             "suricata_alerts_found": 0,
@@ -438,7 +438,7 @@ class AnomalyServer:
             self._save_report_to_db(report)
 
             # Cập nhật thống kê
-            self.stats["total_reports"] += 1
+            self.stats["TOTAL_REPORTS"] += 1
             
         except Exception as e:
             logger.error(f"Lỗi khi xử lý báo cáo từ {address[0]}: {e}")
@@ -505,16 +505,16 @@ class AnomalyServer:
         cur = conn.cursor()
 
         try:
-            # ====== 1. Insert/Update AGENTS ======
+            # ====== 1. Insert/Update CLIENTS ======
             agent_id = agent.get("id")
             hostname = agent.get("hostname")
             os = agent.get("os")
             last_seen = datetime.now(timezone.utc)
-
-            agent_ip_addr = agent.get("ip_addr")
+            agent_ip_addr = agent.get("agent_ip_addr")
+            
 
             cur.execute("""
-                INSERT INTO "AGENTS" ("ID", "HOSTNAME", "IP_ADDRESS", "OS", "STATUS", "LAST_SEEN")
+                INSERT INTO "CLIENTS" ("ID", "HOSTNAME", "IP_ADDRESS", "OS", "STATUS", "LAST_SEEN")
                 VALUES (%s, %s, %s, %s, %s, %s)
                 ON CONFLICT ("ID") DO UPDATE SET
                 "HOSTNAME" = EXCLUDED."HOSTNAME",
@@ -533,20 +533,21 @@ class AnomalyServer:
             dest_port = dport
 
             cur.execute("""
-                INSERT INTO "PACKETS" ("ID", "TIMESTAMP", "PROTOCOL", "SOURCE_IP", "DEST_IP", "SOURCE_PORT", "DEST_PORT", "AGENT_ID")
+                INSERT INTO "PACKETS" ("ID", "TIMESTAMP",  "PROTOCOL", "SOURCE_IP", "DEST_IP", "SOURCE_PORT", "DEST_PORT", "AGENT_ID")
                 VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
             """, (packet_id, timestamp, protocol, source_ip, dest_ip, source_port, dest_port, agent_id))
 
             # ====== 3. Insert anomaly_reports ======
-            anomaly = report.get("anomaly", {})
+            anomaly_data = report.get("anomaly", {})
             proto_layer = report.get("proto_layer", {})
             app_protocol = proto_layer.get("type", "unknown")
 
             packet_count = flow.get("packet_count", 0)
-            anomaly_score = anomaly.get("score")
-            flow_score = anomaly.get("flow_score")
-            detection_method = anomaly.get("detection_method")
+            anomaly_score = anomaly_data.get("score")
+            flow_score = anomaly_data.get("flow_score")
+            detection_method = anomaly_data.get("detection_method")
             flow_id = flow.get("id")
+            processed_time=anomaly_data.get("start_time")
             client_ip = agent_ip_addr
             cur.execute("""
                 INSERT INTO "ANOMALY_REPORTS" (
@@ -555,9 +556,9 @@ class AnomalyServer:
                     "PROTOCOL", "APP_PROTOCOL",
                     "PACKET_SIZE", "PACKET_COUNT",
                     "ANOMALY_SCORE", "FLOW_SCORE",
-                    "DETECTION_METHOD",
-                    "RAW_DATA"
-                ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+                    "DETECTION_METHOD", "IS_PROCESSED",
+                    "PROCESSED_AT", "RAW_DATA"
+                ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
             """, (
                 timestamp,
                 client_ip,
@@ -573,22 +574,66 @@ class AnomalyServer:
                 anomaly_score,
                 flow_score,
                 detection_method,
+                True,
+                processed_time,
                 Json(report)
             ))
 
+
             # ====== 4. Commit and optionally block source IP ======
             
-            # self._send_block_command(client_socket=client_socket, ip_to_block=source_ip)
             update_query = """
                 UPDATE "AGENTS"
                 SET "STATUS" = 'inactive'
                 WHERE "LAST_SEEN" < NOW() - INTERVAL '5 minutes'
                 AND "STATUS" != 'inactive'
             """
-
             cur.execute(update_query)
-            conn.commit()
 
+            # ====== 5. Cập nhật DAILY_STATISTICS ======
+
+            current_date_db = date.today()
+            is_actual_anomaly = 1 if anomaly_data.get("detection_method") else 0 
+            high_severity = 1 if (anomaly_score is not None and anomaly_score >= HIGH_SEVERITY_ANOMALY_SCORE_THRESHOLD) else 0
+
+            initial_top_protocols_json_str = json.dumps({protocol: 1})
+            initial_top_flow_ids_json_str = json.dumps({flow_id: 1})
+
+            sql_daily_stats = """
+                INSERT INTO "DAILY_STATISTICS" ( 
+                    "DATE", "TOTAL_REPORTS", "ANOMALY_COUNT", "HIGH_SEVERITY_COUNT", 
+                    "TOP_PROTOCOLS", "TOP_FLOW_IDS"
+                )
+                VALUES (%(current_date)s, 1, %(anomaly_inc)s, %(high_sev_inc)s, %(init_proto_json)s::jsonb, %(init_flow_json)s::jsonb)
+                ON CONFLICT ("DATE") DO UPDATE SET
+                    TOTAL_REPORTS = DAILY_STATISTICS.TOTAL_REPORTS + 1,
+                    ANOMALY_COUNT = DAILY_STATISTICS.ANOMALY_COUNT + EXCLUDED.ANOMALY_COUNT,
+                    HIGH_SEVERITY_COUNT = DAILY_STATISTICS.HIGH_SEVERITY_COUNT + EXCLUDED.HIGH_SEVERITY_COUNT,
+                    TOP_PROTOCOLS = jsonb_set(
+                        COALESCE(DAILY_STATISTICS.TOP_PROTOCOLS, '{}'::jsonb),
+                        ARRAY[%(proto_key)s],
+                        to_jsonb(COALESCE((DAILY_STATISTICS.TOP_PROTOCOLS->>%(proto_key)s)::int, 0) + 1),
+                        true 
+                    ),
+                    top_flow_ids = jsonb_set(
+                        COALESCE(DAILY_STATISTICS.top_flow_ids, '{}'::jsonb),
+                        ARRAY[%(flow_key)s],
+                        to_jsonb(COALESCE((DAILY_STATISTICS.top_flow_ids->>%(flow_key)s)::int, 0) + 1),
+                        true 
+                    );
+            """
+            params_daily_stats = {
+                "current_date": current_date_db,
+                "anomaly_inc": is_actual_anomaly,
+                "high_sev_inc": high_severity,
+                "init_proto_json": initial_top_protocols_json_str,
+                "init_flow_json": initial_top_flow_ids_json_str,
+                "proto_key": protocol, 
+                "flow_key": flow_id  
+            }
+            cur.execute(sql_daily_stats, params_daily_stats)
+            
+            
         except Exception as e:
             conn.rollback()
             print(f"Error saving report: {e}")
@@ -630,7 +675,7 @@ class AnomalyServer:
                 
                 logger.info(f"Thống kê: Uptime: {int(hours):02d}:{int(minutes):02d}:{int(seconds):02d}, "
                            f"Clients: {active_clients}, Total Clients: {self.stats['total_clients']}, "
-                           f"Reports: {self.stats['total_reports']}")
+                           f"Reports: {self.stats['TOTAL_REPORTS']}")
                 
                 # Cập nhật 30 giây một lần
                 time.sleep(30)

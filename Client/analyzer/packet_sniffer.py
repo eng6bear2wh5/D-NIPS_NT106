@@ -13,7 +13,7 @@ from config import *
 import platform
 
 class PacketSniffer:
-    def __init__(self, interface=DEFAULT_INTERFACE, output_dir=DEFAULT_OUTPUT_DIR, model_path=DEFAULT_MODEL_PATH, filter_exp=None, analyze_only=False, agent_id=None, agent_hostname=None, agent_os=None):
+    def __init__(self, interface=DEFAULT_INTERFACE, output_dir=DEFAULT_OUTPUT_DIR, model_path=DEFAULT_MODEL_PATH, filter_exp=None, analyze_only=False, agent_id=None, agent_hostname=None, agent_os=None, agent_ip_addr=None):
         # Khởi tạo các thành phần
         self.agent_id = agent_id
         self.agent_hostname = agent_hostname
@@ -100,7 +100,7 @@ class PacketSniffer:
         """Phân tích gói tin và trả về thông tin"""
         return self.packet_parser.parse_packet(packet)
     
-    def report_anomaly(self, packet_info, anomaly_info, raw_packet=None, agent_id=None, agent_hostname=None, agent_os=None):
+    def report_anomaly(self, packet_info, anomaly_info, raw_packet=None, agent_id=None, agent_hostname=None, agent_os=None, agent_ip_addr=None):
         """Báo cáo gói tin bất thường tới server nếu đã bật tính năng"""
         if not self.anomaly_reporter or not ANOMALY_REPORT_ENABLED:
             return
@@ -108,7 +108,7 @@ class PacketSniffer:
         is_anomaly, score, flow_score = anomaly_info
         # Kiểm tra ngưỡng báo cáo
         if (is_anomaly == -1 and score < ANOMALY_THRESHOLD) or flow_score >= FLOW_SCORE_THRESHOLD:
-            self.anomaly_reporter.report_anomaly(packet_info, anomaly_info, raw_packet, agent_id, agent_hostname, agent_os)
+            self.anomaly_reporter.report_anomaly(packet_info, anomaly_info, raw_packet, agent_id, agent_hostname, agent_os, agent_ip_addr)
 
     def start_sniffing(self, max_packets=None):
         # Kiểm tra xem có đang ở chế độ chỉ phân tích không

@@ -204,7 +204,7 @@ class AnomalyReporter:
                 self.logger.warning("Hàng đợi báo cáo đầy, bỏ qua báo cáo này")
             return False
     
-    def report_anomaly(self, packet_info, anomaly_info, raw_packet=None, agent_id=None, agent_hostname=None, agent_os=None):
+    def report_anomaly(self, packet_info, anomaly_info, raw_packet=None, agent_id=None, agent_hostname=None, agent_os=None, agent_ip_addr=None):
         """
         Tạo báo cáo bất thường và gửi tới server
         
@@ -274,7 +274,8 @@ class AnomalyReporter:
             "agent": {
             "id": str(agent_id),
             "hostname": agent_hostname,
-            "os": agent_os
+            "os": agent_os,
+            "agent_ip_addr":agent_ip_addr
             },
 
             "packet": {

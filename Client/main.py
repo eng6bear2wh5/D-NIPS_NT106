@@ -24,7 +24,7 @@ def main():
     agent_id = uuid.uuid4()  
     agent_hostname = socket.gethostname()
     agent_os = platform.platform()
-    
+    agent_ip_addr = socket.gethostbyname(agent_hostname)
 
     # Hỏi người dùng có muốn phân tích file PCAP sẵn có không
     analyze_choice = input(Fore.YELLOW + "Bạn muốn phân tích file PCAP có sẵn? (y/n): ").lower()
@@ -43,7 +43,10 @@ def main():
         print(Fore.CYAN + f"[+] Bắt đầu phân tích file: {pcap_file}")
         analyze_pcap_file(pcap_file, model_path=model_path, agent_id=agent_id, agent_hostname=agent_hostname, agent_os=agent_os)
         sys.exit(0)
-    
+    if analyze_choice != 'y':
+        print(Fore.RED + "[!] Đã hủy bắt gói tin.")
+        sys.exit(0)
+
     # Bắt gói tin mới
     try:
         # Liệt kê các thiết bị mạng
@@ -113,7 +116,8 @@ def main():
             analyze_only=False,
             agent_id= agent_id,
             agent_hostname=agent_hostname,
-            agent_os = agent_os
+            agent_os = agent_os,
+            agent_ip_addr = agent_ip_addr
         )
         
         print(Fore.GREEN + "\n[+] Bắt đầu bắt gói tin... Nhấn Ctrl+C để dừng")
