@@ -12,7 +12,7 @@ from models.anomaly_detector import EnhancedAnomalyDetection
 from utils.anomaly_reporter import AnomalyReporter
 from config import *
 
-def analyze_pcap_file(pcap_file, model_path="./model/anomaly_model.pkl"):
+def analyze_pcap_file(pcap_file, model_path="./model/anomaly_model.pkl", agent_id=None, agent_hostname=None, agent_os=None):
     """Phân tích file PCAP đã lưu"""
     print(f"[+] Bắt đầu phân tích file PCAP: {pcap_file}")
     
@@ -88,7 +88,7 @@ def analyze_pcap_file(pcap_file, model_path="./model/anomaly_model.pkl"):
                 
                 # Báo cáo bất thường nếu cần
                 if anomaly_reporter and ((is_anomaly == -1 and score < ANOMALY_THRESHOLD) or flow_score >= FLOW_SCORE_THRESHOLD):
-                    anomaly_reporter.report_anomaly(packet_info, (is_anomaly, score, flow_score), packet)
+                    anomaly_reporter.report_anomaly(packet_info, (is_anomaly, score, flow_score), packet, agent_id, agent_hostname, agent_os)
                 
                 # Chuẩn bị dữ liệu hiển thị
                 anomaly_text = "Bình thường"
