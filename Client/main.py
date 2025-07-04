@@ -9,8 +9,12 @@ import socket
 import uuid
 init(autoreset=True)
 import platform
+from utils.email_utils import send_user_email
 
 def main():
+    #data = "hello world"
+    #email_utils.send_email(data)
+
     print(Fore.CYAN + "=" * 60)
     print(Fore.CYAN + "     PACKET SNIFFER VỚI PHÁT HIỆN BẤT THƯỜNG NÂNG CAO")
     print(Fore.CYAN + "=" * 60)

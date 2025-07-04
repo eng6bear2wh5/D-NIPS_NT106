@@ -71,7 +71,7 @@ class AnomalyServer:
         self.suricata_bin = suricata_bin
         self.suricata_config = suricata_config
         self.suricata_rules_dir = suricata_rules_dir
-        self.suricata_analyzer_instance = None 
+        self.suricata_analyzer_instance = None
 
         # Tạo thư mục lưu trữ báo cáo nếu chưa tồn tại
         if not os.path.exists(self.save_dir):

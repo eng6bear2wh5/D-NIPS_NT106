@@ -16,6 +16,7 @@ class DataSender:
                 "anomaly_score": float(anomaly_score),
                 "flow_score": float(flow_score)
             })
+        #print(f"[DEBUG] Đã thêm vào hàng đợi gửi: {packet_info['src_ip']}->{packet_info['dst_ip']}, is_anomaly={is_anomaly}, score={anomaly_score}")
 
     def send_data(self):
         """Gửi dữ liệu từ hàng đợi đến server"""
