@@ -179,6 +179,69 @@ class PacketParser:
                         elif udp.sport == 123 or udp.dport == 123:
                             if not result["app_proto"]:
                                 result["app_proto"] = "NTP"
+            # Phân tích IPv6
+            elif ether_type == dpkt.ethernet.ETH_TYPE_IP6:
+                if isinstance(eth.data, dpkt.ip6.IP6):
+                    ip6 = eth.data
+                    # Lấy địa chỉ IPv6 nguồn và đích
+                    result["src_ip"] = socket.inet_ntop(socket.AF_INET6, ip6.src)
+                    result["dst_ip"] = socket.inet_ntop(socket.AF_INET6, ip6.dst)
+                    # Xác định giao thức lớp 4
+                    protocol = ip6.nxt
+                    result["protocol"] = PROTOCOL_MAP.get(protocol, f"IPv6/{protocol}")
+                    # Phân tích TCP
+                    if isinstance(ip6.data, dpkt.tcp.TCP):
+                        tcp = ip6.data
+                        result["src_port"] = tcp.sport
+                        result["dst_port"] = tcp.dport
+                        src_app = PORT_MAP.get(tcp.sport, "")
+                        dst_app = PORT_MAP.get(tcp.dport, "")
+                        result["app_proto"] = dst_app or src_app
+                        flags = []
+                        if tcp.flags & dpkt.tcp.TH_FIN:
+                            flags.append("FIN")
+                        if tcp.flags & dpkt.tcp.TH_SYN:
+                            flags.append("SYN")
+                        if tcp.flags & dpkt.tcp.TH_RST:
+                            flags.append("RST")
+                        if tcp.flags & dpkt.tcp.TH_PUSH:
+                            flags.append("PSH")
+                        if tcp.flags & dpkt.tcp.TH_ACK:
+                            flags.append("ACK")
+                        if tcp.flags & dpkt.tcp.TH_URG:
+                            flags.append("URG")
+                        result["details"] = f"Flags: {' '.join(flags)}"
+                    # Phân tích UDP
+                    elif isinstance(ip6.data, dpkt.udp.UDP):
+                        udp = ip6.data
+                        result["src_port"] = udp.sport
+                        result["dst_port"] = udp.dport
+                        src_app = PORT_MAP.get(udp.sport, "")
+                        dst_app = PORT_MAP.get(udp.dport, "")
+                        result["app_proto"] = dst_app or src_app
+                        # DNS
+                        if udp.sport == 53 or udp.dport == 53:
+                            if not result["app_proto"]:
+                                result["app_proto"] = "DNS"
+                            try:
+                                dns = dpkt.dns.DNS(udp.data)
+                                if dns.qr == dpkt.dns.DNS_Q:
+                                    result["details"] = f"Query: {dns.qd[0].name.decode('utf-8', 'replace') }"
+                                elif dns.qr == dpkt.dns.DNS_R:
+                                    if len(dns.an) > 0:
+                                        if dns.an[0].type == dpkt.dns.DNS_AAAA:
+                                            ip6addr = socket.inet_ntop(socket.AF_INET6, dns.an[0].rdata)
+                                            result["details"] = f"Response: {ip6addr}"
+                            except:
+                                pass
+                        # NTP
+                        elif udp.sport == 123 or udp.dport == 123:
+                            if not result["app_proto"]:
+                                result["app_proto"] = "NTP"
+                    # ICMPv6
+                    elif isinstance(ip6.data, dpkt.icmp6.ICMP6):
+                        icmp6 = ip6.data
+                        result["details"] = f"ICMPv6 type:{icmp6.type} code:{icmp6.code}"
         
         except Exception as e:
             # Xử lý lỗi khi phân tích gói tin
