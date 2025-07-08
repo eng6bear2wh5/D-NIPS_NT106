@@ -193,6 +193,7 @@ def main():
     parser.add_argument('-s', '--suricata', default='suricata', help='Path to Suricata binary (default: suricata)')
     parser.add_argument('-c', '--config', help='Suricata configuration file')
     parser.add_argument('-r', '--rules', help='Directory containing Suricata rules')
+    parser.add_argument('-S', '--rule-file', help='Path to a specific Suricata rule file')
     parser.add_argument('--summary', action='store_true', help='Only show alert summary')
     
     args = parser.parse_args()
@@ -210,14 +211,29 @@ def main():
             rules_dir=args.rules
         )
         
-        # Analyze PCAP
-        eve_json = analyzer.analyze_pcap(args.pcap_file, args.output)
+        # Build Suricata command
+        output_dir = args.output
+        pcap_file = args.pcap_file
+        cmd = [args.suricata, "-r", pcap_file, "-l", output_dir]
+        if args.config:
+            cmd.extend(["-c", args.config])
+        if args.rule_file:
+            cmd.extend(["-S", args.rule_file])
+        elif args.rules:
+            cmd.extend(["--set", f"default-rule-path={args.rules}"])
+        cmd.extend(["--set", "outputs.1.eve-log.enabled=yes"])
         
-        if not eve_json:
-            logger.error("PCAP analysis failed")
+        logger.info(f"Running Suricata with command: {' '.join(cmd)}")
+        result = subprocess.run(cmd, capture_output=True, text=True)
+        if result.returncode != 0:
+            logger.error(f"Suricata failed with return code {result.returncode}: {result.stderr}")
             sys.exit(1)
         
-        # Read and display alerts
+        eve_json = os.path.join(output_dir, "eve.json")
+        if not os.path.exists(eve_json):
+            logger.error(f"Results file not found: {eve_json}")
+            sys.exit(1)
+        
         alerts = parse_eve_json(eve_json)
         display_alerts(alerts)
         

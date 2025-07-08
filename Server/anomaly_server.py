@@ -19,6 +19,8 @@ logging.basicConfig(
 )
 logger = logging.getLogger("AnomalyServer")
 
+MAX_CLIENTS = 10
+
 class AnomalyServer:
     def __init__(self, host="0.0.0.0", port=9999, save_dir="./anomaly_reports"):
         self.host = host
@@ -58,6 +60,11 @@ class AnomalyServer:
             stats_thread.start()
             
             while self.running:
+                if len(self.clients) >= MAX_CLIENTS:
+                    logger.warning("Số lượng client đã đạt giới hạn tối đa.")
+                    time.sleep(1)
+                    continue
+                
                 try:
                     client_socket, addr = self.server_socket.accept()
                     logger.info(f"Đã kết nối từ {addr[0]}:{addr[1]}")
@@ -163,6 +170,8 @@ class AnomalyServer:
             # Cập nhật thống kê
             self.stats["total_reports"] += 1
             
+        except json.JSONDecodeError:
+            logger.warning(f"Dữ liệu không hợp lệ từ {address[0]}: {report_json}")
         except Exception as e:
             logger.error(f"Lỗi khi xử lý báo cáo từ {address[0]}: {e}")
     
@@ -174,8 +183,7 @@ class AnomalyServer:
             date_dir = os.path.join(self.save_dir, now.strftime("%Y-%m-%d"))
             
             # Tạo thư mục theo ngày nếu chưa tồn tại
-            if not os.path.exists(date_dir):
-                os.makedirs(date_dir)
+            os.makedirs(date_dir, exist_ok=True)
             
             # Tạo tên file
             flow_id = report["flow"]["id"].replace(":", "-").replace("/", "-")
@@ -186,9 +194,16 @@ class AnomalyServer:
             file_path = os.path.join(date_dir, filename)
             with open(file_path, 'w') as f:
                 json.dump(report, f, indent=2)
-            
+    
         except Exception as e:
             logger.error(f"Lỗi khi lưu báo cáo: {e}")
+            # Lưu vào thư mục tạm thời
+            temp_dir = "./temp_reports"
+            os.makedirs(temp_dir, exist_ok=True)
+            temp_file = os.path.join(temp_dir, f"failed_{timestamp}.json")
+            with open(temp_file, 'w') as f:
+                json.dump(report, f, indent=2)
+            logger.warning(f"Báo cáo đã được lưu tạm thời tại: {temp_file}")
     
     def _stats_display_loop(self):
         """Thread hiển thị thống kê"""

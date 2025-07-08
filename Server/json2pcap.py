@@ -56,29 +56,24 @@ class JSONtoPCAP:
             # Đọc file JSON
             with open(json_file, 'r') as f:
                 report = json.load(f)
-            
-            # Tạo gói tin từ report
-            packet = self._create_packet_from_report(report)
-            
-            # Lấy timestamp
-            if 'flow' in report and 'start_time' in report['flow']:
-                try:
-                    timestamp = datetime.fromisoformat(report['flow']['start_time']).timestamp()
-                except (ValueError, TypeError):
-                    timestamp = datetime.now().timestamp()
-            else:
-                # Sử dụng thời gian hiện tại nếu không có
-                timestamp = datetime.now().timestamp()
-            
-            # Ghi gói tin vào file PCAP
-            if packet:
-                self.pcap_writer.writepkt(packet, timestamp)
-                logger.debug(f"Đã chuyển đổi {json_file} thành gói tin PCAP")
-                return True
-            else:
-                logger.warning(f"Không thể tạo gói tin từ {json_file}")
+
+            # Lấy danh sách các gói tin
+            packets = report.get("packets", [])
+            if not packets:
+                logger.warning(f"Không tìm thấy thông tin gói tin trong {json_file}")
                 return False
-            
+
+            # Tạo và ghi từng gói tin
+            for packet_info in packets:
+                packet = self._create_packet_from_packet_info(packet_info)
+                timestamp = datetime.fromisoformat(packet_info["timestamp"]).timestamp()
+                if packet:
+                    self.pcap_writer.writepkt(packet, timestamp)
+                else:
+                    logger.warning(f"Không thể tạo gói tin từ {json_file}")
+
+            logger.info(f"Đã chuyển đổi {json_file} thành {len(packets)} gói tin PCAP")
+            return True
         except Exception as e:
             logger.error(f"Lỗi khi chuyển đổi {json_file}: {e}")
             return False
@@ -86,6 +81,11 @@ class JSONtoPCAP:
     def _create_packet_from_report(self, report):
         """Tạo gói tin từ báo cáo JSON"""
         try:
+            # Log thông tin flow ID và anomaly score
+            flow_id = report.get("flow", {}).get("id", "unknown")
+            anomaly_score = report.get("anomaly", {}).get("score", 0)
+            logger.debug(f"Tạo gói tin cho flow ID: {flow_id}, anomaly score: {anomaly_score}")
+
             # Tạo Ethernet frame
             eth = Ethernet()
             eth.src = self._generate_mac_address()
@@ -94,52 +94,35 @@ class JSONtoPCAP:
             # Tạo IP packet
             ip_info = report.get("packet", {}).get("ip", {})
             if not ip_info:
-                logger.warning("Không tìm thấy thông tin IP trong báo cáo")
+                logger.warning(f"Không tìm thấy thông tin IP trong báo cáo cho flow ID: {flow_id}")
                 return None
             
             # Xác định phiên bản IP
             if ":" in ip_info.get("src", "") or ":" in ip_info.get("dst", ""):
-                # IPv6
-                # Không triển khai trong ví dụ này
-                logger.warning("IPv6 chưa được hỗ trợ trong ví dụ này")
+                logger.warning(f"IPv6 chưa được hỗ trợ cho flow ID: {flow_id}")
                 return None
             
             # Tạo IPv4 packet
             ip = IP()
-            
-            # Thiết lập địa chỉ nguồn và đích
-            try:
-                ip.src = socket.inet_aton(ip_info.get("src", "0.0.0.0"))
-                ip.dst = socket.inet_aton(ip_info.get("dst", "0.0.0.0"))
-            except socket.error:
-                logger.warning(f"Địa chỉ IP không hợp lệ: {ip_info.get('src')} hoặc {ip_info.get('dst')}")
-                return None
-            
-            # Thiết lập các trường IP khác
+            ip.src = socket.inet_aton(ip_info.get("src", "0.0.0.0"))
+            ip.dst = socket.inet_aton(ip_info.get("dst", "0.0.0.0"))
             ip.ttl = ip_info.get("ttl", 64)
             ip.id = ip_info.get("id", random.randint(0, 65535))
-            ip.p = ip_info.get("proto", 0)  # Protocol
+            ip.p = ip_info.get("proto", 0)
             ip.df = ip_info.get("flags", {}).get("df", 0)
             ip.mf = ip_info.get("flags", {}).get("mf", 0)
             ip.offset = ip_info.get("frag_offset", 0)
             ip.tos = ip_info.get("tos", 0)
             
-            # Tạo giao thức tầng transport dựa vào protocol
+            # Tạo giao thức tầng transport
             if ip.p == IP_PROTO_TCP:
-                # TCP
                 tcp_info = report.get("packet", {}).get("tcp", {})
-                if not tcp_info:
-                    logger.warning("Không tìm thấy thông tin TCP trong báo cáo")
-                    return None
-                
                 tcp = TCP()
                 tcp.sport = tcp_info.get("sport", 0)
                 tcp.dport = tcp_info.get("dport", 0)
                 tcp.seq = tcp_info.get("seq", 0)
                 tcp.ack = tcp_info.get("ack", 0)
                 tcp.flags = 0
-                
-                # Thiết lập các cờ TCP
                 flags_info = tcp_info.get("flags", {})
                 if flags_info.get("fin", 0): tcp.flags |= dpkt.tcp.TH_FIN
                 if flags_info.get("syn", 0): tcp.flags |= dpkt.tcp.TH_SYN
@@ -147,58 +130,84 @@ class JSONtoPCAP:
                 if flags_info.get("psh", 0): tcp.flags |= dpkt.tcp.TH_PUSH
                 if flags_info.get("ack", 0): tcp.flags |= dpkt.tcp.TH_ACK
                 if flags_info.get("urg", 0): tcp.flags |= dpkt.tcp.TH_URG
-                
                 tcp.win = tcp_info.get("window", 8192)
-                tcp.off = tcp_info.get("header_len", 20) // 4  # header length in 32-bit words
-                
-                # Tạo payload cho TCP
-                payload = self._create_payload(report)
-                tcp.data = payload
-                
+                tcp.off = tcp_info.get("header_len", 20) // 4
+                tcp.data = self._create_payload(report)
                 ip.data = tcp
-                
+            
             elif ip.p == IP_PROTO_UDP:
-                # UDP
                 udp_info = report.get("packet", {}).get("udp", {})
-                if not udp_info:
-                    logger.warning("Không tìm thấy thông tin UDP trong báo cáo")
-                    return None
-                
                 udp = UDP()
                 udp.sport = udp_info.get("sport", 0)
                 udp.dport = udp_info.get("dport", 0)
-                
-                # Tạo payload cho UDP
-                payload = self._create_payload(report)
-                udp.data = payload
-                
-                # UDP length được tính tự động
-                
+                udp.data = self._create_payload(report)
                 ip.data = udp
-                
+            
             elif ip.p == IP_PROTO_ICMP:
-                # ICMP
+                icmp_info = report.get("packet", {}).get("icmp", {})
                 icmp = ICMP()
-                icmp.type = 8  # Echo request
-                icmp.code = 0
-                
-                # Tạo payload cho ICMP
-                payload = self._create_payload(report)
-                icmp.data = payload
-                
+                icmp.type = icmp_info.get("type", 8)
+                icmp.code = icmp_info.get("code", 0)
+                icmp.data = self._create_payload(report)
                 ip.data = icmp
             
             else:
-                # Protocol không được hỗ trợ
-                logger.warning(f"Protocol {ip.p} chưa được hỗ trợ")
+                logger.warning(f"Protocol {ip.p} chưa được hỗ trợ cho flow ID: {flow_id}")
                 return None
             
-            # Gán IP packet vào Ethernet frame
             eth.type = ETH_TYPE_IP
             eth.data = ip
-            
             return bytes(eth)
-            
+    
+        except Exception as e:
+            logger.error(f"Lỗi khi tạo gói tin cho flow ID: {flow_id}: {e}")
+            return None
+    
+    def _create_packet_from_packet_info(self, packet_info):
+        """Tạo gói tin từ thông tin packet"""
+        try:
+            # Kiểm tra thông tin bắt buộc
+            required_fields = ["src_ip", "dst_ip", "src_port", "dst_port", "protocol", "payload"]
+            for field in required_fields:
+                if field not in packet_info:
+                    logger.warning(f"Thiếu thông tin {field} trong packet: {packet_info}")
+                    return None
+
+            # Tạo Ethernet frame
+            eth = Ethernet()
+            eth.src = self._generate_mac_address()
+            eth.dst = self._generate_mac_address()
+
+            # Tạo IP packet
+            ip = IP()
+            ip.src = socket.inet_aton(packet_info["src_ip"])
+            ip.dst = socket.inet_aton(packet_info["dst_ip"])
+            ip.p = {"TCP": IP_PROTO_TCP, "UDP": IP_PROTO_UDP, "ICMP": IP_PROTO_ICMP}.get(packet_info["protocol"], 0)
+
+            # Tạo giao thức tầng transport
+            if ip.p == IP_PROTO_UDP:
+                udp = UDP()
+                udp.sport = packet_info["src_port"]
+                udp.dport = packet_info["dst_port"]
+                udp.data = bytes.fromhex(packet_info["payload"])
+                ip.data = udp
+            elif ip.p == IP_PROTO_TCP:
+                tcp = TCP()
+                tcp.sport = packet_info["src_port"]
+                tcp.dport = packet_info["dst_port"]
+                tcp.data = bytes.fromhex(packet_info["payload"])
+                ip.data = tcp
+            elif ip.p == IP_PROTO_ICMP:
+                icmp = ICMP()
+                icmp.data = bytes.fromhex(packet_info["payload"])
+                ip.data = icmp
+            else:
+                logger.warning(f"Giao thức {packet_info['protocol']} chưa được hỗ trợ")
+                return None
+
+            eth.type = ETH_TYPE_IP
+            eth.data = ip
+            return bytes(eth)
         except Exception as e:
             logger.error(f"Lỗi khi tạo gói tin: {e}")
             return None

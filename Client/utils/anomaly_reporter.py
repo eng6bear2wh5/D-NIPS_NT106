@@ -21,6 +21,9 @@ class AnomalyReporter:
         # Hàng đợi để lưu các báo cáo khi không thể gửi ngay
         self.report_queue = queue.Queue(maxsize=queue_size)
         
+        # Biến để lưu trạng thái các luồng
+        self.flow_states = {}
+        
         # Thiết lập logging
         logging.basicConfig(
             level=logging.INFO,
@@ -62,6 +65,45 @@ class AnomalyReporter:
             self.socket.close()
         self.logger.info("Đã dừng reporter thread")
     
+    def _should_send_report(self, flow_id):
+        """Kiểm tra xem có nên gửi báo cáo cho luồng không"""
+        flow = self.flow_states[flow_id]
+        current_time = datetime.now().timestamp()
+        last_time = datetime.fromisoformat(flow["last_time"]).timestamp()
+        # Gửi báo cáo nếu luồng không có gói tin mới trong 5 giây
+        return (current_time - last_time) > 5
+
+    def _create_report(self, flow_id):
+        """Tạo báo cáo từ trạng thái luồng"""
+        flow = self.flow_states[flow_id]
+        
+        # Tính toán điểm bất thường dựa trên dữ liệu thực tế
+        packet_count = flow["packet_count"]
+        byte_count = flow["byte_count"]
+        duration = (datetime.fromisoformat(flow["last_time"]) - datetime.fromisoformat(flow["start_time"])).total_seconds()
+        avg_packet_rate = packet_count / duration if duration > 0 else 0
+        
+        # Giả sử tính điểm bất thường dựa trên tốc độ gói tin
+        score = min(1.0, avg_packet_rate / 100)  # Ví dụ: tốc độ > 100 gói/giây là bất thường
+        flow_score = score * 5  # Quy đổi sang thang điểm 5
+        
+        report = {
+            "flow": {
+                "id": flow_id,
+                "packet_count": packet_count,
+                "byte_count": byte_count,
+                "start_time": flow["start_time"],
+                "last_time": flow["last_time"]
+            },
+            "anomaly": {
+                "score": score,
+                "flow_score": flow_score,
+                "detection_method": "isolation_forest"
+            },
+            "packets": flow["packets"]  # Thêm danh sách các gói tin
+        }
+        return report
+
     def _reporter_loop(self):
         """Loop chính để gửi các báo cáo trong hàng đợi"""
         while self.running:
@@ -70,17 +112,22 @@ class AnomalyReporter:
                 if not self.connect():
                     time.sleep(self.reconnect_interval)
                     continue
-            
+
             # Xử lý các báo cáo trong hàng đợi
             try:
-                if not self.report_queue.empty():
+                batch = []
+                while not self.report_queue.empty() and len(batch) < 10:  # Gửi tối đa 10 báo cáo mỗi lần
                     report = self.report_queue.get(block=False)
-                    self._send_report(report)
+                    batch.append(report)
                     self.report_queue.task_done()
+
+                if batch:
+                    json_data = json.dumps(batch)
+                    message = json_data.encode('utf-8') + b'\n'
+                    self.socket.sendall(message)
+                    self.logger.debug(f"Đã gửi batch {len(batch)} báo cáo")
                 else:
-                    time.sleep(0.1)  # Ngủ một chút nếu không có báo cáo
-            except queue.Empty:
-                time.sleep(0.1)
+                    time.sleep(0.1)
             except Exception as e:
                 self.logger.error(f"Lỗi trong reporter loop: {e}")
                 self.connected = False
@@ -89,20 +136,22 @@ class AnomalyReporter:
     def _send_report(self, report):
         """Gửi báo cáo tới server"""
         try:
-            # Chuyển đổi báo cáo thành JSON và gửi đi
+            report["sent_time"] = datetime.now().isoformat()  # Thêm timestamp
             json_data = json.dumps(report)
-            message = json_data.encode('utf-8') + b'\n'  # Thêm ký tự xuống dòng để phân biệt các báo cáo
+            message = json_data.encode('utf-8') + b'\n'
             self.socket.sendall(message)
             self.logger.debug(f"Đã gửi báo cáo: {report['flow']['id']}")
             return True
         except Exception as e:
             self.logger.error(f"Lỗi khi gửi báo cáo: {e}")
             self.connected = False
-            # Đưa báo cáo lại vào hàng đợi để thử lại sau
+            # Đưa báo cáo lại vào hàng đợi hoặc lưu vào file tạm
             try:
                 self.report_queue.put(report, block=False)
             except queue.Full:
-                self.logger.warning("Hàng đợi báo cáo đầy, bỏ qua báo cáo này")
+                self.logger.warning("Hàng đợi báo cáo đầy, lưu báo cáo vào file tạm")
+                with open("failed_reports.json", "a") as f:
+                    f.write(json.dumps(report) + "\n")
             return False
     
     def report_anomaly(self, packet_info, anomaly_info, raw_packet=None):
@@ -121,104 +170,64 @@ class AnomalyReporter:
             return
         
         # Tạo ID cho luồng
-        if packet_info["protocol"] in ["TCP", "UDP"]:
+        try:
             flow_id = f"{packet_info['src_ip']}:{packet_info['src_port']}-{packet_info['dst_ip']}:{packet_info['dst_port']}-{packet_info['protocol']}"
-        else:
-            flow_id = f"{packet_info['src_ip']}-{packet_info['dst_ip']}-{packet_info['protocol']}"
+        except KeyError as e:
+            self.logger.error(f"Thiếu thông tin trong packet_info: {e}")
+            return
         
-        # Xác định loại giao thức IP
-        ip_proto = 0
-        if packet_info["protocol"] == "TCP":
-            ip_proto = 6
-        elif packet_info["protocol"] == "UDP":
-            ip_proto = 17
-        elif packet_info["protocol"] == "ICMP":
-            ip_proto = 1
-        
-        # Chuẩn bị thông tin về layer giao thức ứng dụng
-        proto_layer = {"type": "unknown"}
-        if packet_info["app_proto"]:
-            proto_layer["type"] = packet_info["app_proto"].lower()
-            # Thông tin chi tiết có thể được bổ sung tùy thuộc vào kiểu giao thức
-        
-        # Tạo thông tin TCP/UDP (nếu có)
-        transport_layer = {}
-        if packet_info["protocol"] == "TCP":
-            # Phân tích các cờ TCP từ details
-            flags = {"syn": 0, "ack": 0, "fin": 0, "rst": 0, "psh": 0, "urg": 0}
-            if "Flags:" in packet_info["details"]:
-                flags_str = packet_info["details"].split("Flags:")[1].strip()
-                for flag in ["SYN", "ACK", "FIN", "RST", "PSH", "URG"]:
-                    if flag in flags_str:
-                        flags[flag.lower()] = 1
-            
-            transport_layer = {
-                "sport": int(packet_info["src_port"]) if packet_info["src_port"] != "N/A" else 0,
-                "dport": int(packet_info["dst_port"]) if packet_info["dst_port"] != "N/A" else 0,
-                "seq": 0,  # Giá trị mặc định vì không có thông tin
-                "ack": 0,  # Giá trị mặc định vì không có thông tin
-                "flags": flags,
-                "window": 0,  # Giá trị mặc định vì không có thông tin
-                "header_len": 20,  # Giá trị TCP header tiêu chuẩn
-                "options": []
-            }
-        elif packet_info["protocol"] == "UDP":
-            transport_layer = {
-                "sport": int(packet_info["src_port"]) if packet_info["src_port"] != "N/A" else 0,
-                "dport": int(packet_info["dst_port"]) if packet_info["dst_port"] != "N/A" else 0,
-                "length": packet_info["size"] - 28  # UDP payload length (gói tin size - IP header - UDP header)
-            }
-        
-        # Tạo báo cáo theo định dạng yêu cầu
+        # Cập nhật trạng thái luồng
         current_time = datetime.now().isoformat()
-        report = {
-            "packet": {
-                "ip": {
-                    "src": packet_info["src_ip"],
-                    "dst": packet_info["dst_ip"],
-                    "proto": ip_proto,
-                    "ttl": 64,  # Giá trị mặc định vì không có thông tin
-                    "id": 0,    # Giá trị mặc định vì không có thông tin
-                    "flags": {
-                        "df": 0,  # Giá trị mặc định vì không có thông tin
-                        "mf": 0   # Giá trị mặc định vì không có thông tin
-                    },
-                    "frag_offset": 0,
-                    "tos": 0,
-                    "options": []
-                }
-            },
-            "flow": {
-                "id": flow_id,
-                "packet_count": 1,  # Có thể cập nhật nếu có thông tin
-                "byte_count": packet_info["size"],
+        if flow_id not in self.flow_states:
+            self.flow_states[flow_id] = {
+                "packet_count": 0,
+                "byte_count": 0,
                 "start_time": current_time,
                 "last_time": current_time,
-                "inter_packet_time": 0  # Có thể cập nhật nếu có thông tin
-            },
-            "proto_layer": proto_layer,
-            "anomaly": {
-                "score": float(anomaly_score),
-                "flow_score": flow_score,
-                "detection_method": "isolation_forest"
+                "packets": []  # Danh sách các gói tin
             }
-        }
         
-        # Thêm thông tin transport layer (TCP/UDP) nếu có
-        if transport_layer:
-            protocol_key = packet_info["protocol"].lower()
-            report["packet"][protocol_key] = transport_layer
+        # Khi cập nhật trạng thái luồng
+        flow = self.flow_states[flow_id]
+        flow["packet_count"] += 1
+        flow["byte_count"] += packet_info["size"]
+        flow["last_time"] = current_time
+
+        # Thêm thông tin gói tin vào danh sách packets
+        flow["packets"].append({
+            "timestamp": current_time,
+            "src_ip": packet_info["src_ip"],
+            "dst_ip": packet_info["dst_ip"],
+            "src_port": packet_info["src_port"],
+            "dst_port": packet_info["dst_port"],
+            "protocol": packet_info["protocol"],
+            "payload": raw_packet.hex() if raw_packet else ""  # Payload dạng hex
+        })
         
-        # Gửi báo cáo
-        try:
-            self.report_queue.put(report, block=False)
-            self.logger.info(f"Đã thêm báo cáo vào hàng đợi: {flow_id}")
-            
-            # Bắt đầu thread gửi báo cáo nếu chưa chạy
-            if not self.running:
-                self.start()
-                
-            return True
-        except queue.Full:
-            self.logger.warning(f"Hàng đợi báo cáo đầy, bỏ qua báo cáo: {flow_id}")
-            return False
+        # Kiểm tra và gửi báo cáo nếu cần thiết
+        if self._should_send_report(flow_id):
+            report = self._create_report(flow_id)
+            self._send_report(report)
+        
+        # Gửi báo cáo tức thì nếu có lỗi xảy ra
+        if anomaly_score > 0.8:
+            # Cập nhật trạng thái luồng
+            flow["packet_count"] += 1
+            flow["byte_count"] += packet_info["size"]
+            flow["last_time"] = current_time
+
+            # Tạo và gửi báo cáo tức thì
+            report = self._create_report(flow_id)
+            self._send_report(report)
+        
+        # Gửi báo cáo định kỳ cho các luồng còn lại
+        for flow_id in list(self.flow_states.keys()):
+            if self._should_send_report(flow_id):
+                report = self._create_report(flow_id)
+                self._send_report(report)
+                # Xóa luồng nếu không còn hoạt động
+                if (datetime.now().timestamp() - datetime.fromisoformat(self.flow_states[flow_id]["last_time"]).timestamp()) > 60:
+                    del self.flow_states[flow_id]
+        
+        self.logger.debug(f"Trạng thái flow_states: {json.dumps(self.flow_states, indent=2)}")
+        self.logger.info(f"Số lượng báo cáo trong hàng đợi: {self.report_queue.qsize()}")
