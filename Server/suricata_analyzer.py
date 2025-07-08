@@ -76,7 +76,7 @@ class SuricataAnalyzer:
                 logger.error(f"Suricata failed with return code {result.returncode}: {result.stderr}")
                 return None
             
-            logger.info("Suricata completed analysis")
+            # logger.info("Suricata completed analysis")
             
             # Path to eve.json
             eve_json = os.path.join(output_dir, "eve.json")

@@ -1,0 +1,57 @@
+{
+  "agent": {
+    "id": "0f32b866-a1c3-421f-bf28-76effb598173",
+    "hostname": "rigil-Legion-R9000P-ARX8",
+    "os": "Linux-6.11.0-26-generic-x86_64-with-Ubuntu-24.04-noble",
+    "agent_ip_addr": "127.0.1.1"
+  },
+  "packet": {
+    "ip": {
+      "src": "34.110.138.217",
+      "dst": "192.168.1.8",
+      "proto": 6,
+      "ttl": 64,
+      "id": 0,
+      "flags": {
+        "df": 0,
+        "mf": 0
+      },
+      "frag_offset": 0,
+      "tos": 0,
+      "options": []
+    },
+    "tcp": {
+      "sport": 443,
+      "dport": 51464,
+      "seq": 0,
+      "ack": 0,
+      "flags": {
+        "syn": 0,
+        "ack": 1,
+        "fin": 0,
+        "rst": 0,
+        "psh": 0,
+        "urg": 0
+      },
+      "window": 0,
+      "header_len": 20,
+      "options": []
+    }
+  },
+  "flow": {
+    "id": "34.110.138.217:443-192.168.1.8:51464-TCP",
+    "packet_count": 1,
+    "byte_count": 66,
+    "start_time": "2025-07-04T23:43:16.458119",
+    "last_time": "2025-07-04T23:43:16.458119",
+    "inter_packet_time": 0
+  },
+  "proto_layer": {
+    "type": "https"
+  },
+  "anomaly": {
+    "score": 0.006937302227767339,
+    "flow_score": 3,
+    "detection_method": "isolation_forest"
+  }
+}

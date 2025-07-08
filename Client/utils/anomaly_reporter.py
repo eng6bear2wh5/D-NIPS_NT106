@@ -5,6 +5,16 @@ import threading
 import queue
 import logging
 from datetime import datetime
+from utils.dh_utils import (
+    deserialize_dh_parameters,
+    generate_dh_private_key,
+    serialize_dh_public_key,
+    deserialize_dh_public_key,
+    derive_aes_key_from_shared,
+    send_message_dh,      
+    recv_message_dh  
+)
+from utils.crypto_util import CryptoUtil 
 
 class AnomalyReporter:
     """
@@ -31,6 +41,61 @@ class AnomalyReporter:
         )
         self.logger = logging.getLogger("AnomalyReporter")
     
+
+        self.crypto_util = None # Sẽ được khởi tạo sau khi trao đổi DH thành công
+        self.aes_key: bytes = None # Khóa AES được dẫn xuất
+        
+    def _perform_dh_key_exchange(self) -> bool:
+            if not self.socket:
+                self.logger.error("Socket không khả dụng cho trao đổi DH.")
+                return False
+            
+            try:
+                self.logger.info("Bắt đầu trao đổi khóa Diffie-Hellman...")
+                self.socket.settimeout(30) # Timeout cho các thao tác socket trong DH
+
+                self.logger.info("Đang nhận tham số DH từ server...")
+                dh_params_pem = recv_message_dh(self.socket) # <--- SỬ DỤNG HÀM MỚI
+                # self.logger.debug(f"Client received DH params PEM (len {len(dh_params_pem)}):\n{dh_params_pem.decode(errors='ignore')}")
+                dh_parameters = deserialize_dh_parameters(dh_params_pem)
+                self.logger.info("Đã nhận và tải tham số DH.")
+
+                self.logger.info("Đang nhận khóa công khai DH của server...")
+                server_public_key_pem = recv_message_dh(self.socket) # <--- SỬ DỤNG HÀM MỚI
+                # self.logger.debug(f"Client received Server Public Key PEM (len {len(server_public_key_pem)}):\n{server_public_key_pem.decode(errors='ignore')}")
+                server_dh_public_key = deserialize_dh_public_key(server_public_key_pem)
+                self.logger.info("Đã nhận khóa công khai DH của server.")
+
+                client_dh_private_key = generate_dh_private_key(dh_parameters)
+                client_dh_public_key = client_dh_private_key.public_key()
+                client_dh_public_key_pem = serialize_dh_public_key(client_dh_public_key)
+
+                self.logger.info("Đang gửi khóa công khai DH của client cho server...")
+                send_message_dh(self.socket, client_dh_public_key_pem) # <--- SỬ DỤNG HÀM MỚI
+                
+                shared_secret_bytes = client_dh_private_key.exchange(server_dh_public_key)
+                
+                self.aes_key = derive_aes_key_from_shared(shared_secret_bytes, key_length_bytes=32)
+                self.crypto_util = CryptoUtil(self.aes_key)
+                
+                self.logger.info(f"Trao đổi khóa Diffie-Hellman thành công. Khóa AES đã được dẫn xuất (4 byte đầu hex: {self.aes_key[:4].hex()}).")
+                self.socket.settimeout(None) 
+                return True
+
+            except (socket.timeout, ConnectionAbortedError, ValueError) as e_dh:
+                self.logger.error(f"Trao đổi khóa DH thất bại: {e_dh}")
+            except Exception as e: 
+                self.logger.error(f"Lỗi trong quá trình xử lý DH: {e}", exc_info=True)
+            
+            if self.socket:
+                try: self.socket.close()
+                except: pass
+            self.socket = None
+            self.crypto_util = None
+            self.aes_key = None
+            return False
+
+
     def connect(self):
         """Kết nối tới server"""
         try:
@@ -41,7 +106,14 @@ class AnomalyReporter:
             self.socket.connect((self.server_host, self.server_port))
             self.connected = True
             self.logger.info(f"Đã kết nối tới server {self.server_host}:{self.server_port}")
+
+            if not self._perform_dh_key_exchange():
+                self.logger.error("Không thể thiết lập phiên bảo mật qua trao đổi khóa DH.")
+                self.connected = False
+                # _perform_dh_key_exchange đã đóng socket nếu lỗi
+                return False
             return True
+        
         except Exception as e:
             self.connected = False
             self.logger.error(f"Lỗi khi kết nối tới server: {e}")
@@ -51,7 +123,7 @@ class AnomalyReporter:
         """Bắt đầu thread gửi báo cáo"""
         if self.running:
             return
-        
+        print("start")
         self.running = True
         self.reporter_thread = threading.Thread(target=self._reporter_loop)
         self.reporter_thread.daemon = True
@@ -132,16 +204,43 @@ class AnomalyReporter:
                 self.logger.error(f"Lỗi trong reporter loop: {e}")
                 self.connected = False
                 time.sleep(self.reconnect_interval)
-    
+
+
+    def _requeue_report(self, report): # Hàm helper để đưa báo cáo lại vào queue
+        if report is None: return # Không đưa tín hiệu dừng vào lại queue
+        try:
+            self.report_queue.put(report, block=False)
+            self.logger.info(f"Đã đưa báo cáo (ID: {report.get('flow', {}).get('id', 'N/A')}) trở lại hàng đợi.")
+        except queue.Full:
+            self.logger.warning(f"Hàng đợi báo cáo đầy, bỏ qua báo cáo (ID: {report.get('flow', {}).get('id', 'N/A')}) sau khi gửi thất bại.")
+
+
     def _send_report(self, report):
         """Gửi báo cáo tới server"""
+
+        if not self.crypto_util: # Kiểm tra crypto_util đã được khởi tạo chưa
+            self.logger.error("CryptoUtil chưa được khởi tạo. Không thể gửi báo cáo mã hóa.")
+            self.connected = False # Đánh dấu mất kết nối vì không thể mã hóa
+            return False
+        
+        if self.socket is None or self.socket.fileno() == -1:
+            self.logger.error("Socket không hợp lệ hoặc đã đóng trước khi gửi báo cáo.")
+            self.connected = False # Đảm bảo trạng thái connected đúng
+            # Không raise ConnectionError ở đây ngay, để _reporter_loop xử lý việc kết nối lại
+            # Thay vào đó, có thể đưa báo cáo lại vào queue và return False
+            self._requeue_report(report) # Đưa lại báo cáo vào queue
+            return False # Báo hiệu gửi thất bại để _reporter_loop thử kết nối lại
+        
         try:
             report["sent_time"] = datetime.now().isoformat()  # Thêm timestamp
             json_data = json.dumps(report)
-            message = json_data.encode('utf-8') + b'\n'
+            payload_to_send = self.crypto_util.encrypt(json_data)
+            message = payload_to_send.encode('utf-8') + b'\n'  # Thêm ký tự xuống dòng để phân biệt các báo cáo
             self.socket.sendall(message)
+            
             self.logger.debug(f"Đã gửi báo cáo: {report['flow']['id']}")
             return True
+        
         except Exception as e:
             self.logger.error(f"Lỗi khi gửi báo cáo: {e}")
             self.connected = False
@@ -154,7 +253,7 @@ class AnomalyReporter:
                     f.write(json.dumps(report) + "\n")
             return False
     
-    def report_anomaly(self, packet_info, anomaly_info, raw_packet=None):
+    def report_anomaly(self, packet_info, anomaly_info, raw_packet=None, agent_id=None, agent_hostname=None, agent_os=None, agent_ip_addr=None):
         """
         Tạo báo cáo bất thường và gửi tới server
         
@@ -166,8 +265,8 @@ class AnomalyReporter:
         is_anomaly, anomaly_score, flow_score = anomaly_info
         
         # Chỉ báo cáo các gói bất thường
-        if is_anomaly != -1 or flow_score < 3:
-            return
+        # if is_anomaly != -1 or flow_score < 3:
+        #     return
         
         # Tạo ID cho luồng
         try:
@@ -211,23 +310,17 @@ class AnomalyReporter:
         
         # Gửi báo cáo tức thì nếu có lỗi xảy ra
         if anomaly_score > 0.8:
-            # Cập nhật trạng thái luồng
-            flow["packet_count"] += 1
-            flow["byte_count"] += packet_info["size"]
-            flow["last_time"] = current_time
-
-            # Tạo và gửi báo cáo tức thì
             report = self._create_report(flow_id)
             self._send_report(report)
         
         # Gửi báo cáo định kỳ cho các luồng còn lại
-        for flow_id in list(self.flow_states.keys()):
-            if self._should_send_report(flow_id):
-                report = self._create_report(flow_id)
+        for fid in list(self.flow_states.keys()):
+            if self._should_send_report(fid):
+                report = self._create_report(fid)
                 self._send_report(report)
                 # Xóa luồng nếu không còn hoạt động
-                if (datetime.now().timestamp() - datetime.fromisoformat(self.flow_states[flow_id]["last_time"]).timestamp()) > 60:
-                    del self.flow_states[flow_id]
+                if (datetime.now().timestamp() - datetime.fromisoformat(self.flow_states[fid]["last_time"]).timestamp()) > 60:
+                    del self.flow_states[fid]
         
         self.logger.debug(f"Trạng thái flow_states: {json.dumps(self.flow_states, indent=2)}")
         self.logger.info(f"Số lượng báo cáo trong hàng đợi: {self.report_queue.qsize()}")
