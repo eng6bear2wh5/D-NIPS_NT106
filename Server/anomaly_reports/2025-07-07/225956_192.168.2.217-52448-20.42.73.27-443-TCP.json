@@ -1,0 +1,35 @@
+{
+  "flow": {
+    "id": "192.168.2.217:52448-20.42.73.27:443-TCP",
+    "packet_count": 2,
+    "byte_count": 368,
+    "start_time": "2025-07-07T22:59:10.584489",
+    "last_time": "2025-07-07T22:59:45.806944"
+  },
+  "anomaly": {
+    "score": 0.0005678195912238373,
+    "flow_score": 0.002839097956119186,
+    "detection_method": "isolation_forest"
+  },
+  "packets": [
+    {
+      "timestamp": "2025-07-07T22:59:10.584489",
+      "src_ip": "192.168.2.217",
+      "dst_ip": "20.42.73.27",
+      "src_port": 52448,
+      "dst_port": 443,
+      "protocol": "TCP",
+      "payload": "c8982842f7552c9c58563b6f0800450000aaa7b94000400671cec0a802d9142a491bcce001bb5bcbb12399c0f1cb801802817c2f00000101080a37867f34136238e01703030071d85a0e38a9182bdb8bc95be97acb11c8db57c21236b31538cd711e38c02aeefb40909e47d9cac5f6252d29e6a586fdbcaa2f7cb95eb662fdb86edd8c6794c8de9fb0573117ec152ae1f561d22cf86a5fa192ca3daff8120997f252830b1fc64ff6d7102c33b93689216b6c6e6df4930df4"
+    },
+    {
+      "timestamp": "2025-07-07T22:59:45.806944",
+      "src_ip": "192.168.2.217",
+      "dst_ip": "20.42.73.27",
+      "src_port": 52448,
+      "dst_port": 443,
+      "protocol": "TCP",
+      "payload": "c8982842f7552c9c58563b6f0800450000aaa7c94000400671bec0a802d9142a491bcce001bb5bcbbb8499c0f25580180281e9ad00000101080a3787eecc1363e9ab170303007196210ecec9d20a782999236faf60292ada90367abe5b2ac019233e2658e37da972afcf6ecb2de3a7ad9fdafa8e4d8bbc30bbb06aaea2de408b2de2c6e9216794bf8ce5fa4982b5f46aaf23cc9a60ed3f2648e50b5139253cf30ea14965be30a4d1df3abb997149553209bf35acf6e7f97d"
+    }
+  ],
+  "sent_time": "2025-07-07T22:59:56.860513"
+}

@@ -1,0 +1,71 @@
+{
+  "flow": {
+    "id": "192.168.2.217:N/A-192.168.2.245:N/A-ICMP",
+    "packet_count": 6,
+    "byte_count": 252,
+    "start_time": "2025-07-07T22:58:56.863696",
+    "last_time": "2025-07-07T22:58:56.873977"
+  },
+  "anomaly": {
+    "score": 1.0,
+    "flow_score": 5.0,
+    "detection_method": "isolation_forest"
+  },
+  "packets": [
+    {
+      "timestamp": "2025-07-07T22:58:56.863696",
+      "src_ip": "192.168.2.217",
+      "dst_ip": "192.168.2.245",
+      "src_port": "N/A",
+      "dst_port": "N/A",
+      "protocol": "ICMP",
+      "payload": "e00af682b1b12c9c58563b6f08004500001c044200004001ef80c0a802d9c0a802f500002cbdcc420700"
+    },
+    {
+      "timestamp": "2025-07-07T22:58:56.865658",
+      "src_ip": "192.168.2.217",
+      "dst_ip": "192.168.2.245",
+      "src_port": "N/A",
+      "dst_port": "N/A",
+      "protocol": "ICMP",
+      "payload": "e00af682b1b12c9c58563b6f08004500001c044300004001ef7fc0a802d9c0a802f500002bbdcc420800"
+    },
+    {
+      "timestamp": "2025-07-07T22:58:56.867771",
+      "src_ip": "192.168.2.217",
+      "dst_ip": "192.168.2.245",
+      "src_port": "N/A",
+      "dst_port": "N/A",
+      "protocol": "ICMP",
+      "payload": "e00af682b1b12c9c58563b6f08004500001c044400004001ef7ec0a802d9c0a802f500002abdcc420900"
+    },
+    {
+      "timestamp": "2025-07-07T22:58:56.869848",
+      "src_ip": "192.168.2.217",
+      "dst_ip": "192.168.2.245",
+      "src_port": "N/A",
+      "dst_port": "N/A",
+      "protocol": "ICMP",
+      "payload": "e00af682b1b12c9c58563b6f08004500001c044500004001ef7dc0a802d9c0a802f5000029bdcc420a00"
+    },
+    {
+      "timestamp": "2025-07-07T22:58:56.871925",
+      "src_ip": "192.168.2.217",
+      "dst_ip": "192.168.2.245",
+      "src_port": "N/A",
+      "dst_port": "N/A",
+      "protocol": "ICMP",
+      "payload": "e00af682b1b12c9c58563b6f08004500001c044600004001ef7cc0a802d9c0a802f5000028bdcc420b00"
+    },
+    {
+      "timestamp": "2025-07-07T22:58:56.873977",
+      "src_ip": "192.168.2.217",
+      "dst_ip": "192.168.2.245",
+      "src_port": "N/A",
+      "dst_port": "N/A",
+      "protocol": "ICMP",
+      "payload": "e00af682b1b12c9c58563b6f08004500001c044700004001ef7bc0a802d9c0a802f5000027bdcc420c00"
+    }
+  ],
+  "sent_time": "2025-07-07T22:59:09.438043"
+}

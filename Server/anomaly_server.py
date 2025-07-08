@@ -43,6 +43,8 @@ HIGH_SEVERITY_ANOMALY_SCORE_THRESHOLD = 0.8
 
 
 
+MAX_CLIENTS = 10
+
 class AnomalyServer:
     def __init__(self, host="0.0.0.0", port=9999, save_dir=None, suricata_bin="suricata", suricata_config=None, suricata_rules_dir=None):
         load_dotenv()
@@ -146,6 +148,11 @@ class AnomalyServer:
             stats_thread.start()
             
             while self.running:
+                if len(self.clients) >= MAX_CLIENTS:
+                    logger.warning("Số lượng client đã đạt giới hạn tối đa.")
+                    time.sleep(1)
+                    continue
+                
                 try:
                     client_socket, addr = self.server_socket.accept()
                     logger.info(f"Đã kết nối từ {addr[0]}:{addr[1]}")
@@ -440,6 +447,8 @@ class AnomalyServer:
             # Cập nhật thống kê
             self.stats["TOTAL_REPORTS"] += 1
             
+        except json.JSONDecodeError:
+            logger.warning(f"Dữ liệu không hợp lệ từ {address[0]}: {report_json}")
         except Exception as e:
             logger.error(f"Lỗi khi xử lý báo cáo từ {address[0]}: {e}")
     
@@ -451,9 +460,8 @@ class AnomalyServer:
             date_dir = os.path.join(self.save_dir, now.strftime("%Y-%m-%d"))
             
             # Tạo thư mục theo ngày nếu chưa tồn tại
-            if not os.path.exists(date_dir):
-                os.makedirs(date_dir)
-
+            os.makedirs(date_dir, exist_ok=True)
+        
             # Tạo tên file
             flow_id = report["flow"]["id"].replace(":", "-").replace("/", "-")
             timestamp = now.strftime("%H%M%S")
@@ -467,13 +475,18 @@ class AnomalyServer:
             file_path = os.path.join(json_files_dir, filename)
             with open(file_path, 'w') as f:
                 json.dump(report, f, indent=2)
-            abs_path = os.path.abspath(file_path)
-            logger.info(f"Đã lưu báo cáo vào file: {file_path}")
-            return abs_path
-            
+
+    
         except Exception as e:
             logger.error(f"Lỗi khi lưu báo cáo: {e}")
-            return None
+            # Lưu vào thư mục tạm thời
+            temp_dir = "./temp_reports"
+            os.makedirs(temp_dir, exist_ok=True)
+            temp_file = os.path.join(temp_dir, f"failed_{timestamp}.json")
+            with open(temp_file, 'w') as f:
+                json.dump(report, f, indent=2)
+            logger.warning(f"Báo cáo đã được lưu tạm thời tại: {temp_file}")
+
     
 
     def _save_report_to_db(self, report):
