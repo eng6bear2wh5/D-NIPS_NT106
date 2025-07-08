@@ -144,10 +144,7 @@ def analyze_pcap_file(pcap_file, model_path="./model/anomaly_model.pkl", agent_i
             if top_flows:
                 print("\n[~] Top 5 luồng có nhiều bất thường nhất:")
                 for flow, count in top_flows:
-                    if len(flow) == 5:  # TCP/UDP
-                        print(f"  - {flow[0]}:{flow[1]} → {flow[2]}:{flow[3]} [{flow[4]}]: {count} bất thường")
-                    else:  # Các giao thức khác
-                        print(f"  - {flow[0]} → {flow[1]} [{flow[2]}]: {count} bất thường")
+                    print(f"  - {flow[0]} → {flow[1]}: {count} bất thường")
             
             # Lưu mô hình nếu có nhiều gói tin
             if len(feature_vectors) > 100:

@@ -40,6 +40,8 @@ class AnomalyReporter:
             format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
         )
         self.logger = logging.getLogger("AnomalyReporter")
+        
+        self.flow_states = {}  # Lưu trạng thái của các luồng
     
 
         self.crypto_util = None # Sẽ được khởi tạo sau khi trao đổi DH thành công
@@ -263,30 +265,29 @@ class AnomalyReporter:
             raw_packet: Dữ liệu gói tin thô (nếu có)
         """
         is_anomaly, anomaly_score, flow_score = anomaly_info
-        
-        # Chỉ báo cáo các gói bất thường
-        # if is_anomaly != -1 or flow_score < 3:
-        #     return
-        
+
+        # Chỉ báo cáo các gói thực sự bất thường (điều kiện có thể chỉnh lại)
+        if is_anomaly == -1 or flow_score < 3:
+            return
+
         # Tạo ID cho luồng
         try:
             flow_id = f"{packet_info['src_ip']}:{packet_info['src_port']}-{packet_info['dst_ip']}:{packet_info['dst_port']}-{packet_info['protocol']}"
-        except KeyError as e:
-            self.logger.error(f"Thiếu thông tin trong packet_info: {e}")
-            return
-        
-        # Cập nhật trạng thái luồng
+        except KeyError:
+            flow_id = f"{packet_info['src_ip']}-{packet_info['dst_ip']}-{packet_info['protocol']}"
+
+        # Lấy thời gian hiện tại
         current_time = datetime.now().isoformat()
+
+        # Cập nhật trạng thái luồng
         if flow_id not in self.flow_states:
             self.flow_states[flow_id] = {
                 "packet_count": 0,
                 "byte_count": 0,
                 "start_time": current_time,
                 "last_time": current_time,
-                "packets": []  # Danh sách các gói tin
+                "packets": []
             }
-        
-        # Khi cập nhật trạng thái luồng
         flow = self.flow_states[flow_id]
         flow["packet_count"] += 1
         flow["byte_count"] += packet_info["size"]
@@ -297,22 +298,22 @@ class AnomalyReporter:
             "timestamp": current_time,
             "src_ip": packet_info["src_ip"],
             "dst_ip": packet_info["dst_ip"],
-            "src_port": packet_info["src_port"],
-            "dst_port": packet_info["dst_port"],
+            "src_port": packet_info.get("src_port"),
+            "dst_port": packet_info.get("dst_port"),
             "protocol": packet_info["protocol"],
-            "payload": raw_packet.hex() if raw_packet else ""  # Payload dạng hex
+            "payload": raw_packet.hex() if raw_packet else ""
         })
-        
+
         # Kiểm tra và gửi báo cáo nếu cần thiết
         if self._should_send_report(flow_id):
             report = self._create_report(flow_id)
             self._send_report(report)
-        
-        # Gửi báo cáo tức thì nếu có lỗi xảy ra
+
+        # Gửi báo cáo tức thì nếu điểm bất thường cao
         if anomaly_score > 0.8:
             report = self._create_report(flow_id)
             self._send_report(report)
-        
+
         # Gửi báo cáo định kỳ cho các luồng còn lại
         for fid in list(self.flow_states.keys()):
             if self._should_send_report(fid):
@@ -321,6 +322,6 @@ class AnomalyReporter:
                 # Xóa luồng nếu không còn hoạt động
                 if (datetime.now().timestamp() - datetime.fromisoformat(self.flow_states[fid]["last_time"]).timestamp()) > 60:
                     del self.flow_states[fid]
-        
+
         self.logger.debug(f"Trạng thái flow_states: {json.dumps(self.flow_states, indent=2)}")
         self.logger.info(f"Số lượng báo cáo trong hàng đợi: {self.report_queue.qsize()}")

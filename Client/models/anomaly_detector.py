@@ -59,20 +59,10 @@ class EnhancedAnomalyDetection:
     
     def extract_features(self, packet_info, timestamp):
         """Trích xuất đặc trưng từ gói tin và luồng gói tin"""
-        if packet_info['protocol'] in ["TCP", "UDP"]:
-            flow_key = (
-                packet_info["src_ip"], 
-                packet_info["src_port"],
-                packet_info["dst_ip"], 
-                packet_info["dst_port"],
-                packet_info["protocol"]
-            )
-        else:
-            flow_key = (
-                packet_info["src_ip"], 
-                packet_info["dst_ip"], 
-                packet_info["protocol"]
-            )
+        flow_key = (
+            packet_info["src_ip"], 
+            packet_info["dst_ip"], 
+        )
         
         # Cập nhật lại hệ thống luồng
         flow = self.flow_stats[flow_key]
