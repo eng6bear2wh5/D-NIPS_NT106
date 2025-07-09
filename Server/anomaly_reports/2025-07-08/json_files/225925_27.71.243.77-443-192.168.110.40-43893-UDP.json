@@ -1,0 +1,45 @@
+{
+  "agent": {
+    "id": "5be515fe-67cc-45b4-ae60-cfb283a716a2",
+    "hostname": "sigma-ASUS-TUF-Gaming-F15-FX506HF-FX506HF",
+    "os": "Linux-6.11.0-17-generic-x86_64-with-glibc2.39",
+    "agent_ip_addr": "127.0.1.1"
+  },
+  "packet": {
+    "ip": {
+      "src": "27.71.243.77",
+      "dst": "192.168.110.40",
+      "proto": 17,
+      "ttl": 64,
+      "id": 0,
+      "flags": {
+        "df": 0,
+        "mf": 0
+      },
+      "frag_offset": 0,
+      "tos": 0,
+      "options": []
+    },
+    "udp": {
+      "sport": 443,
+      "dport": 43893,
+      "length": 156
+    }
+  },
+  "flow": {
+    "id": "27.71.243.77:443-192.168.110.40:43893-UDP",
+    "packet_count": 1,
+    "byte_count": 184,
+    "start_time": "2025-07-08T22:59:24.725504",
+    "last_time": "2025-07-08T22:59:24.725504",
+    "inter_packet_time": 0
+  },
+  "proto_layer": {
+    "type": "https"
+  },
+  "anomaly": {
+    "score": -0.10980840898041688,
+    "flow_score": 3,
+    "detection_method": "isolation_forest"
+  }
+}
