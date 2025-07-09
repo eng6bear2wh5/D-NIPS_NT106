@@ -41053,3 +41053,1654 @@
 2025-07-04 23:44:29,528 - DEBUG - Starting new HTTP connection (1): localhost:5001
 2025-07-04 23:44:29,530 - INFO - 127.0.0.1 - - [04/Jul/2025 23:44:29] "GET /api/get_packets HTTP/1.1" 200 -
 2025-07-04 23:44:29,531 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:22:14,726 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.110.40:5001
+2025-07-09 20:22:14,726 - INFO - [33mPress CTRL+C to quit[0m
+2025-07-09 20:22:14,731 - INFO - Checking icons for Default-theme theme. Icons color: #FFFFFF
+2025-07-09 20:22:14,818 - INFO - Checking icons for Default-theme theme. Icons color: #FFFFFF
+2025-07-09 20:22:14,888 - INFO - Checking icons for qt designer app.
+2025-07-09 20:22:14,957 - INFO - all icons have been checked and missing icons generated!
+2025-07-09 20:22:15,775 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:22:15,776 - INFO - 127.0.0.1 - - [09/Jul/2025 20:22:15] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:22:15,776 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:22:16,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:22:16,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:22:16] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:22:16,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:22:17,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:22:17,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:22:17] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:22:17,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:22:18,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:22:18,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:22:18] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:22:18,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:22:19,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:22:19,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:22:19] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:22:19,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:22:20,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:22:20,773 - INFO - 127.0.0.1 - - [09/Jul/2025 20:22:20] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:22:20,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:22:21,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:22:21,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:22:21] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:22:21,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:22:22,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:22:22,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:22:22] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:22:22,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:22:23,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:22:23,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:22:23] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:22:23,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:22:24,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:22:24,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:22:24] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:22:24,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:22:25,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:22:25,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:22:25] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:22:25,776 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:22:26,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:22:26,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:22:26] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:22:26,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:22:27,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:22:27,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:22:27] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:22:27,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:22:28,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:22:28,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:22:28] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:22:28,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:22:29,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:22:29,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:22:29] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:22:29,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:22:30,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:22:30,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:22:30] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:22:30,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:22:31,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:22:31,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:22:31] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:22:31,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:22:32,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:22:32,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:22:32] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:22:32,776 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:22:33,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:22:33,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:22:33] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:22:33,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:22:34,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:22:34,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:22:34] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:22:34,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:22:35,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:22:35,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:22:35] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:22:35,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:22:36,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:22:36,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:22:36] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:22:36,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:22:37,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:22:37,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:22:37] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:22:37,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:22:38,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:22:38,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:22:38] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:22:38,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:22:39,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:22:39,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:22:39] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:22:39,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:22:40,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:22:40,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:22:40] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:22:40,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:22:41,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:22:41,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:22:41] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:22:41,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:22:42,776 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:22:42,781 - INFO - 127.0.0.1 - - [09/Jul/2025 20:22:42] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:22:42,781 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:22:43,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:22:43,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:22:43] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:22:43,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:22:44,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:22:44,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:22:44] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:22:44,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:22:45,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:22:45,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:22:45] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:22:45,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:22:46,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:22:46,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:22:46] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:22:46,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:22:47,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:22:47,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:22:47] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:22:47,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:22:48,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:22:48,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:22:48] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:22:48,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:22:49,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:22:49,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:22:49] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:22:49,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:22:50,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:22:50,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:22:50] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:22:50,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:22:51,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:22:51,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:22:51] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:22:51,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:22:52,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:22:52,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:22:52] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:22:52,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:22:53,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:22:53,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:22:53] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:22:53,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:22:54,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:22:54,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:22:54] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:22:54,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:22:55,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:22:55,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:22:55] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:22:55,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:22:56,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:22:56,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:22:56] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:22:56,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:22:57,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:22:57,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:22:57] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:22:57,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:22:58,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:22:58,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:22:58] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:22:58,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:22:59,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:22:59,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:22:59] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:22:59,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:23:00,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:23:00,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:23:00] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:23:00,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:23:01,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:23:01,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:23:01] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:23:01,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:23:02,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:23:02,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:23:02] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:23:02,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:23:03,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:23:03,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:23:03] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:23:03,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:23:04,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:23:04,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:23:04] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:23:04,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:23:05,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:23:05,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:23:05] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:23:05,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:23:06,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:23:06,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:23:06] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:23:06,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:23:07,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:23:07,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:23:07] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:23:07,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:23:08,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:23:08,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:23:08] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:23:08,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:23:09,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:23:09,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:23:09] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:23:09,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:23:10,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:23:10,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:23:10] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:23:10,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:23:11,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:23:11,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:23:11] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:23:11,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:23:12,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:23:12,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:23:12] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:23:12,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:23:13,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:23:13,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:23:13] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:23:13,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:23:14,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:23:14,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:23:14] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:23:14,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:23:15,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:23:15,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:23:15] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:23:15,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:23:16,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:23:16,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:23:16] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:23:16,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:23:17,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:23:17,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:23:17] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:23:17,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:23:18,775 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:23:18,776 - INFO - 127.0.0.1 - - [09/Jul/2025 20:23:18] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:23:18,776 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:23:19,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:23:19,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:23:19] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:23:19,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:23:20,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:23:20,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:23:20] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:23:20,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:23:21,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:23:21,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:23:21] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:23:21,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:23:22,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:23:22,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:23:22] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:23:22,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:23:23,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:23:23,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:23:23] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:23:23,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:23:24,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:23:24,773 - INFO - 127.0.0.1 - - [09/Jul/2025 20:23:24] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:23:24,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:23:25,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:23:25,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:23:25] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:23:25,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:23:26,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:23:26,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:23:26] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:23:26,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:23:27,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:23:27,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:23:27] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:23:27,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:23:28,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:23:28,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:23:28] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:23:28,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:23:29,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:23:29,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:23:29] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:23:29,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:23:30,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:23:30,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:23:30] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:23:30,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:23:31,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:23:31,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:23:31] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:23:31,776 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:23:32,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:23:32,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:23:32] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:23:32,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:23:33,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:23:33,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:23:33] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:23:33,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:23:34,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:23:34,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:23:34] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:23:34,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:23:35,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:23:35,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:23:35] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:23:35,776 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:23:36,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:23:36,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:23:36] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:23:36,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:23:37,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:23:37,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:23:37] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:23:37,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:23:38,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:23:38,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:23:38] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:23:38,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:23:39,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:23:39,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:23:39] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:23:39,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:23:40,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:23:40,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:23:40] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:23:40,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:23:41,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:23:41,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:23:41] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:23:41,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:23:42,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:23:42,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:23:42] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:23:42,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:23:43,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:23:43,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:23:43] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:23:43,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:23:44,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:23:44,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:23:44] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:23:44,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:23:45,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:23:45,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:23:45] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:23:45,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:23:46,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:23:46,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:23:46] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:23:46,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:23:47,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:23:47,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:23:47] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:23:47,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:23:48,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:23:48,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:23:48] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:23:48,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:23:49,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:23:49,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:23:49] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:23:49,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:23:50,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:23:50,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:23:50] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:23:50,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:23:51,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:23:51,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:23:51] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:23:51,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:23:52,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:23:52,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:23:52] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:23:52,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:23:53,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:23:53,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:23:53] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:23:53,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:23:54,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:23:54,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:23:54] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:23:54,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:23:55,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:23:55,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:23:55] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:23:55,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:23:56,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:23:56,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:23:56] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:23:56,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:23:57,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:23:57,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:23:57] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:23:57,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:23:58,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:23:58,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:23:58] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:23:58,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:23:59,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:23:59,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:23:59] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:23:59,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:24:00,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:24:00,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:24:00] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:24:00,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:24:01,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:24:01,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:24:01] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:24:01,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:24:02,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:24:02,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:24:02] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:24:02,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:24:03,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:24:03,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:24:03] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:24:03,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:24:04,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:24:04,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:24:04] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:24:04,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:24:05,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:24:05,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:24:05] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:24:05,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:24:06,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:24:06,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:24:06] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:24:06,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:24:07,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:24:07,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:24:07] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:24:07,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:24:08,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:24:08,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:24:08] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:24:08,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:24:09,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:24:09,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:24:09] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:24:09,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:24:10,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:24:10,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:24:10] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:24:10,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:24:11,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:24:11,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:24:11] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:24:11,776 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:24:12,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:24:12,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:24:12] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:24:12,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:24:13,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:24:13,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:24:13] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:24:13,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:24:14,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:24:14,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:24:14] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:24:14,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:24:15,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:24:15,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:24:15] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:24:15,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:24:16,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:24:16,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:24:16] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:24:16,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:24:17,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:24:17,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:24:17] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:24:17,776 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:24:18,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:24:18,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:24:18] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:24:18,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:24:19,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:24:19,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:24:19] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:24:19,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:24:20,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:24:20,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:24:20] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:24:20,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:24:21,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:24:21,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:24:21] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:24:21,776 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:24:22,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:24:22,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:24:22] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:24:22,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:24:23,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:24:23,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:24:23] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:24:23,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:24:24,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:24:24,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:24:24] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:24:24,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:24:25,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:24:25,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:24:25] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:24:25,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:24:26,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:24:26,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:24:26] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:24:26,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:24:27,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:24:27,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:24:27] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:24:27,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:24:28,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:24:28,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:24:28] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:24:28,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:24:29,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:24:29,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:24:29] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:24:29,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:24:30,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:24:30,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:24:30] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:24:30,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:24:31,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:24:31,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:24:31] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:24:31,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:24:32,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:24:32,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:24:32] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:24:32,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:24:33,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:24:33,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:24:33] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:24:33,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:24:34,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:24:34,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:24:34] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:24:34,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:24:35,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:24:35,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:24:35] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:24:35,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:24:36,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:24:36,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:24:36] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:24:36,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:24:37,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:24:37,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:24:37] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:24:37,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:24:38,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:24:38,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:24:38] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:24:38,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:24:39,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:24:39,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:24:39] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:24:39,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:24:40,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:24:40,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:24:40] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:24:40,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:24:41,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:24:41,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:24:41] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:24:41,776 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:24:42,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:24:42,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:24:42] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:24:42,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:24:43,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:24:43,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:24:43] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:24:43,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:24:44,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:24:44,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:24:44] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:24:44,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:24:45,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:24:45,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:24:45] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:24:45,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:24:46,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:24:46,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:24:46] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:24:46,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:24:47,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:24:47,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:24:47] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:24:47,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:24:48,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:24:48,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:24:48] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:24:48,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:24:49,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:24:49,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:24:49] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:24:49,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:24:50,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:24:50,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:24:50] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:24:50,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:24:51,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:24:51,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:24:51] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:24:51,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:24:52,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:24:52,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:24:52] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:24:52,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:24:53,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:24:53,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:24:53] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:24:53,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:24:54,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:24:54,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:24:54] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:24:54,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:24:55,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:24:55,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:24:55] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:24:55,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:24:56,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:24:56,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:24:56] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:24:56,776 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:24:57,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:24:57,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:24:57] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:24:57,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:24:58,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:24:58,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:24:58] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:24:58,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:24:59,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:24:59,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:24:59] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:24:59,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:25:00,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:25:00,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:25:00] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:25:00,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:25:01,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:25:01,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:25:01] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:25:01,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:25:02,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:25:02,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:25:02] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:25:02,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:25:03,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:25:03,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:25:03] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:25:03,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:25:04,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:25:04,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:25:04] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:25:04,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:25:05,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:25:05,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:25:05] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:25:05,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:25:06,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:25:06,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:25:06] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:25:06,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:25:07,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:25:07,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:25:07] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:25:07,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:25:08,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:25:08,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:25:08] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:25:08,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:25:09,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:25:09,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:25:09] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:25:09,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:25:10,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:25:10,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:25:10] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:25:10,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:25:11,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:25:11,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:25:11] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:25:11,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:25:12,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:25:12,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:25:12] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:25:12,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:25:13,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:25:13,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:25:13] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:25:13,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:25:14,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:25:14,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:25:14] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:25:14,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:25:15,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:25:15,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:25:15] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:25:15,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:25:16,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:25:16,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:25:16] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:25:16,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:25:17,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:25:17,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:25:17] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:25:17,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:25:18,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:25:18,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:25:18] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:25:18,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:25:19,298 - INFO - 127.0.0.1 - - [09/Jul/2025 20:25:19] "[35m[1mPOST /api/add_packet HTTP/1.1[0m" 201 -
+2025-07-09 20:25:19,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:25:19,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:25:19] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:25:19,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 250
+2025-07-09 20:25:20,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:25:20,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:25:20] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:25:20,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:25:21,301 - INFO - 127.0.0.1 - - [09/Jul/2025 20:25:21] "[35m[1mPOST /api/add_packet HTTP/1.1[0m" 201 -
+2025-07-09 20:25:21,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:25:21,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:25:21] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:25:21,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 286
+2025-07-09 20:25:22,303 - INFO - 127.0.0.1 - - [09/Jul/2025 20:25:22] "[35m[1mPOST /api/add_packet HTTP/1.1[0m" 201 -
+2025-07-09 20:25:22,775 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:25:22,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:25:22] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:25:22,776 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 4310
+2025-07-09 20:25:23,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:25:23,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:25:23] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:25:23,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:25:24,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:25:24,773 - INFO - 127.0.0.1 - - [09/Jul/2025 20:25:24] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:25:24,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:25:25,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:25:25,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:25:25] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:25:25,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:25:26,772 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:25:26,773 - INFO - 127.0.0.1 - - [09/Jul/2025 20:25:26] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:25:26,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:25:27,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:25:27,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:25:27] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:25:27,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:25:28,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:25:28,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:25:28] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:25:28,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:25:29,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:25:29,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:25:29] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:25:29,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:25:30,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:25:30,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:25:30] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:25:30,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:25:31,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:25:31,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:25:31] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:25:31,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:25:32,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:25:32,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:25:32] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:25:32,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:25:33,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:25:33,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:25:33] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:25:33,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:25:34,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:25:34,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:25:34] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:25:34,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:25:35,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:25:35,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:25:35] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:25:35,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:25:36,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:25:36,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:25:36] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:25:36,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:25:37,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:25:37,773 - INFO - 127.0.0.1 - - [09/Jul/2025 20:25:37] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:25:37,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:25:38,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:25:38,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:25:38] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:25:38,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:25:39,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:25:39,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:25:39] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:25:39,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:25:40,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:25:40,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:25:40] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:25:40,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:25:41,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:25:41,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:25:41] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:25:41,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:25:42,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:25:42,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:25:42] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:25:42,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:25:43,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:25:43,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:25:43] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:25:43,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:25:44,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:25:44,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:25:44] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:25:44,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:25:45,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:25:45,773 - INFO - 127.0.0.1 - - [09/Jul/2025 20:25:45] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:25:45,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:25:46,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:25:46,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:25:46] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:25:46,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:25:47,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:25:47,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:25:47] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:25:47,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:25:48,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:25:48,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:25:48] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:25:48,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:25:49,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:25:49,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:25:49] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:25:49,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:25:50,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:25:50,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:25:50] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:25:50,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:25:51,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:25:51,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:25:51] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:25:51,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:25:52,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:25:52,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:25:52] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:25:52,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:25:53,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:25:53,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:25:53] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:25:53,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:25:54,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:25:54,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:25:54] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:25:54,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:25:55,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:25:55,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:25:55] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:25:55,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:25:56,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:25:56,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:25:56] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:25:56,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:25:57,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:25:57,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:25:57] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:25:57,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:25:58,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:25:58,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:25:58] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:25:58,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:25:59,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:25:59,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:25:59] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:25:59,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:26:00,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:26:00,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:26:00] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:26:00,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:26:01,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:26:01,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:26:01] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:26:01,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:26:02,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:26:02,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:26:02] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:26:02,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:26:03,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:26:03,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:26:03] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:26:03,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:26:04,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:26:04,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:26:04] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:26:04,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:26:05,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:26:05,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:26:05] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:26:05,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:26:06,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:26:06,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:26:06] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:26:06,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:26:07,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:26:07,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:26:07] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:26:07,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:26:08,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:26:08,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:26:08] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:26:08,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:26:09,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:26:09,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:26:09] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:26:09,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:26:10,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:26:10,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:26:10] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:26:10,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:26:11,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:26:11,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:26:11] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:26:11,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:26:12,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:26:12,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:26:12] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:26:12,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:26:13,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:26:13,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:26:13] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:26:13,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:26:14,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:26:14,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:26:14] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:26:14,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:26:15,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:26:15,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:26:15] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:26:15,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:26:16,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:26:16,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:26:16] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:26:16,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:26:17,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:26:17,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:26:17] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:26:17,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:26:18,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:26:18,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:26:18] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:26:18,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:26:19,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:26:19,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:26:19] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:26:19,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:26:20,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:26:20,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:26:20] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:26:20,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:26:21,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:26:21,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:26:21] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:26:21,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:26:22,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:26:22,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:26:22] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:26:22,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:26:23,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:26:23,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:26:23] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:26:23,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:26:24,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:26:24,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:26:24] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:26:24,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:26:25,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:26:25,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:26:25] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:26:25,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:26:26,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:26:26,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:26:26] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:26:26,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:26:27,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:26:27,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:26:27] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:26:27,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:26:28,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:26:28,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:26:28] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:26:28,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:26:29,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:26:29,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:26:29] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:26:29,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:26:30,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:26:30,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:26:30] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:26:30,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:26:31,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:26:31,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:26:31] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:26:31,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:26:32,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:26:32,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:26:32] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:26:32,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:26:33,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:26:33,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:26:33] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:26:33,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:26:34,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:26:34,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:26:34] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:26:34,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:26:35,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:26:35,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:26:35] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:26:35,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:26:36,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:26:36,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:26:36] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:26:36,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:26:37,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:26:37,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:26:37] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:26:37,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:26:38,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:26:38,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:26:38] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:26:38,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:26:39,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:26:39,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:26:39] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:26:39,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:26:40,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:26:40,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:26:40] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:26:40,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:26:41,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:26:41,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:26:41] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:26:41,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:26:42,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:26:42,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:26:42] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:26:42,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:26:43,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:26:43,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:26:43] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:26:43,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:26:44,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:26:44,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:26:44] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:26:44,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:26:45,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:26:45,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:26:45] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:26:45,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:26:46,775 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:26:46,776 - INFO - 127.0.0.1 - - [09/Jul/2025 20:26:46] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:26:46,776 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:26:47,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:26:47,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:26:47] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:26:47,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:26:48,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:26:48,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:26:48] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:26:48,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:26:49,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:26:49,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:26:49] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:26:49,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:26:50,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:26:50,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:26:50] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:26:50,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:26:51,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:26:51,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:26:51] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:26:51,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:26:52,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:26:52,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:26:52] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:26:52,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:26:53,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:26:53,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:26:53] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:26:53,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:26:54,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:26:54,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:26:54] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:26:54,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:26:55,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:26:55,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:26:55] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:26:55,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:26:56,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:26:56,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:26:56] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:26:56,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:26:57,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:26:57,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:26:57] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:26:57,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:26:58,808 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:26:58,809 - INFO - 127.0.0.1 - - [09/Jul/2025 20:26:58] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:26:58,810 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:26:59,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:26:59,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:26:59] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:26:59,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:27:00,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:27:00,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:27:00] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:27:00,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:27:01,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:27:01,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:27:01] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:27:01,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:27:02,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:27:02,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:27:02] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:27:02,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:27:03,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:27:03,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:27:03] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:27:03,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:27:04,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:27:04,773 - INFO - 127.0.0.1 - - [09/Jul/2025 20:27:04] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:27:04,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:27:05,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:27:05,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:27:05] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:27:05,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:27:06,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:27:06,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:27:06] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:27:06,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:27:07,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:27:07,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:27:07] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:27:07,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:27:08,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:27:08,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:27:08] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:27:08,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:27:09,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:27:09,773 - INFO - 127.0.0.1 - - [09/Jul/2025 20:27:09] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:27:09,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:27:10,785 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:27:10,786 - INFO - 127.0.0.1 - - [09/Jul/2025 20:27:10] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:27:10,786 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:27:11,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:27:11,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:27:11] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:27:11,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:27:12,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:27:12,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:27:12] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:27:12,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:27:13,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:27:13,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:27:13] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:27:13,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:27:14,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:27:14,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:27:14] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:27:14,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:27:15,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:27:15,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:27:15] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:27:15,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:27:16,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:27:16,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:27:16] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:27:16,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:27:17,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:27:17,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:27:17] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:27:17,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:27:18,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:27:18,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:27:18] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:27:18,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:27:19,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:27:19,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:27:19] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:27:19,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:27:20,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:27:20,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:27:20] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:27:20,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:27:21,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:27:21,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:27:21] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:27:21,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:27:22,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:27:22,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:27:22] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:27:22,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:27:23,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:27:23,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:27:23] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:27:23,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:27:24,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:27:24,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:27:24] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:27:24,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:27:25,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:27:25,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:27:25] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:27:25,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:27:26,775 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:27:26,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:27:26] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:27:26,776 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:27:27,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:27:27,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:27:27] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:27:27,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:27:28,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:27:28,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:27:28] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:27:28,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:27:29,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:27:29,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:27:29] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:27:29,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:27:30,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:27:30,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:27:30] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:27:30,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:27:31,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:27:31,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:27:31] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:27:31,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:27:32,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:27:32,773 - INFO - 127.0.0.1 - - [09/Jul/2025 20:27:32] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:27:32,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:27:33,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:27:33,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:27:33] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:27:33,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:27:34,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:27:34,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:27:34] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:27:34,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:27:35,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:27:35,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:27:35] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:27:35,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:27:36,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:27:36,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:27:36] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:27:36,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:27:37,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:27:37,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:27:37] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:27:37,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:27:38,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:27:38,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:27:38] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:27:38,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:27:39,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:27:39,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:27:39] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:27:39,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:27:40,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:27:40,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:27:40] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:27:40,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:27:41,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:27:41,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:27:41] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:27:41,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:27:42,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:27:42,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:27:42] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:27:42,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:27:43,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:27:43,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:27:43] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:27:43,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:27:44,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:27:44,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:27:44] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:27:44,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:27:45,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:27:45,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:27:45] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:27:45,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:27:46,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:27:46,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:27:46] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:27:46,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:27:47,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:27:47,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:27:47] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:27:47,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:27:48,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:27:48,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:27:48] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:27:48,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:27:49,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:27:49,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:27:49] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:27:49,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:27:50,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:27:50,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:27:50] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:27:50,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:27:51,775 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:27:51,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:27:51] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:27:51,776 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:27:52,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:27:52,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:27:52] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:27:52,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:27:53,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:27:53,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:27:53] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:27:53,778 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:27:54,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:27:54,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:27:54] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:27:54,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:27:55,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:27:55,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:27:55] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:27:55,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:27:56,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:27:56,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:27:56] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:27:56,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:27:57,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:27:57,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:27:57] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:27:57,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:27:58,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:27:58,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:27:58] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:27:58,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:27:59,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:27:59,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:27:59] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:27:59,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:28:00,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:28:00,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:28:00] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:28:00,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:28:01,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:28:01,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:28:01] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:28:01,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:28:02,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:28:02,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:28:02] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:28:02,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:28:03,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:28:03,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:28:03] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:28:03,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:28:04,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:28:04,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:28:04] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:28:04,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:28:05,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:28:05,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:28:05] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:28:05,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:28:06,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:28:06,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:28:06] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:28:06,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:28:07,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:28:07,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:28:07] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:28:07,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:28:08,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:28:08,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:28:08] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:28:08,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:28:09,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:28:09,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:28:09] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:28:09,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:28:10,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:28:10,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:28:10] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:28:10,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:28:11,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:28:11,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:28:11] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:28:11,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:28:12,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:28:12,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:28:12] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:28:12,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:28:13,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:28:13,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:28:13] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:28:13,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:28:14,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:28:14,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:28:14] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:28:14,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:28:15,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:28:15,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:28:15] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:28:15,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:28:16,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:28:16,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:28:16] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:28:16,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:28:17,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:28:17,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:28:17] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:28:17,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:28:18,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:28:18,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:28:18] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:28:18,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:28:19,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:28:19,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:28:19] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:28:19,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:28:20,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:28:20,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:28:20] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:28:20,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:28:21,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:28:21,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:28:21] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:28:21,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:28:22,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:28:22,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:28:22] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:28:22,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:28:23,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:28:23,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:28:23] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:28:23,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:28:24,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:28:24,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:28:24] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:28:24,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:28:25,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:28:25,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:28:25] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:28:25,778 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:28:26,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:28:26,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:28:26] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:28:26,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:28:27,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:28:27,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:28:27] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:28:27,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:28:28,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:28:28,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:28:28] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:28:28,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:28:29,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:28:29,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:28:29] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:28:29,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:28:30,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:28:30,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:28:30] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:28:30,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:28:31,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:28:31,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:28:31] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:28:31,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:28:32,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:28:32,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:28:32] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:28:32,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:28:33,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:28:33,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:28:33] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:28:33,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:28:34,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:28:34,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:28:34] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:28:34,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:28:35,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:28:35,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:28:35] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:28:35,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:28:36,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:28:36,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:28:36] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:28:36,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:28:37,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:28:37,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:28:37] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:28:37,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:28:38,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:28:38,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:28:38] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:28:38,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:28:39,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:28:39,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:28:39] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:28:39,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:28:40,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:28:40,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:28:40] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:28:40,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:28:41,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:28:41,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:28:41] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:28:41,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:28:42,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:28:42,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:28:42] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:28:42,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:28:43,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:28:43,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:28:43] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:28:43,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:28:44,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:28:44,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:28:44] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:28:44,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:28:45,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:28:45,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:28:45] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:28:45,776 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:28:46,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:28:46,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:28:46] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:28:46,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:28:47,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:28:47,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:28:47] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:28:47,776 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:28:48,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:28:48,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:28:48] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:28:48,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:28:49,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:28:49,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:28:49] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:28:49,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:28:50,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:28:50,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:28:50] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:28:50,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:28:51,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:28:51,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:28:51] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:28:51,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:28:52,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:28:52,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:28:52] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:28:52,776 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:28:53,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:28:53,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:28:53] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:28:53,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:28:54,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:28:54,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:28:54] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:28:54,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:28:55,775 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:28:55,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:28:55] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:28:55,776 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:28:56,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:28:56,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:28:56] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:28:56,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:28:57,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:28:57,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:28:57] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:28:57,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:28:58,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:28:58,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:28:58] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:28:58,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:28:59,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:28:59,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:28:59] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:28:59,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:29:00,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:29:00,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:29:00] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:29:00,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:29:01,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:29:01,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:29:01] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:29:01,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:29:02,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:29:02,773 - INFO - 127.0.0.1 - - [09/Jul/2025 20:29:02] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:29:02,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:29:03,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:29:03,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:29:03] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:29:03,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:29:04,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:29:04,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:29:04] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:29:04,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:29:05,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:29:05,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:29:05] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:29:05,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:29:06,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:29:06,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:29:06] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:29:06,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:29:07,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:29:07,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:29:07] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:29:07,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:29:08,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:29:08,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:29:08] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:29:08,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:29:09,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:29:09,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:29:09] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:29:09,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:29:10,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:29:10,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:29:10] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:29:10,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:29:11,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:29:11,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:29:11] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:29:11,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:29:12,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:29:12,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:29:12] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:29:12,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:29:13,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:29:13,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:29:13] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:29:13,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:29:14,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:29:14,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:29:14] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:29:14,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:29:15,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:29:15,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:29:15] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:29:15,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:29:16,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:29:16,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:29:16] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:29:16,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:29:17,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:29:17,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:29:17] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:29:17,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:29:18,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:29:18,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:29:18] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:29:18,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:29:19,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:29:19,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:29:19] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:29:19,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:29:20,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:29:20,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:29:20] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:29:20,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:29:21,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:29:21,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:29:21] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:29:21,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:29:22,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:29:22,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:29:22] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:29:22,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:29:23,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:29:23,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:29:23] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:29:23,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:29:24,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:29:24,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:29:24] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:29:24,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:29:25,775 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:29:25,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:29:25] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:29:25,776 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:29:26,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:29:26,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:29:26] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:29:26,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:29:27,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:29:27,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:29:27] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:29:27,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:29:28,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:29:28,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:29:28] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:29:28,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:29:29,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:29:29,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:29:29] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:29:29,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:29:30,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:29:30,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:29:30] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:29:30,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:29:31,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:29:31,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:29:31] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:29:31,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:29:32,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:29:32,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:29:32] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:29:32,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:29:33,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:29:33,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:29:33] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:29:33,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:29:34,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:29:34,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:29:34] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:29:34,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:29:35,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:29:35,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:29:35] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:29:35,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:29:36,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:29:36,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:29:36] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:29:36,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:29:37,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:29:37,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:29:37] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:29:37,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:29:38,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:29:38,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:29:38] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:29:38,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:29:39,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:29:39,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:29:39] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:29:39,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:29:40,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:29:40,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:29:40] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:29:40,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:29:41,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:29:41,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:29:41] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:29:41,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:29:42,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:29:42,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:29:42] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:29:42,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:29:43,775 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:29:43,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:29:43] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:29:43,776 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:29:44,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:29:44,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:29:44] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:29:44,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:29:45,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:29:45,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:29:45] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:29:45,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:29:46,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:29:46,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:29:46] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:29:46,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:29:47,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:29:47,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:29:47] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:29:47,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:29:48,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:29:48,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:29:48] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:29:48,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:29:49,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:29:49,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:29:49] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:29:49,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:29:50,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:29:50,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:29:50] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:29:50,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:29:51,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:29:51,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:29:51] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:29:51,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:29:52,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:29:52,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:29:52] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:29:52,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:29:53,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:29:53,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:29:53] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:29:53,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:29:54,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:29:54,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:29:54] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:29:54,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:29:55,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:29:55,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:29:55] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:29:55,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:29:56,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:29:56,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:29:56] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:29:56,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:29:57,776 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:29:57,780 - INFO - 127.0.0.1 - - [09/Jul/2025 20:29:57] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:29:57,780 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:29:58,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:29:58,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:29:58] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:29:58,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:29:59,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:29:59,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:29:59] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:29:59,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:30:00,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:30:00,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:30:00] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:30:00,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:30:01,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:30:01,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:30:01] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:30:01,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:30:02,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:30:02,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:30:02] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:30:02,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:30:03,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:30:03,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:30:03] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:30:03,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:30:04,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:30:04,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:30:04] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:30:04,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:30:05,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:30:05,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:30:05] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:30:05,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:30:06,774 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:30:06,775 - INFO - 127.0.0.1 - - [09/Jul/2025 20:30:06] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:30:06,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:30:07,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:30:07,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:30:07] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:30:07,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:30:08,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:30:08,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:30:08] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:30:08,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:30:09,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:30:09,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:30:09] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:30:09,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:30:10,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:30:10,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:30:10] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:30:10,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:30:11,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:30:11,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:30:11] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:30:11,775 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:30:12,773 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:30:12,774 - INFO - 127.0.0.1 - - [09/Jul/2025 20:30:12] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:30:12,774 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:30:24,254 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.110.40:5001
+2025-07-09 20:30:24,254 - INFO - [33mPress CTRL+C to quit[0m
+2025-07-09 20:30:24,428 - INFO - Checking icons for Default-theme theme. Icons color: #FFFFFF
+2025-07-09 20:30:24,515 - INFO - Checking icons for Default-theme theme. Icons color: #FFFFFF
+2025-07-09 20:30:24,587 - INFO - Checking icons for qt designer app.
+2025-07-09 20:30:24,661 - INFO - all icons have been checked and missing icons generated!
+2025-07-09 20:30:25,398 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:30:25,399 - INFO - 127.0.0.1 - - [09/Jul/2025 20:30:25] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:30:25,400 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:30:26,348 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:30:26,349 - INFO - 127.0.0.1 - - [09/Jul/2025 20:30:26] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:30:26,349 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:30:27,298 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:30:27,299 - INFO - 127.0.0.1 - - [09/Jul/2025 20:30:27] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:30:27,299 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:30:28,276 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:30:28,280 - INFO - 127.0.0.1 - - [09/Jul/2025 20:30:28] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:30:28,281 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:30:29,274 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:30:29,274 - INFO - 127.0.0.1 - - [09/Jul/2025 20:30:29] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:30:29,275 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:30:30,274 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:30:30,275 - INFO - 127.0.0.1 - - [09/Jul/2025 20:30:30] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:30:30,275 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:30:31,273 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:30:31,274 - INFO - 127.0.0.1 - - [09/Jul/2025 20:30:31] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:30:31,274 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:30:32,273 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:30:32,274 - INFO - 127.0.0.1 - - [09/Jul/2025 20:30:32] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:30:32,275 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:30:33,273 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:30:33,274 - INFO - 127.0.0.1 - - [09/Jul/2025 20:30:33] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:30:33,274 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:30:34,274 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:30:34,275 - INFO - 127.0.0.1 - - [09/Jul/2025 20:30:34] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:30:34,275 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:30:35,274 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:30:35,275 - INFO - 127.0.0.1 - - [09/Jul/2025 20:30:35] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:30:35,276 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:30:36,275 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:30:36,275 - INFO - 127.0.0.1 - - [09/Jul/2025 20:30:36] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:30:36,276 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:30:37,274 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:30:37,275 - INFO - 127.0.0.1 - - [09/Jul/2025 20:30:37] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:30:37,275 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:30:38,274 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:30:38,274 - INFO - 127.0.0.1 - - [09/Jul/2025 20:30:38] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:30:38,275 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:30:39,274 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:30:39,274 - INFO - 127.0.0.1 - - [09/Jul/2025 20:30:39] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:30:39,275 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:30:40,274 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:30:40,275 - INFO - 127.0.0.1 - - [09/Jul/2025 20:30:40] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:30:40,275 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:30:41,273 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:30:41,274 - INFO - 127.0.0.1 - - [09/Jul/2025 20:30:41] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:30:41,275 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:30:42,274 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:30:42,274 - INFO - 127.0.0.1 - - [09/Jul/2025 20:30:42] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:30:42,275 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:30:43,274 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:30:43,275 - INFO - 127.0.0.1 - - [09/Jul/2025 20:30:43] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:30:43,275 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:30:44,274 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:30:44,275 - INFO - 127.0.0.1 - - [09/Jul/2025 20:30:44] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:30:44,275 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:30:45,273 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:30:45,274 - INFO - 127.0.0.1 - - [09/Jul/2025 20:30:45] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:30:45,274 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:30:46,273 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:30:46,274 - INFO - 127.0.0.1 - - [09/Jul/2025 20:30:46] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:30:46,274 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:30:47,274 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:30:47,275 - INFO - 127.0.0.1 - - [09/Jul/2025 20:30:47] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:30:47,275 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:30:48,274 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:30:48,274 - INFO - 127.0.0.1 - - [09/Jul/2025 20:30:48] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:30:48,275 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:30:49,274 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:30:49,274 - INFO - 127.0.0.1 - - [09/Jul/2025 20:30:49] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:30:49,275 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:30:50,274 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:30:50,274 - INFO - 127.0.0.1 - - [09/Jul/2025 20:30:50] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:30:50,275 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:30:51,273 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:30:51,274 - INFO - 127.0.0.1 - - [09/Jul/2025 20:30:51] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:30:51,274 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:30:52,273 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:30:52,274 - INFO - 127.0.0.1 - - [09/Jul/2025 20:30:52] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:30:52,274 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:30:53,273 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:30:53,274 - INFO - 127.0.0.1 - - [09/Jul/2025 20:30:53] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:30:53,274 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:30:54,273 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:30:54,274 - INFO - 127.0.0.1 - - [09/Jul/2025 20:30:54] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:30:54,274 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:30:55,274 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:30:55,274 - INFO - 127.0.0.1 - - [09/Jul/2025 20:30:55] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:30:55,275 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:30:56,274 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:30:56,274 - INFO - 127.0.0.1 - - [09/Jul/2025 20:30:56] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:30:56,275 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:30:57,274 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:30:57,274 - INFO - 127.0.0.1 - - [09/Jul/2025 20:30:57] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:30:57,275 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:30:58,274 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:30:58,274 - INFO - 127.0.0.1 - - [09/Jul/2025 20:30:58] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:30:58,275 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:30:59,274 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:30:59,274 - INFO - 127.0.0.1 - - [09/Jul/2025 20:30:59] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:30:59,275 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:31:00,274 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:31:00,275 - INFO - 127.0.0.1 - - [09/Jul/2025 20:31:00] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:31:00,275 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:31:01,273 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:31:01,274 - INFO - 127.0.0.1 - - [09/Jul/2025 20:31:01] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:31:01,275 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:31:02,274 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:31:02,275 - INFO - 127.0.0.1 - - [09/Jul/2025 20:31:02] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:31:02,275 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:31:03,273 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:31:03,274 - INFO - 127.0.0.1 - - [09/Jul/2025 20:31:03] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:31:03,274 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:31:04,274 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:31:04,275 - INFO - 127.0.0.1 - - [09/Jul/2025 20:31:04] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:31:04,275 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:31:05,274 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:31:05,274 - INFO - 127.0.0.1 - - [09/Jul/2025 20:31:05] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:31:05,275 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:31:06,274 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:31:06,274 - INFO - 127.0.0.1 - - [09/Jul/2025 20:31:06] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:31:06,275 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:31:07,273 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:31:07,274 - INFO - 127.0.0.1 - - [09/Jul/2025 20:31:07] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:31:07,274 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:31:08,274 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:31:08,274 - INFO - 127.0.0.1 - - [09/Jul/2025 20:31:08] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:31:08,275 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:31:09,273 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:31:09,274 - INFO - 127.0.0.1 - - [09/Jul/2025 20:31:09] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:31:09,274 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:31:10,273 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:31:10,274 - INFO - 127.0.0.1 - - [09/Jul/2025 20:31:10] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:31:10,274 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:31:11,273 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:31:11,274 - INFO - 127.0.0.1 - - [09/Jul/2025 20:31:11] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:31:11,274 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:31:12,274 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:31:12,274 - INFO - 127.0.0.1 - - [09/Jul/2025 20:31:12] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:31:12,275 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:31:13,273 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:31:13,274 - INFO - 127.0.0.1 - - [09/Jul/2025 20:31:13] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:31:13,274 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:31:14,273 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:31:14,274 - INFO - 127.0.0.1 - - [09/Jul/2025 20:31:14] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:31:14,274 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:31:15,274 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:31:15,275 - INFO - 127.0.0.1 - - [09/Jul/2025 20:31:15] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:31:15,275 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:31:16,273 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:31:16,274 - INFO - 127.0.0.1 - - [09/Jul/2025 20:31:16] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:31:16,275 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:31:17,274 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:31:17,274 - INFO - 127.0.0.1 - - [09/Jul/2025 20:31:17] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:31:17,275 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:31:18,274 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:31:18,275 - INFO - 127.0.0.1 - - [09/Jul/2025 20:31:18] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:31:18,275 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:31:19,274 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:31:19,274 - INFO - 127.0.0.1 - - [09/Jul/2025 20:31:19] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:31:19,275 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:31:20,274 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:31:20,275 - INFO - 127.0.0.1 - - [09/Jul/2025 20:31:20] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:31:20,275 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:31:21,274 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:31:21,274 - INFO - 127.0.0.1 - - [09/Jul/2025 20:31:21] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:31:21,275 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:31:22,274 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:31:22,274 - INFO - 127.0.0.1 - - [09/Jul/2025 20:31:22] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:31:22,275 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:31:23,274 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:31:23,275 - INFO - 127.0.0.1 - - [09/Jul/2025 20:31:23] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:31:23,275 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:31:24,274 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:31:24,274 - INFO - 127.0.0.1 - - [09/Jul/2025 20:31:24] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:31:24,275 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:31:25,274 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:31:25,274 - INFO - 127.0.0.1 - - [09/Jul/2025 20:31:25] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:31:25,275 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:31:26,274 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:31:26,275 - INFO - 127.0.0.1 - - [09/Jul/2025 20:31:26] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:31:26,275 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:31:26,919 - INFO - 127.0.0.1 - - [09/Jul/2025 20:31:26] "[35m[1mPOST /api/add_packet HTTP/1.1[0m" 201 -
+2025-07-09 20:31:27,274 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:31:27,274 - INFO - 127.0.0.1 - - [09/Jul/2025 20:31:27] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:31:27,275 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 1844
+2025-07-09 20:31:28,273 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:31:28,274 - INFO - 127.0.0.1 - - [09/Jul/2025 20:31:28] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:31:28,275 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
+2025-07-09 20:31:29,273 - DEBUG - Starting new HTTP connection (1): localhost:5001
+2025-07-09 20:31:29,274 - INFO - 127.0.0.1 - - [09/Jul/2025 20:31:29] "GET /api/get_packets HTTP/1.1" 200 -
+2025-07-09 20:31:29,274 - DEBUG - http://localhost:5001 "GET /api/get_packets HTTP/1.1" 200 3
