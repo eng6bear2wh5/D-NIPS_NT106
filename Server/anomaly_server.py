@@ -57,7 +57,6 @@ class AnomalyServer:
         self.SERVER_DH_PARAMETERS: dh.DHParameters = None
         self.SERVER_DH_PARAMETERS_PEM: bytes = None
 
-
         self.save_dir = save_dir
         self.json_subdir_name = "json_files"
         self.pcap_subdir_name = "pcap_files"
