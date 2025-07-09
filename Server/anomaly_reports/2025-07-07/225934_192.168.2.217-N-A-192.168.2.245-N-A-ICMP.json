@@ -1,0 +1,206 @@
+{
+  "flow": {
+    "id": "192.168.2.217:N/A-192.168.2.245:N/A-ICMP",
+    "packet_count": 21,
+    "byte_count": 882,
+    "start_time": "2025-07-07T22:58:56.863696",
+    "last_time": "2025-07-07T22:59:28.813145"
+  },
+  "anomaly": {
+    "score": 0.006572883307001632,
+    "flow_score": 0.03286441653500816,
+    "detection_method": "isolation_forest"
+  },
+  "packets": [
+    {
+      "timestamp": "2025-07-07T22:58:56.863696",
+      "src_ip": "192.168.2.217",
+      "dst_ip": "192.168.2.245",
+      "src_port": "N/A",
+      "dst_port": "N/A",
+      "protocol": "ICMP",
+      "payload": "e00af682b1b12c9c58563b6f08004500001c044200004001ef80c0a802d9c0a802f500002cbdcc420700"
+    },
+    {
+      "timestamp": "2025-07-07T22:58:56.865658",
+      "src_ip": "192.168.2.217",
+      "dst_ip": "192.168.2.245",
+      "src_port": "N/A",
+      "dst_port": "N/A",
+      "protocol": "ICMP",
+      "payload": "e00af682b1b12c9c58563b6f08004500001c044300004001ef7fc0a802d9c0a802f500002bbdcc420800"
+    },
+    {
+      "timestamp": "2025-07-07T22:58:56.867771",
+      "src_ip": "192.168.2.217",
+      "dst_ip": "192.168.2.245",
+      "src_port": "N/A",
+      "dst_port": "N/A",
+      "protocol": "ICMP",
+      "payload": "e00af682b1b12c9c58563b6f08004500001c044400004001ef7ec0a802d9c0a802f500002abdcc420900"
+    },
+    {
+      "timestamp": "2025-07-07T22:58:56.869848",
+      "src_ip": "192.168.2.217",
+      "dst_ip": "192.168.2.245",
+      "src_port": "N/A",
+      "dst_port": "N/A",
+      "protocol": "ICMP",
+      "payload": "e00af682b1b12c9c58563b6f08004500001c044500004001ef7dc0a802d9c0a802f5000029bdcc420a00"
+    },
+    {
+      "timestamp": "2025-07-07T22:58:56.871925",
+      "src_ip": "192.168.2.217",
+      "dst_ip": "192.168.2.245",
+      "src_port": "N/A",
+      "dst_port": "N/A",
+      "protocol": "ICMP",
+      "payload": "e00af682b1b12c9c58563b6f08004500001c044600004001ef7cc0a802d9c0a802f5000028bdcc420b00"
+    },
+    {
+      "timestamp": "2025-07-07T22:58:56.873977",
+      "src_ip": "192.168.2.217",
+      "dst_ip": "192.168.2.245",
+      "src_port": "N/A",
+      "dst_port": "N/A",
+      "protocol": "ICMP",
+      "payload": "e00af682b1b12c9c58563b6f08004500001c044700004001ef7bc0a802d9c0a802f5000027bdcc420c00"
+    },
+    {
+      "timestamp": "2025-07-07T22:59:09.451180",
+      "src_ip": "192.168.2.217",
+      "dst_ip": "192.168.2.245",
+      "src_port": "N/A",
+      "dst_port": "N/A",
+      "protocol": "ICMP",
+      "payload": "e00af682b1b12c9c58563b6f08004500001c9517000040015eabc0a802d9c0a802f500005c87cc42d735"
+    },
+    {
+      "timestamp": "2025-07-07T22:59:09.534654",
+      "src_ip": "192.168.2.217",
+      "dst_ip": "192.168.2.245",
+      "src_port": "N/A",
+      "dst_port": "N/A",
+      "protocol": "ICMP",
+      "payload": "e00af682b1b12c9c58563b6f08004500001ca09500004001532dc0a802d9c0a802f50000057ecc422e3f"
+    },
+    {
+      "timestamp": "2025-07-07T22:59:11.891669",
+      "src_ip": "192.168.2.217",
+      "dst_ip": "192.168.2.245",
+      "src_port": "N/A",
+      "dst_port": "N/A",
+      "protocol": "ICMP",
+      "payload": "e00af682b1b12c9c58563b6f08004500001cc0a9000040013319c0a802d9c0a802f500001164cc422259"
+    },
+    {
+      "timestamp": "2025-07-07T22:59:13.068048",
+      "src_ip": "192.168.2.217",
+      "dst_ip": "192.168.2.245",
+      "src_port": "N/A",
+      "dst_port": "N/A",
+      "protocol": "ICMP",
+      "payload": "e00af682b1b12c9c58563b6f08004500001cc817000040012babc0a802d9c0a802f50000435ecc42f05e"
+    },
+    {
+      "timestamp": "2025-07-07T22:59:13.154817",
+      "src_ip": "192.168.2.217",
+      "dst_ip": "192.168.2.245",
+      "src_port": "N/A",
+      "dst_port": "N/A",
+      "protocol": "ICMP",
+      "payload": "e00af682b1b12c9c58563b6f08004500001cd36c000040012056c0a802d9c0a802f50000ef56cc424466"
+    },
+    {
+      "timestamp": "2025-07-07T22:59:13.164077",
+      "src_ip": "192.168.2.217",
+      "dst_ip": "192.168.2.245",
+      "src_port": "N/A",
+      "dst_port": "N/A",
+      "protocol": "ICMP",
+      "payload": "e00af682b1b12c9c58563b6f08004500001cd494000040011f2ec0a802d9c0a802f500002c56cc420767"
+    },
+    {
+      "timestamp": "2025-07-07T22:59:13.187824",
+      "src_ip": "192.168.2.217",
+      "dst_ip": "192.168.2.245",
+      "src_port": "N/A",
+      "dst_port": "N/A",
+      "protocol": "ICMP",
+      "payload": "e00af682b1b12c9c58563b6f08004500001cd773000040011c4fc0a802d9c0a802f500002054cc421369"
+    },
+    {
+      "timestamp": "2025-07-07T22:59:15.790564",
+      "src_ip": "192.168.2.217",
+      "dst_ip": "192.168.2.245",
+      "src_port": "N/A",
+      "dst_port": "N/A",
+      "protocol": "ICMP",
+      "payload": "e00af682b1b12c9c58563b6f08004500001cf3dd00004001ffe4c0a802d9c0a802f50000823fcc42b17d"
+    },
+    {
+      "timestamp": "2025-07-07T22:59:17.235944",
+      "src_ip": "192.168.2.217",
+      "dst_ip": "192.168.2.245",
+      "src_port": "N/A",
+      "dst_port": "N/A",
+      "protocol": "ICMP",
+      "payload": "e00af682b1b12c9c58563b6f08004500001c079200004001ec30c0a802d9c0a802f500002e30cc42058d"
+    },
+    {
+      "timestamp": "2025-07-07T22:59:18.763815",
+      "src_ip": "192.168.2.217",
+      "dst_ip": "192.168.2.245",
+      "src_port": "N/A",
+      "dst_port": "N/A",
+      "protocol": "ICMP",
+      "payload": "e00af682b1b12c9c58563b6f08004500001c203f00004001d383c0a802d9c0a802f500001c1dcc4217a0"
+    },
+    {
+      "timestamp": "2025-07-07T22:59:18.779150",
+      "src_ip": "192.168.2.217",
+      "dst_ip": "192.168.2.245",
+      "src_port": "N/A",
+      "dst_port": "N/A",
+      "protocol": "ICMP",
+      "payload": "e00af682b1b12c9c58563b6f08004500001c21e900004001d1d9c0a802d9c0a802f50000e61bcc424da1"
+    },
+    {
+      "timestamp": "2025-07-07T22:59:23.446716",
+      "src_ip": "192.168.2.217",
+      "dst_ip": "192.168.2.245",
+      "src_port": "N/A",
+      "dst_port": "N/A",
+      "protocol": "ICMP",
+      "payload": "e00af682b1b12c9c58563b6f08004500001c5680000040019d42c0a802d9c0a802f50000fcf2cc4236ca"
+    },
+    {
+      "timestamp": "2025-07-07T22:59:25.207095",
+      "src_ip": "192.168.2.217",
+      "dst_ip": "192.168.2.245",
+      "src_port": "N/A",
+      "dst_port": "N/A",
+      "protocol": "ICMP",
+      "payload": "e00af682b1b12c9c58563b6f08004500001c6ed50000400184edc0a802d9c0a802f500008edfcc42a4dd"
+    },
+    {
+      "timestamp": "2025-07-07T22:59:27.065992",
+      "src_ip": "192.168.2.217",
+      "dst_ip": "192.168.2.245",
+      "src_port": "N/A",
+      "dst_port": "N/A",
+      "protocol": "ICMP",
+      "payload": "e00af682b1b12c9c58563b6f08004500001c90a0000040016322c0a802d9c0a802f50000a4c5cc428ef7"
+    },
+    {
+      "timestamp": "2025-07-07T22:59:28.813145",
+      "src_ip": "192.168.2.217",
+      "dst_ip": "192.168.2.245",
+      "src_port": "N/A",
+      "dst_port": "N/A",
+      "protocol": "ICMP",
+      "payload": "e00af682b1b12c9c58563b6f08004500001ca535000040014e8dc0a802d9c0a802f5000005b6cc422e07"
+    }
+  ],
+  "sent_time": "2025-07-07T22:59:34.627144"
+}

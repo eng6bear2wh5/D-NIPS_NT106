@@ -1,0 +1,53 @@
+{
+  "flow": {
+    "id": "Unknown:N/A-Unknown:N/A-0x86dd",
+    "packet_count": 4,
+    "byte_count": 395,
+    "start_time": "2025-07-07T22:59:10.578396",
+    "last_time": "2025-07-07T22:59:45.826658"
+  },
+  "anomaly": {
+    "score": 0.0011348077247042706,
+    "flow_score": 0.005674038623521353,
+    "detection_method": "isolation_forest"
+  },
+  "packets": [
+    {
+      "timestamp": "2025-07-07T22:59:10.578396",
+      "src_ip": "Unknown",
+      "dst_ip": "Unknown",
+      "src_port": "N/A",
+      "dst_port": "N/A",
+      "protocol": "0x86dd",
+      "payload": "3333000000fba8934a9c2b5386dd60033d91003511fffe80000000000000e1a59f407fbb998bff0200000000000000000000000000fb14e914e9003515c7000000000001000000000000105f73706f746966792d636f6e6e656374045f746370056c6f63616c00000c0001"
+    },
+    {
+      "timestamp": "2025-07-07T22:59:21.875551",
+      "src_ip": "Unknown",
+      "dst_ip": "Unknown",
+      "src_port": "N/A",
+      "dst_port": "N/A",
+      "protocol": "0x86dd",
+      "payload": "3333000000fb3ee6279f550686dd60036183002f11fffe800000000000003ce627fffe9f5506ff0200000000000000000000000000fbba2a14e9002fe3b50000000000010000000000000a5f6c7972612d6d646e73045f756470056c6f63616c00000c8001"
+    },
+    {
+      "timestamp": "2025-07-07T22:59:34.535366",
+      "src_ip": "Unknown",
+      "dst_ip": "Unknown",
+      "src_port": "N/A",
+      "dst_port": "N/A",
+      "protocol": "0x86dd",
+      "payload": "3333000000fb3ee6279f550686dd60036183002f11fffe800000000000003ce627fffe9f5506ff0200000000000000000000000000fbba2a14e9002fe3b50000000000010000000000000a5f6c7972612d6d646e73045f756470056c6f63616c00000c8001"
+    },
+    {
+      "timestamp": "2025-07-07T22:59:45.826658",
+      "src_ip": "Unknown",
+      "dst_ip": "Unknown",
+      "src_port": "N/A",
+      "dst_port": "N/A",
+      "protocol": "0x86dd",
+      "payload": "3333ff42f7554228a31949ba86dd6000000000203afffe800000000000004028a3fffe1949baff0200000000000000000001ff42f755870040dc00000000fe80000000000000ca9828fffe42f75501014228a31949ba"
+    }
+  ],
+  "sent_time": "2025-07-07T23:00:05.007150"
+}

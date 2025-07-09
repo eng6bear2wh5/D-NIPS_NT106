@@ -1,0 +1,57 @@
+{
+  "agent": {
+    "id": "0f32b866-a1c3-421f-bf28-76effb598173",
+    "hostname": "rigil-Legion-R9000P-ARX8",
+    "os": "Linux-6.11.0-26-generic-x86_64-with-Ubuntu-24.04-noble",
+    "agent_ip_addr": "127.0.1.1"
+  },
+  "packet": {
+    "ip": {
+      "src": "2a03:2880:f00c:20c:face:b00c:0:6206",
+      "dst": "2402:800:639f:c730:600a:e4c2:1a9d:c650",
+      "proto": 6,
+      "ttl": 64,
+      "id": 0,
+      "flags": {
+        "df": 0,
+        "mf": 0
+      },
+      "frag_offset": 0,
+      "tos": 0,
+      "options": []
+    },
+    "tcp": {
+      "sport": 443,
+      "dport": 54262,
+      "seq": 0,
+      "ack": 0,
+      "flags": {
+        "syn": 0,
+        "ack": 1,
+        "fin": 0,
+        "rst": 0,
+        "psh": 0,
+        "urg": 0
+      },
+      "window": 0,
+      "header_len": 20,
+      "options": []
+    }
+  },
+  "flow": {
+    "id": "2a03:2880:f00c:20c:face:b00c:0:6206:443-2402:800:639f:c730:600a:e4c2:1a9d:c650:54262-TCP",
+    "packet_count": 1,
+    "byte_count": 86,
+    "start_time": "2025-07-04T23:43:35.753295",
+    "last_time": "2025-07-04T23:43:35.753295",
+    "inter_packet_time": 0
+  },
+  "proto_layer": {
+    "type": "https"
+  },
+  "anomaly": {
+    "score": 0.06453426924039635,
+    "flow_score": 3,
+    "detection_method": "isolation_forest"
+  }
+}

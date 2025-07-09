@@ -127,8 +127,8 @@ class PacketSniffer:
                 time.sleep(1)  # Gửi dữ liệu mỗi giây
                 self.data_sender.send_data()
 
-        # sender_thread = threading.Thread(target=periodic_send, daemon=True)
-        # sender_thread.start()
+        sender_thread = threading.Thread(target=periodic_send, daemon=True)
+        sender_thread.start()
             
         # Bắt đầu bắt và phân tích gói tin
         self.visualizer.update_display()
@@ -148,7 +148,7 @@ class PacketSniffer:
                 is_anomaly, anomaly_score, flow_score = self.detect_anomaly(packet_info, timestamp)
 
                 # Thêm dữ liệu vào hàng đợi gửi
-                # self.data_sender.add_data(packet_info, is_anomaly, anomaly_score, flow_score)
+                self.data_sender.add_data(packet_info, is_anomaly, anomaly_score, flow_score)
 
                 # Thêm gói tin vào visualizer
                 self.visualizer.add_packet(packet_info, (is_anomaly, anomaly_score, flow_score))

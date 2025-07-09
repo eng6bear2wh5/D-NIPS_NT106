@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1194</width>
+    <width>1200</width>
     <height>727</height>
    </rect>
   </property>
@@ -172,7 +172,7 @@
              <string>Black List</string>
             </property>
             <property name="icon">
-             <iconset resource="../Qss/icons/_icons.qrc">
+             <iconset>
               <normaloff>:/font_awesome_solid/icons/font_awesome/solid/ban.png</normaloff>:/font_awesome_solid/icons/font_awesome/solid/ban.png</iconset>
             </property>
            </widget>
@@ -436,7 +436,7 @@ border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0,
           <string notr="true">color: rgb(255, 255, 255);</string>
          </property>
          <property name="currentIndex">
-          <number>1</number>
+          <number>0</number>
          </property>
          <widget class="QWidget" name="settingPage">
           <layout class="QVBoxLayout" name="verticalLayout_6">
@@ -470,25 +470,32 @@ border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0,
                </widget>
               </item>
               <item>
-               <widget class="QFrame" name="frame">
-                <property name="frameShape">
-                 <enum>QFrame::StyledPanel</enum>
-                </property>
-                <property name="frameShadow">
-                 <enum>QFrame::Raised</enum>
-                </property>
-                <layout class="QHBoxLayout" name="horizontalLayout_3">
-                 <item>
+               <widget class="QWidget" name="widget_7" native="true">
+                <layout class="QFormLayout" name="formLayout">
+                 <item row="0" column="0">
                   <widget class="QLabel" name="label_3">
                    <property name="text">
-                    <string>Theme</string>
+                    <string>Email</string>
                    </property>
                   </widget>
                  </item>
-                 <item>
-                  <widget class="QComboBox" name="comboBox">
-                   <property name="cursor">
-                    <cursorShape>PointingHandCursor</cursorShape>
+                 <item row="0" column="1">
+                  <widget class="QLineEdit" name="email"/>
+                 </item>
+                 <item row="1" column="0">
+                  <widget class="QLabel" name="label_5">
+                   <property name="text">
+                    <string>Password</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="1">
+                  <widget class="QLineEdit" name="passwd"/>
+                 </item>
+                 <item row="2" column="0">
+                  <widget class="QPushButton" name="VerifyBtn">
+                   <property name="text">
+                    <string>Verify</string>
                    </property>
                   </widget>
                  </item>
@@ -847,7 +854,7 @@ background-color: rgb(0, 0, 0);</string>
                           <string/>
                          </property>
                          <property name="icon">
-                          <iconset resource="../Qss/icons/_icons.qrc">
+                          <iconset>
                            <normaloff>:/font_awesome_regular/icons/font_awesome/regular/file.png</normaloff>:/font_awesome_regular/icons/font_awesome/regular/file.png</iconset>
                          </property>
                          <property name="iconSize">

@@ -62,3 +62,5 @@ To set up and run this project on a new machine, follow these steps:
     ```bash
     Dashboard/.venv/bin/python /home/rigil/PacketSniffer/D-NIPS_NT106/Dashboard/main.py
     ```
+
+Custom_Widgets --monitor-ui ui

@@ -1,0 +1,1 @@
+./run_suricata.sh ./anomaly_reports ./reports

@@ -67,7 +67,6 @@ def run_json2pcap(json2pcap_path, reports_dir, output_file, date=None, flow_id=N
 # Chạy suricata_analyzer.py
 def run_suricata_analyzer(suricata_analyzer_path, pcap_file, output_dir, 
                          suricata_bin="suricata", config_file=None, rules_dir=None):
-    """Chạy công cụ suricata_analyzer để phân tích file PCAP với Suricata"""
     logger.info("Chạy công cụ suricata_analyzer để phân tích PCAP...")
     
     if not os.path.exists(suricata_analyzer_path):
@@ -82,12 +81,13 @@ def run_suricata_analyzer(suricata_analyzer_path, pcap_file, output_dir,
     os.makedirs(output_dir, exist_ok=True)
     
     cmd = [sys.executable, suricata_analyzer_path, pcap_file, "-o", output_dir, "-s", suricata_bin]
-    
     if config_file:
         cmd.extend(["-c", config_file])
-    
     if rules_dir:
-        cmd.extend(["-r", rules_dir])
+        if rules_dir.endswith('.rules'):
+            cmd.extend(["-S", rules_dir])
+        else:
+            cmd.extend(["-r", rules_dir])
     
     try:
         logger.info(f"Thực thi lệnh: {' '.join(cmd)}")
@@ -390,7 +390,7 @@ def main():
     # Các tham số Suricata
     parser.add_argument('-s', '--suricata', default='suricata', help='Đường dẫn đến Suricata binary (mặc định: suricata)')
     parser.add_argument('--suricata-config', help='File cấu hình Suricata')
-    parser.add_argument('--suricata-rules', help='Thư mục chứa rules Suricata')
+    parser.add_argument('--suricata-rules', default='/var/lib/suricata/rules', help='Thư mục chứa rules Suricata (mặc định: /var/lib/suricata/rules)')
     
     # Các tham số tích hợp
     parser.add_argument('--json2pcap', default='./json2pcap.py', help='Đường dẫn đến công cụ json2pcap.py (mặc định: ./json2pcap.py)')
@@ -401,8 +401,11 @@ def main():
     
     args = parser.parse_args()
     
-    # Tạo thư mục output nếu không tồn tại
-    os.makedirs(args.output, exist_ok=True)
+    try:
+        os.makedirs(args.output, exist_ok=True)
+    except Exception as e:
+        logger.error(f"Lỗi khi tạo thư mục đầu ra: {e}")
+        return 1
     
     # Bước 1: Chuyển đổi JSON sang PCAP
     logger.info("[+] Chuyển đổi báo cáo JSON sang PCAP...")
@@ -465,3 +468,12 @@ def main():
 
 if __name__ == "__main__":
     sys.exit(main())
+
+def _process_report(self, report_json, address):
+    try:
+        report = json.loads(report_json)
+        ...
+    except json.JSONDecodeError:
+        logger.warning(f"Dữ liệu không hợp lệ từ {address[0]}: {report_json}")
+    except Exception as e:
+        logger.error(f"Lỗi khi xử lý báo cáo từ {address[0]}: {e}")
