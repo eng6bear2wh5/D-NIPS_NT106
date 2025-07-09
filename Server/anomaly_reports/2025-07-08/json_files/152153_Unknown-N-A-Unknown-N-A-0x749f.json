@@ -1,0 +1,35 @@
+{
+  "flow": {
+    "id": "Unknown:N/A-Unknown:N/A-0x749f",
+    "packet_count": 2,
+    "byte_count": 112,
+    "start_time": "2025-07-08T15:21:44.984650",
+    "last_time": "2025-07-08T15:21:47.306680"
+  },
+  "anomaly": {
+    "score": 0.008613153146169516,
+    "flow_score": 0.04306576573084758,
+    "detection_method": "isolation_forest"
+  },
+  "packets": [
+    {
+      "timestamp": "2025-07-08T15:21:44.984650",
+      "src_ip": "Unknown",
+      "dst_ip": "Unknown",
+      "src_port": "N/A",
+      "dst_port": "N/A",
+      "protocol": "0x749f",
+      "payload": "ffffffffffffe6910a79b816749f0000f5818000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "timestamp": "2025-07-08T15:21:47.306680",
+      "src_ip": "Unknown",
+      "dst_ip": "Unknown",
+      "src_port": "N/A",
+      "dst_port": "N/A",
+      "protocol": "0x749f",
+      "payload": "ffffffffffff1068388e61d7749f0000f5818000000000000000000000000000000000000000000000000000000000000000000000000000"
+    }
+  ],
+  "sent_time": "2025-07-08T15:21:53.969927"
+}

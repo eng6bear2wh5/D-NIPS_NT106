@@ -1,0 +1,62 @@
+{
+  "flow": {
+    "id": "Unknown:N/A-Unknown:N/A-0x74df",
+    "packet_count": 5,
+    "byte_count": 280,
+    "start_time": "2025-07-08T15:21:39.205249",
+    "last_time": "2025-07-08T15:21:57.675343"
+  },
+  "anomaly": {
+    "score": 0.00270707880533797,
+    "flow_score": 0.01353539402668985,
+    "detection_method": "isolation_forest"
+  },
+  "packets": [
+    {
+      "timestamp": "2025-07-08T15:21:39.205249",
+      "src_ip": "Unknown",
+      "dst_ip": "Unknown",
+      "src_port": "N/A",
+      "dst_port": "N/A",
+      "protocol": "0x74df",
+      "payload": "ffffffffffff96978b2f981a74df0000f5818000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "timestamp": "2025-07-08T15:21:48.891989",
+      "src_ip": "Unknown",
+      "dst_ip": "Unknown",
+      "src_port": "N/A",
+      "dst_port": "N/A",
+      "protocol": "0x74df",
+      "payload": "fffffffffffffe742dd4f7d374df0000f5818000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "timestamp": "2025-07-08T15:21:53.969058",
+      "src_ip": "Unknown",
+      "dst_ip": "Unknown",
+      "src_port": "N/A",
+      "dst_port": "N/A",
+      "protocol": "0x74df",
+      "payload": "ffffffffffffd0b128e6cd5974df0000f5818000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "timestamp": "2025-07-08T15:21:56.576508",
+      "src_ip": "Unknown",
+      "dst_ip": "Unknown",
+      "src_port": "N/A",
+      "dst_port": "N/A",
+      "protocol": "0x74df",
+      "payload": "ffffffffffff36596a1ecedc74df0000f5818000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "timestamp": "2025-07-08T15:21:57.675343",
+      "src_ip": "Unknown",
+      "dst_ip": "Unknown",
+      "src_port": "N/A",
+      "dst_port": "N/A",
+      "protocol": "0x74df",
+      "payload": "ffffffffffff36596a1ecedc74df0000f5818000000000000000000000000000000000000000000000000000000000000000000000000000"
+    }
+  ],
+  "sent_time": "2025-07-08T15:22:02.824977"
+}

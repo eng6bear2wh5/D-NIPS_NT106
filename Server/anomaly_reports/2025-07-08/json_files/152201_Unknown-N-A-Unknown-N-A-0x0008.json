@@ -1,0 +1,26 @@
+{
+  "flow": {
+    "id": "Unknown:N/A-Unknown:N/A-0x0008",
+    "packet_count": 1,
+    "byte_count": 22,
+    "start_time": "2025-07-08T15:21:52.494299",
+    "last_time": "2025-07-08T15:21:52.494299"
+  },
+  "anomaly": {
+    "score": 0.0,
+    "flow_score": 0.0,
+    "detection_method": "isolation_forest"
+  },
+  "packets": [
+    {
+      "timestamp": "2025-07-08T15:21:52.494299",
+      "src_ip": "Unknown",
+      "dst_ip": "Unknown",
+      "src_port": "N/A",
+      "dst_port": "N/A",
+      "protocol": "0x0008",
+      "payload": "ffffffffffffcec8b3a666eb00080000f58180008206"
+    }
+  ],
+  "sent_time": "2025-07-08T15:22:01.839040"
+}

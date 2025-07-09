@@ -1,0 +1,44 @@
+{
+  "flow": {
+    "id": "192.168.6.32:N/A-192.168.6.196:N/A-ICMP",
+    "packet_count": 3,
+    "byte_count": 126,
+    "start_time": "2025-07-08T15:25:14.324327",
+    "last_time": "2025-07-08T15:25:16.888202"
+  },
+  "anomaly": {
+    "score": 0.011701038467163962,
+    "flow_score": 0.058505192335819814,
+    "detection_method": "isolation_forest"
+  },
+  "packets": [
+    {
+      "timestamp": "2025-07-08T15:25:14.324327",
+      "src_ip": "192.168.6.32",
+      "dst_ip": "192.168.6.196",
+      "src_port": "N/A",
+      "dst_port": "N/A",
+      "protocol": "ICMP",
+      "payload": "e00af682b1b12c9c58563b6f08004500001c4ac600004001a1e6c0a80620c0a806c40000d3514946e367"
+    },
+    {
+      "timestamp": "2025-07-08T15:25:14.621008",
+      "src_ip": "192.168.6.32",
+      "dst_ip": "192.168.6.196",
+      "src_port": "N/A",
+      "dst_port": "N/A",
+      "protocol": "ICMP",
+      "payload": "e00af682b1b12c9c58563b6f08004500001c4bfd00004001a0afc0a80620c0a806c40000d2504946e468"
+    },
+    {
+      "timestamp": "2025-07-08T15:25:16.888202",
+      "src_ip": "192.168.6.32",
+      "dst_ip": "192.168.6.196",
+      "src_port": "N/A",
+      "dst_port": "N/A",
+      "protocol": "ICMP",
+      "payload": "e00af682b1b12c9c58563b6f08004500001c57f70000400194b5c0a80620c0a806c400005f4849465771"
+    }
+  ],
+  "sent_time": "2025-07-08T15:25:21.963309"
+}

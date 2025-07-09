@@ -1,0 +1,62 @@
+{
+  "flow": {
+    "id": "Unknown:N/A-Unknown:N/A-0x8941",
+    "packet_count": 5,
+    "byte_count": 536,
+    "start_time": "2025-07-08T15:21:48.614633",
+    "last_time": "2025-07-08T15:21:49.078459"
+  },
+  "anomaly": {
+    "score": 0.10779904533165453,
+    "flow_score": 0.5389952266582727,
+    "detection_method": "isolation_forest"
+  },
+  "packets": [
+    {
+      "timestamp": "2025-07-08T15:21:48.614633",
+      "src_ip": "Unknown",
+      "dst_ip": "Unknown",
+      "src_port": "N/A",
+      "dst_port": "N/A",
+      "protocol": "0x8941",
+      "payload": "2121212121215ac17aebe9088941100558c17aebe908002021b49b83825dd90339f3a62b5c20e80f4f240cbb130b9004665f8e4a42150d97"
+    },
+    {
+      "timestamp": "2025-07-08T15:21:48.863132",
+      "src_ip": "Unknown",
+      "dst_ip": "Unknown",
+      "src_port": "N/A",
+      "dst_port": "N/A",
+      "protocol": "0x8941",
+      "payload": "1111111111112a41da2c6d008941100158c17aebe90800607427b0c8508f638ea90cfc62ad13a619ff343b112d55fa607612014281400a5ec4d3a4b72df2fb61ba8eff5be3868e9501cd066074ae2d6cf4a820b284ee2a4075f2b034e62bd79c8c3c10e8137396f3995f79b2af8f1991e5813c7879b9845f"
+    },
+    {
+      "timestamp": "2025-07-08T15:21:48.920529",
+      "src_ip": "Unknown",
+      "dst_ip": "Unknown",
+      "src_port": "N/A",
+      "dst_port": "N/A",
+      "protocol": "0x8941",
+      "payload": "1111111111112a41da2c6d0089411001bce67ce73e1c006022c41dc53f014c35dacc0bb2b8d240cb8260ddf1e1d1935cb5470be8b12b942f0c82002d613779add156d582b4df45f168125274828861f55aa223e3cfe087a28b56b277b1187d545a749256ebff5f6e4ab03e8ff31a531a702cc75bc6dd37cd"
+    },
+    {
+      "timestamp": "2025-07-08T15:21:49.023378",
+      "src_ip": "Unknown",
+      "dst_ip": "Unknown",
+      "src_port": "N/A",
+      "dst_port": "N/A",
+      "protocol": "0x8941",
+      "payload": "1111111111112a41da2c6d0089411001bce67ce73e1c0060d7792535e7111b55024436cc74a8405bbeeadda10ff0ea17935396b84172433c9395315e193af757445490a3763ca5317fa2ac772d458bac8b744bc0d60af307e2308f5b500b0f1d5d3654c3383f9093e08910d280f847f9eaf3fd356ef6e809"
+    },
+    {
+      "timestamp": "2025-07-08T15:21:49.078459",
+      "src_ip": "Unknown",
+      "dst_ip": "Unknown",
+      "src_port": "N/A",
+      "dst_port": "N/A",
+      "protocol": "0x8941",
+      "payload": "1111111111112a41da2c6d0089411016bce67ce73e1c006067bd8ab0629e62e8c6e3a88951715a75b9dffbea948ea5e134ea3054673d4e9c3ee9f0d731d91cec2a45d15833d526713b115f064568265f5fafa35940747160ff6d8317c1af2d7d92b5664d8ff0518503b0fcd452af48ec53705208f74f919d"
+    }
+  ],
+  "sent_time": "2025-07-08T15:21:56.577727"
+}

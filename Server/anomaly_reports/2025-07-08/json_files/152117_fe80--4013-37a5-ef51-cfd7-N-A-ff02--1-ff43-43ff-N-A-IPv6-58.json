@@ -1,0 +1,35 @@
+{
+  "flow": {
+    "id": "fe80::4013:37a5:ef51:cfd7:N/A-ff02::1:ff43:43ff:N/A-IPv6/58",
+    "packet_count": 2,
+    "byte_count": 172,
+    "start_time": "2025-07-08T15:20:38.958799",
+    "last_time": "2025-07-08T15:20:39.984247"
+  },
+  "anomaly": {
+    "score": 0.01950367059080519,
+    "flow_score": 0.09751835295402594,
+    "detection_method": "isolation_forest"
+  },
+  "packets": [
+    {
+      "timestamp": "2025-07-08T15:20:38.958799",
+      "src_ip": "fe80::4013:37a5:ef51:cfd7",
+      "dst_ip": "ff02::1:ff43:43ff",
+      "src_port": "N/A",
+      "dst_port": "N/A",
+      "protocol": "IPv6/58",
+      "payload": "3333ff4343ff30894a599c5086dd6000000000203afffe80000000000000401337a5ef51cfd7ff0200000000000000000001ff4343ff87004b6800000000fe80000000000000fce08fb9ce4343ff010130894a599c50"
+    },
+    {
+      "timestamp": "2025-07-08T15:20:39.984247",
+      "src_ip": "fe80::4013:37a5:ef51:cfd7",
+      "dst_ip": "ff02::1:ff43:43ff",
+      "src_port": "N/A",
+      "dst_port": "N/A",
+      "protocol": "IPv6/58",
+      "payload": "3333ff4343ff30894a599c5086dd6000000000203afffe80000000000000401337a5ef51cfd7ff0200000000000000000001ff4343ff87004b6800000000fe80000000000000fce08fb9ce4343ff010130894a599c50"
+    }
+  ],
+  "sent_time": "2025-07-08T15:21:17.595746"
+}

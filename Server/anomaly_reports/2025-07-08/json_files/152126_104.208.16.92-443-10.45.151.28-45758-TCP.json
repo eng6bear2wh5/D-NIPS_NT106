@@ -1,0 +1,53 @@
+{
+  "flow": {
+    "id": "104.208.16.92:443-10.45.151.28:45758-TCP",
+    "packet_count": 4,
+    "byte_count": 401,
+    "start_time": "2025-07-08T15:21:20.740077",
+    "last_time": "2025-07-08T15:21:21.310160"
+  },
+  "anomaly": {
+    "score": 0.07016522155545771,
+    "flow_score": 0.3508261077772885,
+    "detection_method": "isolation_forest"
+  },
+  "packets": [
+    {
+      "timestamp": "2025-07-08T15:21:20.740077",
+      "src_ip": "104.208.16.92",
+      "dst_ip": "10.45.151.28",
+      "src_port": 443,
+      "dst_port": 45758,
+      "protocol": "TCP",
+      "payload": "2c9c58563b6f44f4778c35b00800450400342b1c40006b06ca2e68d0105c0a2d971c01bbb2be90f3d9738002d031801040013edd00000101080a12c65bef4fa0affe"
+    },
+    {
+      "timestamp": "2025-07-08T15:21:20.795043",
+      "src_ip": "104.208.16.92",
+      "dst_ip": "10.45.151.28",
+      "src_port": 443,
+      "dst_port": 45758,
+      "protocol": "TCP",
+      "payload": "2c9c58563b6f44f4778c35b008004504005b2b1e40006b06ca0568d0105c0a2d971c01bbb2be90f3d9738002dcec801840012bb600000101080a12c65c174fa0affe17030300222e1e512c8f17fcd714188f6980e3cc8d9fbcb02e1c8375cd0d48a8d2ae7d22dcabec"
+    },
+    {
+      "timestamp": "2025-07-08T15:21:20.995240",
+      "src_ip": "104.208.16.92",
+      "dst_ip": "10.45.151.28",
+      "src_port": 443,
+      "dst_port": 45758,
+      "protocol": "TCP",
+      "payload": "2c9c58563b6f44f4778c35b00800450400962b1f40006b06c9c968d0105c0a2d971c01bbb2be90f3d99a8002dcec801840018af000000101080a12c65d1d4fa0b12f170303005dcddc82c25b1185ef9f59e160b901152e3cb0df1e47453beb2c48fc8fdad0c9c00c825c5217743e76a487090ba73dffc6e02aeca921d100c2fd46a9070adc2fa0b9ef106f88ea97c5597b445fb8a871c09eea29e37733251426155832d7"
+    },
+    {
+      "timestamp": "2025-07-08T15:21:21.310160",
+      "src_ip": "104.208.16.92",
+      "dst_ip": "10.45.151.28",
+      "src_port": 443,
+      "dst_port": 45758,
+      "protocol": "TCP",
+      "payload": "2c9c58563b6f44f4778c35b00800450400342b2040006b06ca2a68d0105c0a2d971c01bbb2be90f3d9fc8002dd0f801040012d2b00000101080a12c65e2d4fa0b20b"
+    }
+  ],
+  "sent_time": "2025-07-08T15:21:26.640110"
+}
