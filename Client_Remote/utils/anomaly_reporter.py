@@ -20,7 +20,7 @@ class AnomalyReporter:
     """
     Class để báo cáo các gói tin bất thường tới server qua socket
     """
-    def __init__(self, server_host="127.0.0.1", server_port=9999, reconnect_interval=5, queue_size=1000):
+    def __init__(self, server_host="24.144.118.38", server_port=9999, reconnect_interval=5, queue_size=1000):
         self.server_host = server_host
         self.server_port = server_port
         self.reconnect_interval = reconnect_interval
@@ -98,18 +98,14 @@ class AnomalyReporter:
         try:
             if self.socket:
                 self.socket.close()
-            
+            print(f"Đang kết nối tới {self.server_host}:{self.server_port}...")
             self.socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
             # print(f"{self.server_host = }")
             self.socket.connect((self.server_host, self.server_port))
             self.connected = True
             self.logger.info(f"Đã kết nối tới server {self.server_host}:{self.server_port}")
 
-            if not self._perform_dh_key_exchange():
-                self.logger.error("Không thể thiết lập phiên bảo mật qua trao đổi khóa DH.")
-                self.connected = False
-                # _perform_dh_key_exchange đã đóng socket nếu lỗi
-                return False
+            self._perform_dh_key_exchange()
             return True
         
         except Exception as e:
