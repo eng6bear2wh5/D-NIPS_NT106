@@ -1,4 +1,4 @@
-#!/home/rigil/PacketSniffer/D-NIPS_NT106/Dashboard/.venv/bin/python3
+#!/home/ursuswh/D_NIPS/D-NIPS_NT106/Dashboard/.venv/bin/python3.12
 # -*- coding: utf-8 -*-
 import re
 import sys

@@ -4,9 +4,19 @@ from cryptography.hazmat.primitives import hashes, serialization
 from cryptography.hazmat.primitives.asymmetric import dh
 from cryptography.hazmat.primitives.kdf.hkdf import HKDF
 from cryptography.hazmat.backends import default_backend
+import struct # Thêm import này
+import logging
 
 DH_PARAMETER_KEY_SIZE = 2048  # Kích thước bit cho tham số DH, ví dụ 2048 hoặc 3072
-import struct # Thêm import này
+
+# Thiết lập logger cho module này
+logger = logging.getLogger("dh_utils")
+logger.setLevel(logging.INFO)
+file_handler = logging.FileHandler("dh_utils.log")
+formatter = logging.Formatter('%(asctime)s %(levelname)s: %(message)s')
+file_handler.setFormatter(formatter)
+if not logger.hasHandlers():
+    logger.addHandler(file_handler)
 
 def generate_dh_parameters() -> dh.DHParameters: # <--- ĐÂY LÀ HÀM BỊ THIẾU
     """Tạo tham số DH (p, g)."""
@@ -21,7 +31,13 @@ def serialize_dh_parameters(parameters: dh.DHParameters) -> bytes:
 
 def deserialize_dh_parameters(pem_bytes: bytes) -> dh.DHParameters:
     """Chuyển đổi PEM bytes sang đối tượng tham số DH."""
-    return serialization.load_pem_parameters(pem_bytes, backend=default_backend())
+    try:
+        params = serialization.load_pem_parameters(pem_bytes, backend=default_backend())
+        logger.info("[DH_UTILS] Đã deserialize DH parameters thành công.")
+        return params
+    except Exception as e:
+        logger.error(f"[DH_UTILS][ERROR] Lỗi khi deserialize DH parameters: {e}")
+        raise
 
 def generate_dh_private_key(parameters: dh.DHParameters) -> dh.DHPrivateKey:
     """Tạo khóa riêng DH từ các tham số đã cho."""
@@ -36,21 +52,33 @@ def serialize_dh_public_key(public_key: dh.DHPublicKey) -> bytes:
 
 def deserialize_dh_public_key(key_bytes: bytes) -> dh.DHPublicKey:
     """Chuyển đổi PEM bytes sang đối tượng khóa công khai DH."""
-    return serialization.load_pem_public_key(key_bytes, backend=default_backend())
+    try:
+        pubkey = serialization.load_pem_public_key(key_bytes, backend=default_backend())
+        logger.info("[DH_UTILS] Đã deserialize DH public key thành công.")
+        return pubkey
+    except Exception as e:
+        logger.error(f"[DH_UTILS][ERROR] Lỗi khi deserialize DH public key: {e}")
+        raise
 
 def derive_aes_key_from_shared(shared_secret: bytes, key_length_bytes: int = 32) -> bytes:
     """
     Dẫn xuất khóa AES từ shared secret của DH bằng HKDF.
     key_length_bytes: 16 (AES-128), 24 (AES-192), 32 (AES-256).
     """
-    hkdf = HKDF(
-        algorithm=hashes.SHA256(),
-        length=key_length_bytes,
-        salt=None,
-        info=b'anomaly_reporter_aes_key', 
-        backend=default_backend()
-    )
-    return hkdf.derive(shared_secret)
+    try:
+        hkdf = HKDF(
+            algorithm=hashes.SHA256(),
+            length=key_length_bytes,
+            salt=None,
+            info=b'anomaly_reporter_aes_key', 
+            backend=default_backend()
+        )
+        key = hkdf.derive(shared_secret)
+        logger.info("[DH_UTILS] Đã derive AES key từ shared secret thành công.")
+        return key
+    except Exception as e:
+        logger.error(f"[DH_UTILS][ERROR] Lỗi khi derive AES key: {e}")
+        raise
 
 def send_message_dh(sock, data_bytes: bytes):
     """Gửi độ dài của message (4-byte big-endian int) sau đó là message."""

@@ -6,27 +6,12 @@ import os
 SMTP_SERVER = "smtp.gmail.com"
 SMTP_PORT = 587
 
-# Đường dẫn file user.json
-USER_JSON_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'user.json')
-
 def send_user_email(subject, body):
     """
     Gửi email cho user với nội dung tuỳ ý.
     subject: Tiêu đề email
     body: Nội dung email (plain text)
     """
-    # Đọc thông tin từ user.json
-    try:
-        with open(USER_JSON_PATH, 'r') as f:
-            user_cfg = json.load(f)
-    except Exception as e:
-        print(f"[Email] Không thể đọc file user.json: {e}")
-        return False
-
-    if not user_cfg.get('enabled', False):
-        print("[Email] Gửi email đang bị tắt (enabled=false)")
-        return False
-
     receiver = "23520766@gm.uit.edu.vn"
     password = "wmqj hzai ersu agdz"
     SENDER_EMAIL = "canopus1607@gmail.com"

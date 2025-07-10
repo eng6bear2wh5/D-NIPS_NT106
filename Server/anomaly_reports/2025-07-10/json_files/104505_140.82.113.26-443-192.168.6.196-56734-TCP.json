@@ -1,0 +1,26 @@
+{
+  "flow": {
+    "id": "140.82.113.26:443-192.168.6.196:56734-TCP",
+    "packet_count": 1,
+    "byte_count": 66,
+    "start_time": "2025-07-10T10:44:29.409268",
+    "last_time": "2025-07-10T10:44:29.409268"
+  },
+  "anomaly": {
+    "score": 0.0,
+    "flow_score": 0.0,
+    "detection_method": "isolation_forest"
+  },
+  "packets": [
+    {
+      "timestamp": "2025-07-10T10:44:29.409268",
+      "src_ip": "140.82.113.26",
+      "dst_ip": "192.168.6.196",
+      "src_port": 443,
+      "dst_port": 56734,
+      "protocol": "TCP",
+      "payload": "e00af682b1b1229c6f6776f3080045080034406a400028064d798c52711ac0a806c401bbdd9ea1d8decff15b133e8010004c0d6000000101080aa399c8b86e7964d0"
+    }
+  ],
+  "sent_time": "2025-07-10T10:44:47.213134"
+}

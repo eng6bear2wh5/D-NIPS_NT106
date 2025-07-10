@@ -101,5 +101,5 @@ class LivePacketUpdater:
                 current_interval_anomalous_count,
                 len(new_packets_data_list)
             )
-            print(f"Total Anomalous Packets: {self.total_anomalous_packets}")
+            print(f"Total Anomalous Packets: {current_interval_anomalous_count}")
             print(f"Total Packets: {len(new_packets_data_list)}")

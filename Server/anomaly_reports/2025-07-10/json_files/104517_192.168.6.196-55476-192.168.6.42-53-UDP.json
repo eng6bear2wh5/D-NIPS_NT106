@@ -1,0 +1,26 @@
+{
+  "flow": {
+    "id": "192.168.6.196:55476-192.168.6.42:53-UDP",
+    "packet_count": 1,
+    "byte_count": 79,
+    "start_time": "2025-07-10T10:44:43.541590",
+    "last_time": "2025-07-10T10:44:43.541590"
+  },
+  "anomaly": {
+    "score": 0.0,
+    "flow_score": 0.0,
+    "detection_method": "isolation_forest"
+  },
+  "packets": [
+    {
+      "timestamp": "2025-07-10T10:44:43.541590",
+      "src_ip": "192.168.6.196",
+      "dst_ip": "192.168.6.42",
+      "src_port": 55476,
+      "dst_port": 53,
+      "protocol": "UDP",
+      "payload": "229c6f6776f3e00af682b1b10800450000417d91000040116edcc0a806c4c0a8062ad8b40035002d718fd6fd01000001000000000000046d61696e0a7673636f64652d63646e036e65740000410001"
+    }
+  ],
+  "sent_time": "2025-07-10T10:45:03.915071"
+}

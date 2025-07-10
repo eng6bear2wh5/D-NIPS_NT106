@@ -1,0 +1,26 @@
+{
+  "flow": {
+    "id": "192.168.6.32:N/A-192.168.6.196:N/A-ARP",
+    "packet_count": 1,
+    "byte_count": 42,
+    "start_time": "2025-07-10T10:51:26.899958",
+    "last_time": "2025-07-10T10:51:26.899958"
+  },
+  "anomaly": {
+    "score": 0.0,
+    "flow_score": 0.0,
+    "detection_method": "isolation_forest"
+  },
+  "packets": [
+    {
+      "timestamp": "2025-07-10T10:51:26.899958",
+      "src_ip": "192.168.6.32",
+      "dst_ip": "192.168.6.196",
+      "src_port": "N/A",
+      "dst_port": "N/A",
+      "protocol": "ARP",
+      "payload": "e00af682b1b12c9c58563b6f080600010800060400022c9c58563b6fc0a80620e00af682b1b1c0a806c4"
+    }
+  ],
+  "sent_time": "2025-07-10T10:51:49.448193"
+}

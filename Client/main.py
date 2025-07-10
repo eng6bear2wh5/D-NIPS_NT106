@@ -9,7 +9,6 @@ import socket
 import uuid
 init(autoreset=True)
 import platform
-from utils.email_utils import send_user_email
 
 def main():
     #data = "hello world"
