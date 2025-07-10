@@ -12,11 +12,21 @@ def parse_eve_json(eve_json):
                 event = json.loads(line.strip())
                 if event.get("event_type") == "alert":
                     alerts.append(event)
+                    # Gửi email khi phát hiện alert
+                    try:
+                        from email_sender import send_user_email
+                        subject = "[IDS] Phát hiện lưu lượng bất thường"
+                        body = f"Cảnh báo IDS: Phát hiện lưu lượng bất thường!\n\nChi tiết:\nSignature: {event.get('alert', {}).get('signature', 'N/A')}\nNguồn: {event.get('src_ip', 'N/A')}\nĐích: {event.get('dest_ip', 'N/A')}\nThời gian: {event.get('timestamp', 'N/A')}\nSeverity: {event.get('alert', {}).get('severity', 'N/A')}"
+                        send_user_email(subject, body)
+                    except Exception as e:
+                        print(f"[Email] Lỗi khi gửi email cảnh báo: {e}")
+                    
             except Exception:
                 continue
     return alerts
 
 def create_html_report(eve_json, output_html, chart_path=None):
+
     alerts = parse_eve_json(eve_json)
     today = datetime.now().strftime("%Y-%m-%d %H:%M")
     template_str = """
