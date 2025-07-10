@@ -11,7 +11,7 @@ FLOW_ALERT_THRESHOLD = 1  # Ngưỡng cảnh báo luồng bất thường
 
 # Cấu hình server báo cáo bất thường
 ANOMALY_REPORT_ENABLED = True
-ANOMALY_REPORT_SERVER = "127.0.0.1"
+ANOMALY_REPORT_SERVER = "24.144.118.38"
 ANOMALY_REPORT_PORT = 9999
 ANOMALY_REPORT_RETRY = 5  # Seconds between reconnection attempts
 ANOMALY_REPORT_QUEUE_SIZE = 1000  # Maximum number of reports in queue
