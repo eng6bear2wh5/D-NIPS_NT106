@@ -20,7 +20,7 @@ class AnomalyReporter:
     """
     Class để báo cáo các gói tin bất thường tới server qua socket
     """
-    def __init__(self, server_host="24.144.118.38", server_port=9999, reconnect_interval=5, queue_size=1000):
+    def __init__(self, server_host="127.0.0.1", server_port=9999, reconnect_interval=5, queue_size=1000):
         self.server_host = server_host
         self.server_port = server_port
         self.reconnect_interval = reconnect_interval

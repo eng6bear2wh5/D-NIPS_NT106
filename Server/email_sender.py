@@ -2,6 +2,7 @@ import smtplib
 from email.mime.text import MIMEText
 import json
 import os
+from Client.config import SENDER_EMAIL  # Đọc sender từ config.py
 
 SMTP_SERVER = "smtp.gmail.com"
 SMTP_PORT = 587
@@ -27,9 +28,8 @@ def send_user_email(subject, body):
         print("[Email] Gửi email đang bị tắt (enabled=false)")
         return False
 
-    receiver = "23520766@gm.uit.edu.vn"
-    password = "wmqj hzai ersu agdz"
-    SENDER_EMAIL = "canopus1607@gmail.com"
+    receiver = user_cfg.get('receiver_email')
+    password = user_cfg.get('password')
     if not receiver or not password:
         print("[Email] Thiếu thông tin receiver_email hoặc password trong user.json")
         return False

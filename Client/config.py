@@ -19,3 +19,5 @@ ANOMALY_REPORT_QUEUE_SIZE = 1000  # Maximum number of reports in queue
 # Ngưỡng phát hiện bất thường
 ANOMALY_THRESHOLD = -0.5  # Ngưỡng điểm bất thường (thấp hơn = bất thường)
 FLOW_SCORE_THRESHOLD = 3  # Ngưỡng điểm luồng để báo cáo
+
+SENDER_EMAIL = "your_gmail_address@gmail.com"
