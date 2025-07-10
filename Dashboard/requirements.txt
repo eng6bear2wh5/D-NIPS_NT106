@@ -47,8 +47,6 @@ tinycss2==1.4.0
 urllib3==2.4.0
 watchdog==6.0.0
 webencodings==0.5.1
-<<<<<<< Updated upstream
 Werkzeug==3.1.3
-=======
-Werkzeug==3.1.3
->>>>>>> Stashed changes
+
+
