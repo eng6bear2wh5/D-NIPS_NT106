@@ -1,9 +1,9 @@
 
-# 📡 Real-time Packet Sniffing and Anomaly Detection System Integrated with Distributed Network Intrusion Detection (D-NIDS)
+# Real-time Packet Sniffing and Anomaly Detection System Integrated with Distributed Network Intrusion Detection (D-NIDS)
 
 This is a real-time packet monitoring system integrated with a distributed network intrusion detection system (D-NIDS). It captures live network traffic at distributed clients, detects anomalies using machine learning, and confirms threats through a centralized Suricata-based rule engine.
 
-## 📌 Project Overview
+## Project Overview
 
 This system offers decentralized and scalable intrusion detection using:
 
@@ -14,7 +14,7 @@ This system offers decentralized and scalable intrusion detection using:
 
 ---
 
-## 🧠 System Architecture
+## System Architecture
 
 ```
 D-NIDS/
@@ -30,19 +30,19 @@ D-NIDS/
 └── requirements.txt      # Python dependencies
 ```
 
-### 🔍 Client Features
+### Client Features
 - Captures traffic via `pcap`/`dpkt`
 - Extracts features: packet length, time delta, IPs, ports, flows
 - Uses `IsolationForest` (scikit-learn) for anomaly detection
 - Sends JSON alerts over TCP (encrypted with AES)
 - Rich CLI logs and optional PySide6 GUI
 
-### 📊 Dashboard Features
+### Dashboard Features
 - GUI built with PySide6 and Qt Designer
 - Communicates with clients via Flask API
 - Displays packet summaries, anomaly scores, and alert history
 
-### 🛡️ Server Features
+### Server Features
 - Receives encrypted anomaly reports from clients
 - Converts JSON to PCAP for deep inspection
 - Suricata rule-based detection on suspicious flows
@@ -52,25 +52,25 @@ D-NIDS/
 
 ---
 
-## 🔐 Security
+## Security
 
-- 🔑 Diffie-Hellman key exchange for secure session setup
-- 🔒 AES-256-CBC symmetric encryption with IV randomization
-- 🔁 TCP socket framing with message length prefix
+- Diffie-Hellman key exchange for secure session setup
+- AES-256-CBC symmetric encryption with IV randomization
+- TCP socket framing with message length prefix
 
 ---
 
-## 🧪 Example Scenarios
+## Example Scenarios
 
-### ✅ Scenario 1 – Multi-network Monitoring
+### Scenario 1 – Multi-network Monitoring
 Clients deployed in different network zones connect to the server and stream encrypted anomaly events.
 
-### ✅ Scenario 2 – DDoS ICMP Detection
+### Scenario 2 – DDoS ICMP Detection
 Server identifies ping flood attacks via Suricata and triggers real-time email alerts.
 
 ---
 
-## 🚀 Deployment Instructions
+## Deployment Instructions
 
 ### Prerequisites
 - Python 3.7
@@ -94,7 +94,7 @@ pip install -r requirements.txt
 
 ---
 
-## 📎 Repository
+## Repository
 
 GitHub: https://github.com/ursuswh-metamorphic/D-NIPS_NT106
 
