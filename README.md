@@ -101,10 +101,10 @@ GitHub: https://github.com/ursuswh-metamorphic/D-NIPS_NT106
 ## Demo
 
 <img width="1718" height="967" alt="Screenshot 2026-05-20 205320" src="https://github.com/user-attachments/assets/8a0f114a-e4a3-47fe-be29-7394f5f3b9fb" />
-<img width="2560" height="1440" alt="Screenshot (2)" src="https://github.com/user-attachments/assets/01f24193-96ce-4eef-aad3-95c7e464db47" />
-<img width="2560" height="1440" alt="Screenshot (1)" src="https://github.com/user-attachments/assets/7dde55d7-6f84-4016-b77d-931c326bef83" />
-<img width="2560" height="1440" alt="Screenshot (1)" src="https://github.com/user-attachments/assets/a5b09eba-7066-407a-9167-08a06aed2a7f" />
-<img width="2560" height="1440" alt="Screenshot (2)" src="https://github.com/user-attachments/assets/915b27dc-6d85-4994-bb89-227fe9d257f9" />
+<img width="2299" height="1151" alt="Screenshot 2026-05-20 205946" src="https://github.com/user-attachments/assets/b3cba98e-07e6-41ab-b1a6-3a79de90d6bd" />
+<img width="2499" height="1145" alt="Screenshot 2026-05-20 210052" src="https://github.com/user-attachments/assets/fbb54a1d-fd55-4226-846b-e13af231d589" />
+<img width="2288" height="1121" alt="Screenshot 2026-05-20 210026" src="https://github.com/user-attachments/assets/9f9bd009-d1b1-43f7-8eae-7bad83107ff4" />
+
 
 
  view the project's operation process, you can watch the demo video here:
