@@ -100,7 +100,14 @@ GitHub: https://github.com/ursuswh-metamorphic/D-NIPS_NT106
 
 ## Demo
 
-o view the project's operation process, you can watch the demo video here:
+<img width="1718" height="967" alt="Screenshot 2026-05-20 205320" src="https://github.com/user-attachments/assets/8a0f114a-e4a3-47fe-be29-7394f5f3b9fb" />
+<img width="2560" height="1440" alt="Screenshot (2)" src="https://github.com/user-attachments/assets/01f24193-96ce-4eef-aad3-95c7e464db47" />
+<img width="2560" height="1440" alt="Screenshot (1)" src="https://github.com/user-attachments/assets/7dde55d7-6f84-4016-b77d-931c326bef83" />
+<img width="2560" height="1440" alt="Screenshot (1)" src="https://github.com/user-attachments/assets/a5b09eba-7066-407a-9167-08a06aed2a7f" />
+<img width="2560" height="1440" alt="Screenshot (2)" src="https://github.com/user-attachments/assets/915b27dc-6d85-4994-bb89-227fe9d257f9" />
+
+
+ view the project's operation process, you can watch the demo video here:
 
 [![Google Drive](https://img.shields.io/badge/Google%20Drive-Video%20Demo-yellow?style=for-the-badge&logo=googledrive&logoColor=white)](https://drive.google.com/drive/folders/1vw7LXJQ3Ick8RxU8MWXLfjgqUCHScUJQ?usp=drive_link)
 
