@@ -98,3 +98,10 @@ pip install -r requirements.txt
 
 GitHub: https://github.com/ursuswh-metamorphic/D-NIPS_NT106
 
+## Demo
+
+o view the project's operation process, you can watch the demo video here:
+
+[![Google Drive](https://img.shields.io/badge/Google%20Drive-Video%20Demo-yellow?style=for-the-badge&logo=googledrive&logoColor=white)](https://drive.google.com/drive/folders/1vw7LXJQ3Ick8RxU8MWXLfjgqUCHScUJQ?usp=drive_link)
+
+
